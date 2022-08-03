@@ -75,11 +75,11 @@ const Bheard = () => {
               <hr />
               <H3 color="black">The brief</H3>
               <Description>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum "Lorem ipsum
+                in reprehenderit in voluptate velit esse cillum Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                 minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -89,11 +89,11 @@ const Bheard = () => {
 
               <H3 color="black">The solution.</H3>
               <Description>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum "Lorem ipsum
+                in reprehenderit in voluptate velit esse cillum Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                 minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -102,9 +102,9 @@ const Bheard = () => {
               </Description>
               <QuoteContainer>
                 <H3 color="black">
-                  "n ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  n ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum"
+                  cillum
                 </H3>
               </QuoteContainer>
             </CenterDiv>
@@ -117,7 +117,7 @@ const Bheard = () => {
                 {" "}
                 Arrange a free consultation
               </Description>
-              <Title font="70px" align="center">
+              <Title font="70px" align="left">
                 Arrange your non-binding, free inital consulation now
               </Title>
               <Button>
