@@ -8,6 +8,8 @@ export const VideoContainer = styled.div`
   width: 100%;
   height: 100vh;
   background-color: black;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 `;
 export const Video = styled.video`
   width: 100%;
@@ -54,9 +56,31 @@ export const MainWrapper = styled.div`
     padding: 0rem;
   }
 `;
+export const Overview = styled.h4`
+  font-size: 23px;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: left;
+  @media only screen and (max-width: 760px) {
+    font-size: 15px;
+  }
+`;
+export const Row = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: #e9e9e9;
+`;
+export const HR = styled.hr`
+  background: black;
+`;
 export const H3 = styled.h3`
-  font-size: 30px;
-  color: white;
+  font-size: 60px;
+  color: black;
   font-weight: 500;
   letter-spacing: 1px;
   text-align: left;
@@ -130,4 +154,15 @@ export const Customers = styled.div`
 export const CustomerLogo = styled.img`
   width: ${(props) => (props.width ? props.width : "100%")};
   height: auto;
+`;
+export const QuoteContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #e9e9e9;
+  padding: 1rem;
+  border-left: 8px solid black;
 `;

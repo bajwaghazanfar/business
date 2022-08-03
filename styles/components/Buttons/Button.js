@@ -2,21 +2,33 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   width: ${(props) => (props.width ? `${props.width}` : "fit-content ")};
-  height: 50px;
-  height: auto;
-  padding: 0rem 3.5rem;
-  background: ${(props) => (props.alt ? `${props.alt}` : "white")};
-  border-radius: 1px;
-  border: 4px solid #17202a;
-  outline: none;
 
+  height: auto;
+  padding: 1rem 4rem;
+  background: ${(props) => (props.alt ? `${props.alt}` : "white")};
+  border-radius: 70px;
+  border: none;
+  outline: none;
   cursor: pointer;
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  top: 100px;
+  &:hover {
+    background: black;
+    transition: all 0.5s ease-in-out;
+  }
+  @media only screen and (max-width: 760px) {
+    padding: 0rem 4rem;
+  }
 `;
 export const ButtonText = styled.h3`
-  font-size: 15px;
+  font-size: 20px;
   color: ${(props) => (props.alt ? `${props.alt}` : " black")};
   font-weight: 700;
-  text-transform: uppercase;
+  &:hover {
+    color: white;
+    transition: all 0.5s ease-in-out;
+  }
   display: flex;
   justify-content: center;
   align-items: center;

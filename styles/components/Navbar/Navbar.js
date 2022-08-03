@@ -3,13 +3,13 @@ import styled from "styled-components";
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;
-  color: white;
+  color: black;
   font-weight: 600;
 `;
 export const H1 = styled.h1`
   font-size: 40px;
   font-weight: 800;
-  color: white;
+  color: black;
 `;
 //Divs
 export const NavbarContainer = styled.div`
@@ -28,11 +28,12 @@ export const NavbarWrapper = styled.div`
 
   display: flex;
   justify-content: space-between;
-
-  position: fixed;
-  top: 0;
-  left: 0;
+  align-items: center;
+  padding: 2rem;
 `;
+//position: fixed;
+//top: 0;
+//left: 0;
 export const LeftContainer = styled.div`
   width: auto;
   height: auto;
@@ -48,6 +49,7 @@ export const RightContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1rem 2rem;
 `;
 
 export const Navbar = () => {
@@ -55,7 +57,7 @@ export const Navbar = () => {
     <NavbarContainer>
       <NavbarWrapper>
         <LeftContainer>
-          <H1>gb</H1>
+          <H1>MB</H1>
         </LeftContainer>
         <RightContainer>
           <H3>Projects</H3>
