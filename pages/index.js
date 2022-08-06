@@ -46,6 +46,7 @@ import {
   ContactUsGrid,
   ContactUsWrapper,
 } from "../styles/components/contactUs/contactUs";
+import { Footer } from "../styles/components/footer/footer";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -54,7 +55,7 @@ export default function Home() {
       setHeight(window.document.body.scrollHeight);
     }
   }, []);
-  console.log(height);
+
   return (
     <>
       <Container>
@@ -212,6 +213,7 @@ export default function Home() {
           </ContactUsGrid>
         </ContactUsWrapper>
       </ContactUsContainer>
+      <Footer />
     </>
   );
 }

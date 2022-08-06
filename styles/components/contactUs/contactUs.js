@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { Button, ButtonText } from "../Buttons/Button";
+import { Description, Title } from "../StickySection/StickySection";
 
 //Container and divs
 export const ContactUsContainer = styled.div`
@@ -46,3 +48,24 @@ export const Image = styled(motion.img)`
   object-fit: cover;
   cursor: pointer;
 `;
+
+export const ContactUs = () => {
+  return (
+    <ContactUsContainer>
+      <ContactUsWrapper>
+        <ContactUsGrid>
+          <Description align="center">Arrange a free consultation</Description>
+          <Title font="70px" align="left">
+            Arrange your non-binding, free inital consulation now
+          </Title>
+          <Button>
+            <ButtonText>Arrange a conversation</ButtonText>
+          </Button>
+        </ContactUsGrid>
+        <ContactUsGrid padding="0rem">
+          <Image src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg" />
+        </ContactUsGrid>
+      </ContactUsWrapper>
+    </ContactUsContainer>
+  );
+};

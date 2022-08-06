@@ -32,7 +32,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 CenterDiv;
-const Bheard = () => {
+const Arvtuning = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -121,4 +121,4 @@ const Bheard = () => {
     </>
   );
 };
-export default Bheard;
+export default Arvtuning;

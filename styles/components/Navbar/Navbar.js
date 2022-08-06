@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-
+import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;
-  color: black;
+  color: ${(props) => (props.color ? props.color : "black")};
   font-weight: 600;
 `;
 export const H1 = styled.h1`
@@ -51,20 +53,68 @@ export const RightContainer = styled.div`
   align-items: center;
   padding: 1rem 2rem;
 `;
-
+//Mobile
+export const HamburgerLogo = styled.button`
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+`;
+export const MobileMenu = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 export const Navbar = () => {
+  const [width, setWidth] = useState(0);
+  const [open, setOpen] = useState(false);
+
+  const openMenu = () => {
+    setOpen(!open);
+  };
+
+  useEffect(() => {
+    console.log(window.innerWidth);
+    setWidth(innerWidth);
+  }, [width]);
   return (
     <NavbarContainer>
       <NavbarWrapper>
         <LeftContainer>
-          <H1>MB</H1>
+          <Link href="/">
+            <H1>MB</H1>
+          </Link>
         </LeftContainer>
-        <RightContainer>
-          <H3>Projects</H3>
-          <H3>Projects</H3>
-          <H3>Projects</H3>
-        </RightContainer>
+
+        {width < 768 ? (
+          <HamburgerLogo onClick={openMenu}>
+            <MenuIcon style={{ color: "white" }} />
+          </HamburgerLogo>
+        ) : (
+          <RightContainer>
+            <H3>Projects</H3>
+            <H3>Projects</H3>
+            <H3>Projects</H3>
+          </RightContainer>
+        )}
       </NavbarWrapper>
+      <MobileMenu style={open ? { display: "flex" } : { display: "none" }}>
+        <H3 color="white">Projects</H3>
+        <H3 color="white">Projects</H3>
+        <H3 color="white">Projects</H3>
+      </MobileMenu>
     </NavbarContainer>
   );
 };

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { Button, ButtonText } from "../Buttons/Button";
 
 //H1,H2 etc..
 export const Title = styled.h1`
@@ -8,8 +9,8 @@ export const Title = styled.h1`
 
   color: ${(props) => (props.color ? props.color : "black")};
   text-align: ${(props) => (props.align ? props.align : "center")};
-  position: ${(props) => (props.sticky ? props.sticky : "")};
 
+  top: 30%;
   bottom: 10px;
 
   @media only screen and (max-width: 760px) {
@@ -26,21 +27,11 @@ export const Description = styled.h3`
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
   color: ${(props) => (props.color ? props.color : "#616161")};
-  position: ${(props) => (props.sticky ? props.sticky : "")};
 
-  bottom: 10px;
   @media only screen and (max-width: 760px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }
-`;
-export const StickyContainer = styled.div`
-  width: 100%;
-  height: auto;
-  position: sticky;
-  margin: 0px;
-
-  top: 10%;
 `;
 //Images
 export const LogoWrapper = styled.div`
@@ -134,23 +125,8 @@ export const StickyGrid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: ${(props) => (props.sticky ? props.sticky : "")};
   padding: 2rem;
   top: 50px;
-  gap: 20px;
-  @media only screen and (max-width: 760px) {
-    align-items: flex-start;
-  }
-`;
-export const StickyGridWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: ${(props) => (props.sticky ? props.sticky : "")};
-  justify-content: center;
-
-  padding: 2rem;
   gap: 20px;
   @media only screen and (max-width: 760px) {
     align-items: flex-start;
@@ -162,8 +138,9 @@ export const Grid = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};
-  align-content: ${(props) => (props.align ? props.align : "center ")};
+  align-items: ${(props) => (props.align ? props.align : "flex-start ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
+
   gap: 20px;
 `;
 
@@ -178,130 +155,61 @@ export const CenterDiv = styled.div`
   gap: ${(props) => (props.gap ? props.gap : "0px")};
   text-align: left;
 `;
-//3X3 GRID
-export const Grid_3x3 = styled.div`
+export const FooterLinksContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: grid;
-
-  gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: flex-end;
-  align-items: center;
-  grid-gap: 10px;
-`;
-// Projects
-export const ProjectDiv = styled.div`
-  width: 90%;
-  height: auto;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
-`;
-export const Projects = styled(motion.div)`
-  width: ${(props) => (props.width ? props.width : "80% ")};
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  & > div {
-    display: flex;
-    flex-basis: calc(50% - 40px);
-    justify-content: center;
+  padding: 0rem 4rem;
+  @media only screen and (max-width: 760px) {
     flex-direction: column;
   }
 `;
-export const ValuesContainer = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-`;
-export const Value = styled.div`
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 10% 90%;
-
-  justify-content: center;
-  align-items: center;
-
-  border: 1px solid black;
-`;
-export const ValueImgWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e6e6e6;
-`;
-export const ValueImg = styled.img`
-  width: 60px;
-  height: auto;
-  object-fit: cover;
-`;
-export const ValueTitle = styled.h2`
-  font-size: 30px;
-  color: black;
+export const FooterLinkHeader = styled.h3`
+  font-size: 25px;
   font-weight: 600;
-  line-height: 0px;
-  padding: 0rem;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 35px;
+
+  color: ${(props) => (props.color ? props.color : "#616161")};
+
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
 `;
-export const ValueDescription = styled.p`
+export const FooterLink = styled.h4`
   font-size: 20px;
-  color: black;
   font-weight: 500;
-  margin: 0px;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 35px;
+  color: ${(props) => (props.color ? props.color : "black")};
+
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
 `;
-export const ValueTextWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0px;
-  padding: 1rem;
-`;
-export const StickySectionComponent = ({
-  title,
-  description1,
-  description2,
-  bigImage,
-  smallImage1,
-  smallImage2,
-}) => {
+export const Footer = () => {
   return (
     <SS_Container>
-      <StickyGrid>
-        <Title>{title} </Title>
-      </StickyGrid>
-      <Grid>
-        <CenterDiv>
-          <Description>{description1}</Description>
-          {description2 != null ? (
-            <Description>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostru
-            </Description>
-          ) : null}
-          <Image src={bigImage} />
-          <ImageGrid>
-            <Vertical_Image src={smallImage1} />
-            <Vertical_Image src={smallImage2} />
-          </ImageGrid>
-        </CenterDiv>
-      </Grid>
+      <SS_ContainerWrapper>
+        <Grid justify="center" align="center" padding="0rem">
+          <Title color="black" font="70px" align="left">
+            MB Developments
+          </Title>
+        </Grid>
+        <Grid align="center" justify="center" padding="0rem">
+          <FooterLinksContainer>
+            <FooterLinkHeader>Clients</FooterLinkHeader>
+            <FooterLink>ARV Tuning</FooterLink>
+            <FooterLink>FC Properties</FooterLink>
+            <FooterLink>LCH Insurance</FooterLink>
+          </FooterLinksContainer>
+        </Grid>
+      </SS_ContainerWrapper>
     </SS_Container>
   );
 };

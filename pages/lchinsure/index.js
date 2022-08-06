@@ -32,7 +32,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 CenterDiv;
-const Bheard = () => {
+const Lchinsure = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -46,7 +46,7 @@ const Bheard = () => {
           <Arrow height={`${height}px`} />
         </ArrowWrapper>
       </ArrowContainer>
-      <SS_Container top="200px" justify="flex-start" align="flex-start">
+      <SS_Container top="100px" justify="flex-start" align="flex-start">
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
@@ -60,7 +60,7 @@ const Bheard = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
+            <Image src="/fiber-optics.jpg" />
 
             <CenterDiv gap="1px">
               <Row>
@@ -121,4 +121,4 @@ const Bheard = () => {
     </>
   );
 };
-export default Bheard;
+export default Lchinsure;

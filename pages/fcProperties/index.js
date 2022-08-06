@@ -32,7 +32,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 CenterDiv;
-const Bheard = () => {
+const Fcproperties = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,7 +51,7 @@ const Bheard = () => {
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
               <Description style={{ fontWeight: "700" }} sticky="sticky">
-                Case Study/Arv Tuning
+                Case Study/FC Properties
               </Description>
               <Title font="70px" align="left" sticky="sticky">
                 How MB Developments reduced the costs of laborious tasks by 50%,
@@ -60,7 +60,7 @@ const Bheard = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
+            <Image src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" />
 
             <CenterDiv gap="1px">
               <Row>
@@ -121,4 +121,4 @@ const Bheard = () => {
     </>
   );
 };
-export default Bheard;
+export default Fcproperties;
