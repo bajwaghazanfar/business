@@ -68,12 +68,13 @@ import fiberOptics from "../public/fiber-optics.jpg";
 import fcProperties from "../public/fcProperties.avif";
 import arvTuning from "../public/arvTuning.avif";
 import contactUs from "../public/contactUs.jpg";
-
+import altBg from "../public/altBg.avif";
 import lchLogo from "../public/lch1.png";
 import arvLogo from "../public/arv.png";
 import fcLogo from "../public/fc.png";
 export default function Home() {
   const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
   const titleArray = [
     {
@@ -89,6 +90,7 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHeight(window.document.body.scrollHeight);
+      setWidth(window.innerWidth);
     }
 
     const intervalID = setInterval(() => {
@@ -171,9 +173,19 @@ export default function Home() {
           </ArrowWrapper>
         </ArrowContainer>
         <VideoContainer>
-          <Video controls={false} autoPlay={true} muted={true} loop={true}>
-            <source src="/video4.mp4" />
-          </Video>
+          {width > 768 ? (
+            <Video
+              controls={false}
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              playsInline
+            >
+              <source src="/video4.mp4" />
+            </Video>
+          ) : (
+            <FullImage src={altBg} layout="fill" />
+          )}
         </VideoContainer>
       </Container>
       <SS_Container>

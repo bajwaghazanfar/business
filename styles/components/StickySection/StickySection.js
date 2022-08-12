@@ -185,7 +185,7 @@ export const CenterDiv = styled.div`
   gap: ${(props) => (props.gap ? props.gap : "0px")};
   text-align: left;
   padding: 1rem;
-  border-top: 1px solid white;
+  border-top: ${(props) => (props.border ? props.border : "none")};
 `;
 //3X3 GRID
 export const Grid_3x3 = styled.div`
