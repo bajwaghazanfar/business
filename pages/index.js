@@ -19,6 +19,16 @@ import {
   CustomersWrapper,
   Customers,
   CustomerLogo,
+  FrameworkContainer,
+  Framework,
+  LineContainer,
+  AlignLeft,
+  RightContainer,
+  AlignRight,
+  H4,
+  InsightsWrapper,
+  InsightsContainer,
+  H5,
 } from "../styles/pages/home/home";
 import { Button, ButtonText } from "../styles/components/Buttons/Button";
 import {
@@ -39,6 +49,8 @@ import {
   ValueDescription,
   ValueTextWrapper,
   ValueImgWrapper,
+  StickyGridWrapper,
+  StickyContainer,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -47,14 +59,39 @@ import {
   ContactUsWrapper,
 } from "../styles/components/contactUs/contactUs";
 import { Footer } from "../styles/components/footer/footer";
-
+import CountupHook from "../styles/components/countUp/countUp";
+import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 export default function Home() {
   const [height, setHeight] = useState(null);
+  const [toggle, setToggle] = useState(true);
+  const titleArray = [
+    {
+      title:
+        "Building digital solutions to meet your business needs and inject growth ",
+    },
+    {
+      title:
+        "We have a holistic approach to creating digital solutions for businesses",
+    },
+  ];
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHeight(window.document.body.scrollHeight);
     }
+
+    const intervalID = setInterval(() => {
+      setToggle((toggle) => !toggle);
+    }, 5000);
+    return () => clearInterval(intervalID);
   }, []);
+  //Framework ref
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
 
   return (
     <>
@@ -64,43 +101,89 @@ export default function Home() {
             <MainWrapper>
               <H2Wrapper>
                 <H3>M.B Developments</H3>
-                <H2>
-                  <H2Span>Building</H2Span>digital solution to meet
-                  <H2Span> your business needs</H2Span>
-                  and inject growth
-                </H2>
-                <Button>
-                  <ButtonText>Explore</ButtonText>
-                </Button>
+                {toggle ? (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren}>
+                      Building digital solutions to meet your business needs and
+                      inject growth
+                    </H2>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren}>
+                      We have a holistic approach to creating digital solutions
+                      for businesses
+                    </H2>
+                  </motion.div>
+                )}
               </H2Wrapper>
+              <AlignLeft>
+                <H4>{toggle ? 0 : 1}</H4>
+                <LineContainer
+                  animate={{ width: "50%" }}
+                  transition={{ ease: "easeOut", duration: 5 }}
+                  key={toggle}
+                />
+              </AlignLeft>
             </MainWrapper>
           </LeftContainer>
+          <RightContainer>
+            <AlignRight
+              direction="row"
+              justify="space-evenly"
+              variants={FadeUpContainer(0)}
+              initial="hidden"
+              animate="visible"
+              key={toggle}
+            >
+              <InsightsContainer variants={FadeUpChildren}>
+                <InsightsWrapper>
+                  <H5>MB Developments</H5>
+                  <H5>11.August.2022</H5>
+                </InsightsWrapper>
+                <H4>MB Developments is launched</H4>
+              </InsightsContainer>
+            </AlignRight>
+          </RightContainer>
         </HomeContainer>
         <ArrowContainer height={`${height}px`}>
           <ArrowWrapper>
-            {" "}
             <Arrow height={`${height}px`} />
           </ArrowWrapper>
         </ArrowContainer>
         <VideoContainer>
           <Video controls={false} autoPlay={true} muted={true} loop={true}>
-            <source src="/video2.mp4" />
+            <source src="/video4.mp4" />
           </Video>
         </VideoContainer>
       </Container>
       <SS_Container>
         <SS_ContainerWrapper>
-          <StickyGrid>
-            <Title>Take the leap to the top </Title>
-            <Button>
-              <ButtonText>Explore</ButtonText>
-            </Button>
+          <StickyGrid sticky="sticky">
+            <StickyContainer sticky="sticky">
+              <Title align="left" sticky="sticky" font="70px">
+                What we do best
+              </Title>
+              <Button>
+                <ButtonText>Explore</ButtonText>
+              </Button>
+            </StickyContainer>
           </StickyGrid>
           <Grid>
-            <CenterDiv>
-              <Description color="#525252" style={{ fontWeight: "700" }}>
+            <CenterDiv gap="0px">
+              <H3 color="black">
                 The optimum between standardization and customization.
-              </Description>
+              </H3>
               <Description>
                 At Purevirtual AG, technological competence meets industry
                 experience - implemented by an experienced team with a lot of
@@ -114,9 +197,7 @@ export default function Home() {
                 while proven ways of standardization ensure efficient and silent
                 operation.
               </Description>
-              <Description color="#525252" style={{ fontWeight: "700" }}>
-                Customers
-              </Description>
+              <H3 color="black">Customers</H3>
               <CustomersWrapper>
                 <Customers>
                   <CustomerLogo src="/lch1.png" />
@@ -132,9 +213,77 @@ export default function Home() {
                 </Customers>
               </CustomersWrapper>
             </CenterDiv>
+
+            <CenterDiv gap="0px">
+              <H3 color="black"> The services we provide</H3>
+              <ValuesContainer>
+                <Value>
+                  <ValueImgWrapper>
+                    <ValueImg src="/logos/building.svg" />
+                  </ValueImgWrapper>
+                  <ValueTextWrapper>
+                    <ValueTitle>Web Development</ValueTitle>
+                    <ValueDescription>
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    </ValueDescription>
+                  </ValueTextWrapper>
+                </Value>
+                <Value>
+                  <ValueImgWrapper>
+                    <ValueImg src="/logos/layers.svg" />
+                  </ValueImgWrapper>
+                  <ValueTextWrapper>
+                    <ValueTitle>Full stack development</ValueTitle>
+                    <ValueDescription>
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    </ValueDescription>
+                  </ValueTextWrapper>
+                </Value>
+                <Value>
+                  <ValueImgWrapper>
+                    <ValueImg src="/logos/phone-call.svg" />
+                  </ValueImgWrapper>
+                  <ValueTextWrapper>
+                    <ValueTitle>Web design</ValueTitle>
+                    <ValueDescription>
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    </ValueDescription>
+                  </ValueTextWrapper>
+                </Value>
+              </ValuesContainer>
+            </CenterDiv>
+            <FrameworkContainer ref={ref}>
+              {inView ? (
+                <>
+                  <Framework>
+                    <CountupHook
+                      end={100}
+                      id="counter1"
+                      description="Change cases"
+                    />
+                  </Framework>
+                  <Framework>
+                    <CountupHook
+                      end={10000}
+                      id="counter2"
+                      description="Lines of code"
+                    />
+                  </Framework>
+                  <Framework>
+                    <CountupHook end={4} id="counter3" description="Clients" />
+                  </Framework>
+                  <Framework>
+                    <CountupHook end={100} id="counter4" description="Effort" />
+                  </Framework>
+                </>
+              ) : (
+                <></>
+              )}
+            </FrameworkContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
+
       <SS_Container>
         <SS_ContainerWrapper bg="black">
           <Grid justify="flex-start" align="flex-start" padding="2rem">
@@ -169,9 +318,7 @@ export default function Home() {
             </Button>
           </Grid>
           <StickyGrid>
-            <CenterDiv height="100%" gap="30px">
-              <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
-            </CenterDiv>
+            <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
           </StickyGrid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -198,7 +345,6 @@ export default function Home() {
         <ContactUsWrapper>
           <ContactUsGrid>
             <Description align="center">
-              {" "}
               Arrange a free consultation
             </Description>
             <Title font="70px" align="center" fontWeight="500">

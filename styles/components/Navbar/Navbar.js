@@ -4,14 +4,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 //Fonts
 export const H3 = styled.h3`
-  font-size: 15px;
-  color: ${(props) => (props.color ? props.color : "black")};
+  font-size: 20px;
+  color: ${(props) => (props.color ? props.color : "white")};
   font-weight: 600;
 `;
 export const H1 = styled.h1`
   font-size: 40px;
-  font-weight: 800;
-  color: black;
+  font-weight: 600;
+  color: white;
 `;
 //Divs
 export const NavbarContainer = styled.div`

@@ -9,12 +9,13 @@ export const Title = styled.h1`
   color: ${(props) => (props.color ? props.color : "black")};
   text-align: ${(props) => (props.align ? props.align : "center")};
   position: ${(props) => (props.sticky ? props.sticky : "")};
-
+  text-decoration: ${(props) => (props.underline ? props.underline : "")};
   bottom: 10px;
 
-  @media only screen and (max-width: 760px) {
+  @media (min-width: 0px) and (max-width: 768px) {
     font-size: 40px;
     text-align: left;
+    position: ${(props) => (props.sticky ? "relative" : "")};
   }
   @media (min-width: 760px) and (max-width: 1030px) {
     font-size: 40px;
@@ -41,6 +42,10 @@ export const StickyContainer = styled.div`
   margin: 0px;
 
   top: 10%;
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
 `;
 //Images
 export const LogoWrapper = styled.div`
@@ -140,6 +145,7 @@ export const StickyGrid = styled.div`
   gap: 20px;
   @media only screen and (max-width: 760px) {
     align-items: flex-start;
+    position: ${(props) => (props.sticky ? "relative" : "")};
   }
 `;
 export const StickyGridWrapper = styled.div`
@@ -172,11 +178,13 @@ export const CenterDiv = styled.div`
   height: ${(props) => (props.height ? props.height : "auto ")};
 
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.direction ? props.direction : "column ")};
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
   gap: ${(props) => (props.gap ? props.gap : "0px")};
   text-align: left;
+  padding: 1rem;
+  border-top: 1px solid white;
 `;
 //3X3 GRID
 export const Grid_3x3 = styled.div`
@@ -233,8 +241,13 @@ export const Value = styled.div`
 
   justify-content: center;
   align-items: center;
+  border: 2px solid #c8cfcf;
+  border-radius: 10px;
 
-  border: 1px solid black;
+  @media only screen and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 export const ValueImgWrapper = styled.div`
   width: 100%;
@@ -242,7 +255,8 @@ export const ValueImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e6e6e6;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 `;
 export const ValueImg = styled.img`
   width: 60px;
@@ -250,16 +264,14 @@ export const ValueImg = styled.img`
   object-fit: cover;
 `;
 export const ValueTitle = styled.h2`
-  font-size: 30px;
+  font-size: 24px;
   color: black;
   font-weight: 600;
-  line-height: 0px;
-  padding: 0rem;
 `;
 export const ValueDescription = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: black;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0px;
 `;
 export const ValueTextWrapper = styled.div`
@@ -268,9 +280,9 @@ export const ValueTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: cemter;
   gap: 0px;
-  padding: 1rem;
+  padding: 2rem;
 `;
 export const StickySectionComponent = ({
   title,
