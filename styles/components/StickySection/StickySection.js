@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-
+import Image from "next/image";
 //H1,H2 etc..
 export const Title = styled.h1`
   font-size: ${(props) => (props.font ? props.font : " 100px ")};
@@ -64,7 +64,7 @@ export const Logo = styled.img`
   border-radius: 5px;
   object-fit: cover;
 `;
-export const Image = styled(motion.img)`
+export const FullImage = styled(Image)`
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -139,7 +139,7 @@ export const StickyGrid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: ${(props) => (props.sticky ? props.sticky : "")};
+  position: ${(props) => (props.sticky ? props.sticky : "relative")};
   padding: 2rem;
   top: 50px;
   gap: 20px;
@@ -171,6 +171,7 @@ export const Grid = styled.div`
   align-content: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
   gap: 20px;
+  position: relative;
 `;
 
 export const CenterDiv = styled.div`

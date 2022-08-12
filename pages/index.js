@@ -38,7 +38,7 @@ import {
   SS_Container,
   StickyGrid,
   Title,
-  Image,
+  FullImage,
   ImageGrid,
   Vertical_Image,
   SS_ContainerWrapper,
@@ -63,6 +63,10 @@ import CountupHook from "../styles/components/countUp/countUp";
 import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import fiberOptics from "../public/fiber-optics.jpg";
+import fcProperties from "../public/fcProperties.avif";
+import arvTuning from "../public/arvTuning.avif";
+import contactUs from "../public/contactUs.jpg";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [toggle, setToggle] = useState(true);
@@ -299,7 +303,7 @@ export default function Home() {
             </Button>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <Image src="/fiber-optics.jpg" />
+            <FullImage src={fiberOptics} />
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -318,7 +322,7 @@ export default function Home() {
             </Button>
           </Grid>
           <StickyGrid>
-            <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
+            <FullImage src={arvTuning} />
           </StickyGrid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -337,7 +341,7 @@ export default function Home() {
             </Button>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <Image src="https://images.unsplash.com/photo-1527245240659-ccf507abd66c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=809&q=80" />
+            <FullImage src={fcProperties} />
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -355,7 +359,7 @@ export default function Home() {
             </Button>
           </ContactUsGrid>
           <ContactUsGrid padding="0rem">
-            <Image src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg" />
+            <FullImage src={contactUs} layout="fill" />
           </ContactUsGrid>
         </ContactUsWrapper>
       </ContactUsContainer>

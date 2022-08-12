@@ -11,7 +11,7 @@ import { useState } from "react";
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -45,6 +45,7 @@ export const ContactUsGrid = styled.div`
   align-items: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
   gap: 20px;
+  position: relative;
 `;
 export const Image = styled(motion.img)`
   width: 100%;

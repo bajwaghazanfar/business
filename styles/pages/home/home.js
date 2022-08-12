@@ -54,6 +54,9 @@ export const RightContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  @media only screen and (max-width: 760px) {
+    display: none;
+  }
 `;
 export const MainWrapper = styled.div`
   width: 100%;
@@ -166,6 +169,7 @@ export const Customers = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid #c8c8c8;
+  position: relative;
 `;
 export const CustomerLogo = styled.img`
   width: ${(props) => (props.width ? props.width : "100%")};
