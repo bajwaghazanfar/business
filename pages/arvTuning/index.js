@@ -15,6 +15,7 @@ import { Footer } from "../../styles/components/footer/footer";
 import {
   CenterDiv,
   Description,
+  FullImage,
   Grid,
   Image,
   SS_Container,
@@ -31,6 +32,7 @@ import {
   QuoteContainer,
   Row,
 } from "../../styles/pages/bHeard/bHeard";
+import arvTuning from "../../public/arvTuning.avif";
 CenterDiv;
 const Arvtuning = () => {
   const [height, setHeight] = useState(null);
@@ -60,7 +62,7 @@ const Arvtuning = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <Image src="https://images.unsplash.com/photo-1568048773966-a18abfbffbfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" />
+            <FullImage src={arvTuning} objectFit="cover" />
 
             <CenterDiv gap="1px">
               <Row>

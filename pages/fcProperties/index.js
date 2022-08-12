@@ -16,7 +16,7 @@ import {
   CenterDiv,
   Description,
   Grid,
-  Image,
+  FullImage,
   SS_Container,
   SS_ContainerWrapper,
   StickyContainer,
@@ -31,7 +31,7 @@ import {
   QuoteContainer,
   Row,
 } from "../../styles/pages/bHeard/bHeard";
-CenterDiv;
+import fcProperties from "../../public/fcProperties1.avif";
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
@@ -60,7 +60,7 @@ const Fcproperties = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <Image src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" />
+            <FullImage src={fcProperties} layout="responsive" />
 
             <CenterDiv gap="1px">
               <Row>

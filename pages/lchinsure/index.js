@@ -15,6 +15,7 @@ import { Footer } from "../../styles/components/footer/footer";
 import {
   CenterDiv,
   Description,
+  FullImage,
   Grid,
   Image,
   SS_Container,
@@ -31,7 +32,7 @@ import {
   QuoteContainer,
   Row,
 } from "../../styles/pages/bHeard/bHeard";
-CenterDiv;
+import fiberOptics from "../../public/fiber-optics.jpg";
 const Lchinsure = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
@@ -51,7 +52,7 @@ const Lchinsure = () => {
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
               <Description style={{ fontWeight: "700" }} sticky="sticky">
-                Case Study/Arv Tuning
+                Case Study/Lch Insure
               </Description>
               <Title font="70px" align="left" sticky="sticky">
                 How MB Developments reduced the costs of laborious tasks by 50%,
@@ -60,7 +61,7 @@ const Lchinsure = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <Image src="/fiber-optics.jpg" />
+            <FullImage src={fiberOptics} />
 
             <CenterDiv gap="1px">
               <Row>

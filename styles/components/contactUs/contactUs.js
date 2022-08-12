@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Button, ButtonText } from "../Buttons/Button";
-import { Description, Title } from "../StickySection/StickySection";
+import { Description, FullImage, Title } from "../StickySection/StickySection";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import axios from "axios";
 import { useState } from "react";
+import contactUs from "../../../public/contactUs.jpg";
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
@@ -201,7 +202,7 @@ export const ContactUs = (alt) => {
         </Snackbar>
         <ContactUsWrapper>
           <ContactUsGrid padding="0rem">
-            <Image src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg" />
+            <FullImage src={contactUs} layout="fill" />
           </ContactUsGrid>
           <ContactUsGrid justify="flex-start" align="flex-start">
             <Description>Contact Us</Description>
