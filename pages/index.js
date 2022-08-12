@@ -63,10 +63,15 @@ import CountupHook from "../styles/components/countUp/countUp";
 import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+//Image imports
 import fiberOptics from "../public/fiber-optics.jpg";
 import fcProperties from "../public/fcProperties.avif";
 import arvTuning from "../public/arvTuning.avif";
 import contactUs from "../public/contactUs.jpg";
+
+import lchLogo from "../public/lch1.png";
+import arvLogo from "../public/arv.png";
+import fcLogo from "../public/fc.png";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [toggle, setToggle] = useState(true);
@@ -175,7 +180,7 @@ export default function Home() {
         <SS_ContainerWrapper>
           <StickyGrid sticky="sticky">
             <StickyContainer sticky="sticky">
-              <Title align="left" sticky="sticky" font="70px">
+              <Title align="left" sticky="sticky" font="60px">
                 What we do best
               </Title>
               <Button>
@@ -204,16 +209,14 @@ export default function Home() {
               <H3 color="black">Customers</H3>
               <CustomersWrapper>
                 <Customers>
-                  <CustomerLogo src="/lch1.png" />
+                  <CustomerLogo src={lchLogo} />
                 </Customers>
                 <Customers>
-                  <CustomerLogo src="/arv.png" />
+                  <CustomerLogo src={arvLogo} />
                 </Customers>
+
                 <Customers>
-                  <CustomerLogo src="/bheard.png" />
-                </Customers>
-                <Customers>
-                  <CustomerLogo src="/fc.png" width="60%" />
+                  <CustomerLogo src={fcLogo} />
                 </Customers>
               </CustomersWrapper>
             </CenterDiv>
@@ -294,7 +297,7 @@ export default function Home() {
             <Description style={{ fontWeight: "700" }}>
               Case Study/LCH Insure
             </Description>
-            <Title color="white" font="70px" align="left">
+            <Title color="white" font="60px" align="left">
               How MB Developments reduced the costs of laborious tasks by 50%,
               increased clients and automated 95% of an insurance business.
             </Title>
@@ -313,7 +316,7 @@ export default function Home() {
             <Description style={{ fontWeight: "700" }}>
               Case Study/Arv Tuning
             </Description>
-            <Title font="70px" align="left">
+            <Title font="60px" align="left">
               How MB Developments reduced the costs of laborious tasks by 50%,
               increased clients and automated 95% of an insurance business.
             </Title>
@@ -332,7 +335,7 @@ export default function Home() {
             <Description style={{ fontWeight: "700" }}>
               Case Study/LCH Insure
             </Description>
-            <Title color="white" font="70px" align="left">
+            <Title color="white" font="60px" align="left">
               How MB Developments reduced the costs of laborious tasks by 50%,
               increased clients and automated 95% of an insurance business.
             </Title>
@@ -351,7 +354,7 @@ export default function Home() {
             <Description align="center">
               Arrange a free consultation
             </Description>
-            <Title font="70px" align="center" fontWeight="500">
+            <Title font="60px" align="center" fontWeight="500">
               Arrange your non-binding, free inital consulation now
             </Title>
             <Button>

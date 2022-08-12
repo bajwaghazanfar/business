@@ -1,5 +1,6 @@
 import { style } from "@mui/system";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import styled from "styled-components";
 
@@ -109,7 +110,7 @@ export const H3 = styled.h3`
 `;
 
 export const H2 = styled(motion.h2)`
-  font-size: 80px;
+  font-size: 70px;
   text-align: left;
   color: white;
   font-weight: 400;
@@ -170,11 +171,12 @@ export const Customers = styled.div`
   align-items: center;
   border: 1px solid #c8c8c8;
   position: relative;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
-export const CustomerLogo = styled.img`
-  width: ${(props) => (props.width ? props.width : "100%")};
-  height: auto;
-`;
+export const CustomerLogo = styled(Image)``;
 export const FrameworkContainer = styled.div`
   width: 100%;
   height: 100%;

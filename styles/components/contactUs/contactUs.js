@@ -29,7 +29,7 @@ export const ContactUsWrapper = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-  gap: 1px;
+
   background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
   @media only screen and (max-width: 760px) {
     display: flex;

@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 //Fonts
 export const H3 = styled.h3`
-  font-size: 20px;
+  font-size: 15px;
   color: ${(props) => (props.color ? props.color : "white")};
   font-weight: 600;
 `;
