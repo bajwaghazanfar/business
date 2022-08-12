@@ -43,6 +43,19 @@ const Arvtuning = () => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Case study ARV Tuning -MB Developments</title>
+        <meta
+          name="description"
+          content="Case study of ARV Tuning, an insurance website created by MB Developments"
+        />
+      </Head>
+      <Head>
+        <meta
+          property="og:title"
+          content="Case study ARV Tuning -MB Developments"
+        />
+      </Head>
       <ArrowContainer height={`${height}px`}>
         <ArrowWrapper>
           <Arrow height={`${height}px`} />
@@ -62,7 +75,7 @@ const Arvtuning = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <FullImage src={arvTuning} objectFit="cover" />
+            <FullImage src={arvTuning} objectFit="cover" alt="ARV Tuning " />
 
             <CenterDiv gap="1px">
               <Row>

@@ -72,6 +72,9 @@ import altBg from "../public/altBg.avif";
 import lchLogo from "../public/lch1.png";
 import arvLogo from "../public/arv.png";
 import fcLogo from "../public/fc.png";
+import Head from "next/head";
+//Next Head
+
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
@@ -106,6 +109,16 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>MB Developments</title>
+        <meta
+          name="description"
+          content="MB Developments create the site of your dreams"
+        />
+      </Head>
+      <Head>
+        <meta property="og:title" content="MB Developments" />
+      </Head>
       <Container>
         <HomeContainer>
           <LeftContainer>
@@ -184,7 +197,11 @@ export default function Home() {
               <source src="/video4.mp4" />
             </Video>
           ) : (
-            <FullImage src={altBg} layout="fill" />
+            <FullImage
+              src={altBg}
+              layout="fill"
+              alt="Alternate background image"
+            />
           )}
         </VideoContainer>
       </Container>
@@ -221,14 +238,14 @@ export default function Home() {
               <H3 color="black">Customers</H3>
               <CustomersWrapper>
                 <Customers>
-                  <CustomerLogo src={lchLogo} />
+                  <CustomerLogo src={lchLogo} alt="LCH Insure logo" />
                 </Customers>
                 <Customers>
-                  <CustomerLogo src={arvLogo} />
+                  <CustomerLogo src={arvLogo} alt="ARV Tuning logo" />
                 </Customers>
 
                 <Customers>
-                  <CustomerLogo src={fcLogo} />
+                  <CustomerLogo src={fcLogo} alt="FC Properties logo" />
                 </Customers>
               </CustomersWrapper>
             </CenterDiv>
@@ -318,7 +335,7 @@ export default function Home() {
             </Button>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <FullImage src={fiberOptics} />
+            <FullImage src={fiberOptics} alt="LCH Insure " />
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -337,7 +354,7 @@ export default function Home() {
             </Button>
           </Grid>
           <StickyGrid>
-            <FullImage src={arvTuning} />
+            <FullImage src={arvTuning} alt="ARV Tuning" />
           </StickyGrid>
         </SS_ContainerWrapper>
       </SS_Container>
@@ -345,7 +362,7 @@ export default function Home() {
         <SS_ContainerWrapper bg="black">
           <Grid justify="flex-start" align="flex-start" padding="2rem">
             <Description style={{ fontWeight: "700" }}>
-              Case Study/LCH Insure
+              Case Study/FC Properties
             </Description>
             <Title color="white" font="60px" align="left">
               How MB Developments reduced the costs of laborious tasks by 50%,
@@ -356,7 +373,7 @@ export default function Home() {
             </Button>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <FullImage src={fcProperties} />
+            <FullImage src={fcProperties} alt="FC Properties" />
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>

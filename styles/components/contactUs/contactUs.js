@@ -319,7 +319,10 @@ export const ContactUs = (alt) => {
           </Button>
         </ContactUsGrid>
         <ContactUsGrid padding="0rem">
-          <Image src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg" />
+          <Image
+            src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg"
+            alt="Contact Us image"
+          />
         </ContactUsGrid>
       </ContactUsWrapper>
     </ContactUsContainer>

@@ -32,6 +32,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 import fcProperties from "../../public/fcProperties1.avif";
+import { Head } from "next/document";
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
@@ -41,6 +42,19 @@ const Fcproperties = () => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Case study FC Properties -MB Developments</title>
+        <meta
+          name="description"
+          content="Case study of FC Properties, an insurance website created by MB Developments"
+        />
+      </Head>
+      <Head>
+        <meta
+          property="og:title"
+          content="Case study FC Properties -MB Developments"
+        />
+      </Head>
       <ArrowContainer height={`${height}px`}>
         <ArrowWrapper>
           <Arrow height={`${height}px`} />
@@ -60,7 +74,11 @@ const Fcproperties = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <FullImage src={fcProperties} layout="responsive" />
+            <FullImage
+              src={fcProperties}
+              layout="responsive"
+              alt="FC Properties"
+            />
 
             <CenterDiv gap="1px">
               <Row>

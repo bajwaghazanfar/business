@@ -33,6 +33,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 import fiberOptics from "../../public/fiber-optics.jpg";
+import { Head } from "next/document";
 const Lchinsure = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
@@ -42,6 +43,19 @@ const Lchinsure = () => {
   }, []);
   return (
     <>
+      <Head>
+        <title>Case study LCH Insure -MB Developments</title>
+        <meta
+          name="description"
+          content="Case study of LCH Insure, an insurance website created by MB Developments"
+        />
+      </Head>
+      <Head>
+        <meta
+          property="og:title"
+          content="Case study LCH Insure -MB Developments"
+        />
+      </Head>
       <ArrowContainer height={`${height}px`}>
         <ArrowWrapper>
           <Arrow height={`${height}px`} />
@@ -61,7 +75,7 @@ const Lchinsure = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid>
-            <FullImage src={fiberOptics} />
+            <FullImage src={fiberOptics} alt="LCH Insure" />
 
             <CenterDiv gap="1px">
               <Row>
