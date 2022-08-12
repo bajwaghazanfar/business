@@ -33,7 +33,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 import fiberOptics from "../../public/fiber-optics.jpg";
-import { Head } from "next/document";
+import Head from "next/head";
 const Lchinsure = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {

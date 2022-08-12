@@ -33,7 +33,8 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 import arvTuning from "../../public/arvTuning.avif";
-CenterDiv;
+import Head from "next/head";
+
 const Arvtuning = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {

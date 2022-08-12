@@ -32,7 +32,7 @@ import {
   Row,
 } from "../../styles/pages/bHeard/bHeard";
 import fcProperties from "../../public/fcProperties1.avif";
-import { Head } from "next/document";
+import Head from "next/head";
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);
   useEffect(() => {
