@@ -224,7 +224,7 @@ export default function Home() {
                   <ValueTextWrapper>
                     <ValueTitle>Web Development</ValueTitle>
                     <ValueDescription>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     </ValueDescription>
                   </ValueTextWrapper>
                 </Value>
@@ -235,7 +235,7 @@ export default function Home() {
                   <ValueTextWrapper>
                     <ValueTitle>Full stack development</ValueTitle>
                     <ValueDescription>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     </ValueDescription>
                   </ValueTextWrapper>
                 </Value>
@@ -246,7 +246,7 @@ export default function Home() {
                   <ValueTextWrapper>
                     <ValueTitle>Web design</ValueTitle>
                     <ValueDescription>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     </ValueDescription>
                   </ValueTextWrapper>
                 </Value>
