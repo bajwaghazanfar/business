@@ -260,14 +260,14 @@ export const ValueImgWrapper = styled.div`
   border-bottom-left-radius: 10px;
 `;
 export const ValueImg = styled.img`
-  width: 60px;
+  width: 40px;
   height: auto;
   object-fit: cover;
 `;
 export const ValueTitle = styled.h2`
-  font-size: 24px;
+  font-size: 20px;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 `;
 export const ValueDescription = styled.p`
   font-size: 18px;

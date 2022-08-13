@@ -1,3 +1,15 @@
+//MoveLeft animations
+
+export const MoveLeft = () => {
+  return {
+    visible: { opacity: 1, x: 0 },
+    hidden: {
+      x: -200,
+      opacity: 0,
+    },
+  };
+};
+//Fade animations
 export const FadeUpContainer = (delay, stagger) => {
   return {
     hidden: { opacity: 0, y: 50 },

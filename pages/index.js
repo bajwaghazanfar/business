@@ -29,6 +29,8 @@ import {
   InsightsWrapper,
   InsightsContainer,
   H5,
+  SlideshowContainer,
+  SlideshowWrapper,
 } from "../styles/pages/home/home";
 import { Button, ButtonText } from "../styles/components/Buttons/Button";
 import {
@@ -73,20 +75,31 @@ import lchLogo from "../public/lch1.png";
 import arvLogo from "../public/arv.png";
 import fcLogo from "../public/fc.png";
 import Head from "next/head";
+import { Slider } from "../styles/components/slideshow/Slider";
 //Next Head
 
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
-  const titleArray = [
+  const sliderData = [
     {
-      title:
-        "Building digital solutions to meet your business needs and inject growth ",
+      title: "01",
+      subHeading: "compliance",
+      description:
+        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
     },
     {
-      title:
-        "We have a holistic approach to creating digital solutions for businesses",
+      title: "02",
+      subHeading: "compliance",
+      description:
+        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
+    },
+    {
+      title: "03",
+      subHeading: "compliance",
+      description:
+        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
     },
   ];
 
@@ -288,6 +301,15 @@ export default function Home() {
                 </Value>
               </ValuesContainer>
             </CenterDiv>
+          </Grid>
+        </SS_ContainerWrapper>
+      </SS_Container>
+      <SS_Container>
+        <SS_ContainerWrapper bg="#c8cfcf">
+          <Grid justify="flex-start" align="flex-start">
+            <Title font="60px" align="left" fontWeight="400">
+              The Pure virtual framework in numbers
+            </Title>
             <FrameworkContainer ref={ref}>
               {inView ? (
                 <>
@@ -317,9 +339,18 @@ export default function Home() {
               )}
             </FrameworkContainer>
           </Grid>
+          <Grid align="flex-start" justify="flex-start">
+            {" "}
+            <SlideshowContainer>
+              {" "}
+              <SlideshowWrapper>
+                {" "}
+                <Slider data={sliderData} />
+              </SlideshowWrapper>
+            </SlideshowContainer>
+          </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-
       <SS_Container>
         <SS_ContainerWrapper bg="black">
           <Grid justify="flex-start" align="flex-start" padding="2rem">

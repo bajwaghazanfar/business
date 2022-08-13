@@ -171,9 +171,11 @@ export const Customers = styled.div`
   align-items: center;
   border: 1px solid #c8c8c8;
   position: relative;
+  padding: 5rem;
   @media only screen and (max-width: 760px) {
     width: 100%;
     height: 100%;
+    padding: 1rem;
   }
 `;
 export const CustomerLogo = styled(Image)``;
@@ -249,4 +251,20 @@ export const InsightsWrapper = styled(motion.div)`
 
   border-top: 1px solid white;
   margin: 0px;
+`;
+export const SlideshowContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const SlideshowWrapper = styled.div`
+  width: 50%;
+  height: 600px;
+  box-shadow: 19px 21px 35px -8px rgba(0, 0, 0, 0.1);
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
