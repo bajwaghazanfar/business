@@ -65,9 +65,9 @@ export const Logo = styled.img`
   object-fit: cover;
 `;
 export const FullImage = styled(Image)`
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
+  width: 50%;
+  height: auto;
+
   object-fit: cover;
   cursor: pointer;
 `;
@@ -111,7 +111,7 @@ export const ImageGrid = styled.div`
 //Container and divs
 export const SS_Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${(props) => (props.height ? props.height : "100% ")};
   position: relative;
   display: flex;
   flex-direction: column;
@@ -164,7 +164,7 @@ export const StickyGridWrapper = styled.div`
 `;
 export const Grid = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${(props) => (props.height ? props.height : "100% ")};
   display: flex;
   flex-direction: column;
   justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};

@@ -87,19 +87,19 @@ export default function Home() {
       title: "01",
       subHeading: "compliance",
       description:
-        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
+        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
     },
     {
       title: "02",
       subHeading: "compliance",
       description:
-        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
+        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
     },
     {
       title: "03",
       subHeading: "compliance",
       description:
-        "eniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo",
+        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
     },
   ];
 
@@ -304,10 +304,10 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <SS_Container>
+      <SS_Container height="100vh">
         <SS_ContainerWrapper bg="#c8cfcf">
-          <Grid justify="flex-start" align="flex-start">
-            <Title font="60px" align="left" fontWeight="400">
+          <Grid justify="center" align="flex-start">
+            <Title font="50px" align="left" fontWeight="400">
               The Pure virtual framework in numbers
             </Title>
             <FrameworkContainer ref={ref}>
@@ -340,11 +340,8 @@ export default function Home() {
             </FrameworkContainer>
           </Grid>
           <Grid align="flex-start" justify="flex-start">
-            {" "}
             <SlideshowContainer>
-              {" "}
               <SlideshowWrapper>
-                {" "}
                 <Slider data={sliderData} />
               </SlideshowWrapper>
             </SlideshowContainer>

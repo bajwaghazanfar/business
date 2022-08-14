@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import { useRouter } from "next/router";
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;
@@ -80,7 +81,10 @@ export const MobileMenu = styled.div`
 export const Navbar = () => {
   const [width, setWidth] = useState(0);
   const [open, setOpen] = useState(false);
+  //Next router
+  const router = useRouter();
 
+  console.log(router.pathname);
   const openMenu = () => {
     setOpen(!open);
   };
@@ -94,7 +98,15 @@ export const Navbar = () => {
       <NavbarWrapper>
         <LeftContainer>
           <Link href="/">
-            <H1>MB</H1>
+            <H1
+              style={
+                router.pathname === "/"
+                  ? { color: "white" }
+                  : { color: "black" }
+              }
+            >
+              MB
+            </H1>
           </Link>
         </LeftContainer>
 
@@ -104,9 +116,33 @@ export const Navbar = () => {
           </HamburgerLogo>
         ) : (
           <RightContainer>
-            <H3>Projects</H3>
-            <H3>Projects</H3>
-            <H3>Projects</H3>
+            <H3
+              style={
+                router.pathname === "/"
+                  ? { color: "white" }
+                  : { color: "black" }
+              }
+            >
+              Projects
+            </H3>
+            <H3
+              style={
+                router.pathname === "/"
+                  ? { color: "white" }
+                  : { color: "black" }
+              }
+            >
+              Projects
+            </H3>
+            <H3
+              style={
+                router.pathname === "/"
+                  ? { color: "white" }
+                  : { color: "black" }
+              }
+            >
+              Projects
+            </H3>
           </RightContainer>
         )}
       </NavbarWrapper>

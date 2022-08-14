@@ -181,7 +181,7 @@ export const Customers = styled.div`
 export const CustomerLogo = styled(Image)``;
 export const FrameworkContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: flex-start;
@@ -260,8 +260,8 @@ export const SlideshowContainer = styled.div`
   align-items: center;
 `;
 export const SlideshowWrapper = styled.div`
-  width: 50%;
-  height: 600px;
+  width: 60%;
+  height: 700px;
   box-shadow: 19px 21px 35px -8px rgba(0, 0, 0, 0.1);
   @media only screen and (max-width: 760px) {
     width: 100%;
