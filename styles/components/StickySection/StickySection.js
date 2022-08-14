@@ -22,7 +22,7 @@ export const Title = styled.h1`
   }
 `;
 export const Description = styled.h3`
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
@@ -184,7 +184,7 @@ export const CenterDiv = styled.div`
   align-content: ${(props) => (props.align ? props.align : "center ")};
   gap: ${(props) => (props.gap ? props.gap : "0px")};
   text-align: left;
-  padding: 1rem;
+  padding: ${(props) => (props.padding ? props.padding : "1rem")};
   border-top: ${(props) => (props.border ? props.border : "none")};
 `;
 //3X3 GRID

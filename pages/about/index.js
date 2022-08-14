@@ -26,6 +26,8 @@ import Edit from "../../public/logos/edit.png";
 import philosophy from "../../public/philosophy.jpg";
 philosophy;
 import {
+  Diffrent,
+  DiffrentContainer,
   FullWidthContainer,
   H2,
   H3,
@@ -222,9 +224,57 @@ const About = () => {
             <FullWidthContainer height="auto">
               <FullImage src={Diagram} alt="Alternate background image" />
             </FullWidthContainer>
+            <DiffrentContainer>
+              <Diffrent>
+                <CenterDiv>
+                  <ValueTitle color="black">01</ValueTitle>
+                </CenterDiv>
+                <CenterDiv>
+                  <H4 color="black" style={{ margin: "0px" }}>
+                    Agile and motivated
+                  </H4>
+                  <ValueDescription color="black">
+                    Purevirtual AG combines over ten years of technological
+                    expertise from various IT service providers with another ten
+                    years of indus
+                  </ValueDescription>
+                </CenterDiv>
+              </Diffrent>
+              <Diffrent>
+                <CenterDiv>
+                  <ValueTitle color="black">02</ValueTitle>
+                </CenterDiv>
+                <CenterDiv>
+                  <H4 color="black" style={{ margin: "0px" }}>
+                    Agile and motivated
+                  </H4>
+                  <ValueDescription color="black">
+                    Purevirtual AG combines over ten years of technological
+                    expertise from various IT service providers with another ten
+                    years of indus
+                  </ValueDescription>
+                </CenterDiv>
+              </Diffrent>
+              <Diffrent>
+                <CenterDiv>
+                  <ValueTitle color="black">03</ValueTitle>
+                </CenterDiv>
+                <CenterDiv>
+                  <H4 color="black" style={{ margin: "0px" }}>
+                    Agile and motivated
+                  </H4>
+                  <ValueDescription color="black">
+                    Purevirtual AG combines over ten years of technological
+                    expertise from various IT service providers with another ten
+                    years of indus
+                  </ValueDescription>
+                </CenterDiv>
+              </Diffrent>
+            </DiffrentContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
+      <ContactUs alt={false} />
     </>
   );
 };

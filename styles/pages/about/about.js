@@ -141,13 +141,19 @@ export const TwoColumnGrid = styled.div`
 export const DiffrentContainer = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 export const Diffrent = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-columns: 10% 90%;
   gap: 10px;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+
+  border-bottom: 1px solid #d1d1d1;
+  @media only screen and (max-width: 760px) {
+    grid-template-columns: 15% 85%;
+  }
 `;

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Button, ButtonText } from "../Buttons/Button";
+import { Button, ButtonContainer, ButtonText } from "../Buttons/Button";
 import { Description, FullImage, Title } from "../StickySection/StickySection";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
@@ -12,7 +12,7 @@ import contactUs from "../../../public/contactUs.jpg";
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -50,8 +50,8 @@ export const ContactUsGrid = styled.div`
 `;
 export const Image = styled(motion.img)`
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  height: 100%;
+
   object-fit: cover;
   cursor: pointer;
 `;
@@ -141,7 +141,7 @@ export const Row = styled.div`
     flex-direction: column;
   }
 `;
-export const ContactUs = (alt) => {
+export const ContactUs = ({ alt, mobile }) => {
   const [open, setOpen] = useState(false);
   const initialValues = {
     firstName: "",
@@ -187,10 +187,10 @@ export const ContactUs = (alt) => {
       }
     },
   });
-  console.log(formik.errors);
+  console.log(alt);
   if (alt) {
     return (
-      <ContactUsContainer>
+      <ContactUsContainer alt={mobile}>
         <Snackbar
           open={open}
           autoHideDuration={3000}
@@ -294,9 +294,11 @@ export const ContactUs = (alt) => {
                         <p>{formik.errors.message}</p>
                       ) : null}
                     </InputWrapper>
-                    <Button onClick={formik.handleSubmit} type="submit">
-                      <ButtonText>Submit</ButtonText>
-                    </Button>
+                    <ButtonContainer>
+                      <Button onClick={formik.handleSubmit} type="submit">
+                        <ButtonText>Submit</ButtonText>
+                      </Button>
+                    </ButtonContainer>
                   </Form>
                 )}
               </Formik>
@@ -311,17 +313,21 @@ export const ContactUs = (alt) => {
       <ContactUsWrapper>
         <ContactUsGrid>
           <Description align="center">Arrange a free consultation</Description>
-          <Title font="70px" align="left">
+          <Title font="70px" align="center">
             Arrange your non-binding, free inital consulation now
           </Title>
-          <Button>
-            <ButtonText>Arrange a conversation</ButtonText>
-          </Button>
+          <ButtonContainer>
+            {" "}
+            <Button>
+              <ButtonText>Arrange a conversation</ButtonText>
+            </Button>
+          </ButtonContainer>
         </ContactUsGrid>
         <ContactUsGrid padding="0rem">
           <Image
             src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg"
             alt="Contact Us image"
+            layout="fill"
           />
         </ContactUsGrid>
       </ContactUsWrapper>

@@ -260,9 +260,11 @@ export const SlideshowContainer = styled.div`
   align-items: center;
 `;
 export const SlideshowWrapper = styled.div`
-  width: 60%;
-  height: 700px;
+  width: ${(props) => (props.width ? props.width : "60% ")};
+  height: ${(props) => (props.height ? props.height : "700px ")};
+
   box-shadow: 19px 21px 35px -8px rgba(0, 0, 0, 0.1);
+
   @media only screen and (max-width: 760px) {
     width: 100%;
     height: 100%;

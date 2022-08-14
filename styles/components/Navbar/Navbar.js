@@ -8,11 +8,15 @@ export const H3 = styled.h3`
   font-size: 15px;
   color: ${(props) => (props.color ? props.color : "white")};
   font-weight: 600;
+  margin: 0px;
+  cursor: pointer;
 `;
 export const H1 = styled.h1`
   font-size: 40px;
   font-weight: 600;
   color: white;
+  cursor: pointer;
+  margin: 0px;
 `;
 //Divs
 export const NavbarContainer = styled.div`
@@ -32,7 +36,7 @@ export const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 0rem;
 `;
 //position: fixed;
 //top: 0;
@@ -43,16 +47,14 @@ export const LeftContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 1rem 2rem;
+  padding: 2rem;
 `;
 export const RightContainer = styled.div`
-  width: 30%;
+  width: 20%;
   height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 2rem;
 `;
 //Mobile
 export const HamburgerLogo = styled.button`
@@ -116,40 +118,71 @@ export const Navbar = () => {
           </HamburgerLogo>
         ) : (
           <RightContainer>
-            <H3
-              style={
-                router.pathname === "/"
-                  ? { color: "white" }
-                  : { color: "black" }
-              }
-            >
-              Projects
-            </H3>
-            <H3
-              style={
-                router.pathname === "/"
-                  ? { color: "white" }
-                  : { color: "black" }
-              }
-            >
-              Projects
-            </H3>
-            <H3
-              style={
-                router.pathname === "/"
-                  ? { color: "white" }
-                  : { color: "black" }
-              }
-            >
-              Projects
-            </H3>
+            <Link href="/about">
+              <H3
+                style={
+                  router.pathname === "/"
+                    ? { color: "white" }
+                    : { color: "black" }
+                }
+              >
+                About
+              </H3>
+            </Link>
+
+            <Link href="/about">
+              <H3
+                style={
+                  router.pathname === "/"
+                    ? { color: "white" }
+                    : { color: "black" }
+                }
+              >
+                Projects
+              </H3>
+            </Link>
+            <Link href="/about">
+              <H3
+                style={
+                  router.pathname === "/"
+                    ? { color: "white" }
+                    : { color: "black" }
+                }
+              >
+                Contact Us
+              </H3>
+            </Link>
           </RightContainer>
         )}
       </NavbarWrapper>
       <MobileMenu style={open ? { display: "flex" } : { display: "none" }}>
-        <H3 color="white">Projects</H3>
-        <H3 color="white">Projects</H3>
-        <H3 color="white">Projects</H3>
+        <Link href="/about">
+          <H3
+            style={
+              router.pathname === "/" ? { color: "white" } : { color: "black" }
+            }
+          >
+            About
+          </H3>
+        </Link>{" "}
+        <Link href="/about">
+          <H3
+            style={
+              router.pathname === "/" ? { color: "white" } : { color: "black" }
+            }
+          >
+            Projects
+          </H3>
+        </Link>{" "}
+        <Link href="/about">
+          <H3
+            style={
+              router.pathname === "/" ? { color: "white" } : { color: "black" }
+            }
+          >
+            Contact Us
+          </H3>
+        </Link>
       </MobileMenu>
     </NavbarContainer>
   );

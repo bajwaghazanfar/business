@@ -4,7 +4,7 @@ export const ArrowContainer = styled.div`
   width: 100%;
   height: ${(props) => (props.height ? props.height : "100% ")};
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   mix-blend-mode: difference;
   @media only screen and (max-width: 760px) {
     display: none;

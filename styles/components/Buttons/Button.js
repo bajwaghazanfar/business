@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+export const ButtonContainer = styled.div`
+  width: 100%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ButtonText = styled.h3`
+  font-size: 20px;
+  color: ${(props) => (props.alt ? `${props.alt}` : " black")};
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const Button = styled.button`
   width: ${(props) => (props.width ? `${props.width}` : "fit-content ")};
 
@@ -10,30 +28,25 @@ export const Button = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  position: ${(props) => (props.sticky ? props.sticky : "")};
+  position: ${(props) => (props.sticky ? props.sticky : "absolute")};
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-  top: 100px;
   &:hover {
     background: black;
     transition: all 0.5s ease-in-out;
+    ${ButtonText} {
+      color: white;
+    }
   }
   @media only screen and (max-width: 760px) {
     padding: 0rem 4rem;
   }
 `;
-export const ButtonText = styled.h3`
-  font-size: 20px;
-  color: ${(props) => (props.alt ? `${props.alt}` : " black")};
-  font-weight: 700;
-  &:hover {
-    color: white;
-    transition: all 0.5s ease-in-out;
-  }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const AltButton = styled.button`
   width: 100%;
   height: 50px;

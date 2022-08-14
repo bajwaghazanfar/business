@@ -116,7 +116,13 @@ export const Description = styled.h4`
     font-size: 15px;
   }
 `;
-export const Info = ({ data, index }) => {
+export const SlideshowImg = styled.img`
+  width:100%;
+  height:100%;
+  object:fit:cover;
+  
+`;
+export const Info = ({ data, index, type }) => {
   return (
     <motion.div
       variants={MoveLeft()}
@@ -124,13 +130,19 @@ export const Info = ({ data, index }) => {
       animate="visible"
       key={index}
     >
-      <Title>{data.title}</Title>
-      <Subheading>{data.subHeading}</Subheading>
-      <Description>{data.description}</Description>
+      {type === "image" ? (
+        <SlideshowImg src={data.image} />
+      ) : (
+        <>
+          <Title>{data.title}</Title>
+          <Subheading>{data.subHeading}</Subheading>
+          <Description>{data.description}</Description>
+        </>
+      )}
     </motion.div>
   );
 };
-export const Slider = ({ data }) => {
+export const Slider = ({ data, type }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const next = () => {
     setImageIndex((state) => (state += 1));
@@ -148,7 +160,7 @@ export const Slider = ({ data }) => {
 
   return (
     <SliderContainer>
-      <Info data={data[imageIndex]} index={imageIndex} />
+      <Info data={data[imageIndex]} index={imageIndex} type={type} />
       <NavButton right={true} onClick={next}>
         <ChevronRightIcon style={{ color: "white", fontSize: "30px" }} />
       </NavButton>

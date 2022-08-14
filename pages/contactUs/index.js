@@ -34,9 +34,11 @@ import {
 CenterDiv;
 const Contact = () => {
   const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHeight(window.document.body.scrollHeight);
+      setWidth(window.innerWidth);
     }
   }, []);
   return (
@@ -46,7 +48,11 @@ const Contact = () => {
           <Arrow height={`${height}px`} />
         </ArrowWrapper>
       </ArrowContainer>
-      <SS_Container top="200px" justify="flex-start" align="flex-start">
+      <SS_Container
+        top={width > 768 ? "200px" : "0px"}
+        justify="flex-start"
+        align="flex-start"
+      >
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
@@ -59,7 +65,7 @@ const Contact = () => {
             </StickyContainer>
           </StickyGrid>
         </SS_ContainerWrapper>
-        <ContactUs alt={true} />
+        <ContactUs alt={true} mobile={width > 768 ? true : false} />
         <Footer />
       </SS_Container>
     </>

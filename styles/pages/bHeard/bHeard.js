@@ -57,9 +57,9 @@ export const MainWrapper = styled.div`
   }
 `;
 export const Overview = styled.h4`
-  font-size: 23px;
+  font-size: 17px;
   color: black;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   text-align: left;
   @media only screen and (max-width: 760px) {
@@ -69,17 +69,17 @@ export const Overview = styled.h4`
 export const Row = styled.div`
   width: 100%;
   height: auto;
-  padding: 1rem;
+  padding: ;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  background: #e9e9e9;
+  border-bottom: 1px solid #d0d0d0;
 `;
 export const HR = styled.hr`
   background: black;
 `;
 export const H3 = styled.h3`
-  font-size: 60px;
+  font-size: ${(props) => (props.font ? props.font : " 60px ")};
   color: black;
   font-weight: 500;
   letter-spacing: 1px;
@@ -157,12 +157,12 @@ export const CustomerLogo = styled.img`
 `;
 export const QuoteContainer = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   background: #e9e9e9;
-  padding: 1rem;
+  padding: 2rem;
   border-left: 8px solid black;
 `;

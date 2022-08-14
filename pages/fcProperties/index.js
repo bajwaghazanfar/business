@@ -33,13 +33,29 @@ import {
 } from "../../styles/pages/bHeard/bHeard";
 import fcProperties from "../../public/fcProperties1.avif";
 import Head from "next/head";
+import {
+  SlideshowContainer,
+  SlideshowWrapper,
+} from "../../styles/pages/home/home";
+import { Slider } from "../../styles/components/slideshow/Slider";
+
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(null);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHeight(window.document.body.scrollHeight);
+      setWidth(window.innerWidth);
     }
   }, []);
+  const sliderData = [
+    { image: "/fcProperties/fc1.png" },
+    { image: "/fcProperties/fc2.png" },
+    { image: "/fcProperties/fc3.png" },
+    { image: "/fcProperties/fc4.png" },
+    { image: "/fcProperties/fc5.png" },
+    { image: "/fcProperties/fc6.png" },
+  ];
   return (
     <>
       <Head>
@@ -60,20 +76,24 @@ const Fcproperties = () => {
           <Arrow height={`${height}px`} />
         </ArrowWrapper>
       </ArrowContainer>
-      <SS_Container top="200px" justify="flex-start" align="flex-start">
+      <SS_Container
+        top={width > 768 ? "200px" : "0px"}
+        justify="flex-start"
+        align="flex-start"
+      >
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
               <Description style={{ fontWeight: "700" }} sticky="sticky">
                 Case Study/FC Properties
               </Description>
-              <Title font="70px" align="left" sticky="sticky">
-                How MB Developments reduced the costs of laborious tasks by 50%,
-                increased clients and automated 95% of an insurance business.
+              <Title font="60px" align="left" sticky="sticky">
+                How MB Developments reduced the time spent on repetitive tasks,
+                freeing resources and improving turnover rates by 85%
               </Title>
             </StickyContainer>
           </StickyGrid>
-          <Grid>
+          <Grid width={width > 768 ? "2rem" : "0.5rem"}>
             <FullImage
               src={fcProperties}
               layout="responsive"
@@ -82,52 +102,86 @@ const Fcproperties = () => {
 
             <CenterDiv gap="1px">
               <Row>
-                <Overview>Branch:</Overview>
-                <Overview>Automotive</Overview>
+                <Overview>Industry:</Overview>
+                <Overview>Real estate</Overview>
               </Row>
               <hr />
               <Row>
-                <Overview>Branch:</Overview>
-                <Overview>Automotive</Overview>
+                <Overview>Location:</Overview>
+                <Overview>Birmingham</Overview>
               </Row>
               <hr />
               <Row>
-                <Overview>Branch:</Overview>
-                <Overview>Automotive</Overview>
+                <Overview>Number of employees:</Overview>
+                <Overview>20+</Overview>
               </Row>
               <hr />
-              <H3 color="black">The brief</H3>
+              <H3 color="black">The Challenge.</H3>
               <Description>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum
+                FC Properties is a real estate agency founded in 2020, which
+                dealt with the sales of properties throughout the UK and Wales,
+                managing rental properties for landlords and serving as the
+                bridge of communication between landlords and tenants. During
+                the first year of business, FC Properties used Excel to manage
+                rental properties for landlords, provide monthly reports to
+                landlords and track the sales of properties. Laborious,
+                repetitive work took up 80% of the time at FC Properties,
+                restricting the possibility for expansion and other avenues of
+                success. <br />
+                <br />
+                FC Properties approached us in their second year of business and
+                assigned us with the task of creating an intuitive system, which
+                would automate the repetitive work involved with tracking
+                finances, creating a CMS system to advertise properties for rent
+                or sale on their website, add authorization and authentication
+                to their system as well as adding permission based access
+                controls, to restrict access to sensitive data.
               </Description>
 
               <H3 color="black">The solution.</H3>
               <Description>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum
+                In the first step, MB Developments, in consultation with
+                external management and consultants drafted a plan for the
+                creation of the new system for FC Properties. As part of the
+                planning process, the team gathered all the requirements for
+                this new system, which involved the creation and integration of
+                a frontend and backend system supported by AWS and MongoDB.
+                <br />
+                <br />
+                The second step involved creating the software architectural
+                patterns for the backend system, which would communicate with
+                AWS and MongoDB, picking the technologies involved in the
+                creation of this system, creating test cases for the entire
+                project, and creating web designs for the front end.
+                <br />
+                <br />
+                After extensive planning and consultation with the management of
+                FC Properties, development ensued in which the entire project
+                was created and tested within 20 days. The frontend was
+                integrated with the backend and all sensitive secret keys were
+                stored securely to prevent unauthorized access to the sever and
+                database. Test driven development was used to ensure the project
+                was robust and had no vulnerabilities. The project was then
+                reviewed by the client to ensure that all requirements were met
+                and the client was satisfied by the project created.
+                <br />
+                <br />
+                The project was then deployed and handed over to the client.
+              </Description>
+              <SlideshowContainer>
+                <SlideshowWrapper width="100%" height="440px">
+                  <Slider data={sliderData} type="image" />
+                </SlideshowWrapper>
+              </SlideshowContainer>
+              <Description style={{ fontWeight: "700" }}>
+                Customer reference.
               </Description>
               <QuoteContainer>
-                <H3 color="black">
-                  n ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum
+                <H3 color="black" font="40px">
+                  "We are very grateful for the committed and flexible way of
+                  working of the teams at MB Developments. The optimal
+                  combination of consulting and engineering supports our
+                  insolvency proceedings optimally on the IT side."
                 </H3>
               </QuoteContainer>
             </CenterDiv>

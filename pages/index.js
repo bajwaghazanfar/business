@@ -32,7 +32,11 @@ import {
   SlideshowContainer,
   SlideshowWrapper,
 } from "../styles/pages/home/home";
-import { Button, ButtonText } from "../styles/components/Buttons/Button";
+import {
+  Button,
+  ButtonContainer,
+  ButtonText,
+} from "../styles/components/Buttons/Button";
 import {
   CenterDiv,
   Description,
@@ -56,6 +60,7 @@ import {
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
+  ContactUs,
   ContactUsContainer,
   ContactUsGrid,
   ContactUsWrapper,
@@ -76,6 +81,8 @@ import arvLogo from "../public/arv.png";
 import fcLogo from "../public/fc.png";
 import Head from "next/head";
 import { Slider } from "../styles/components/slideshow/Slider";
+import Contact from "./contactUs";
+import Link from "next/link";
 //Next Head
 
 export default function Home() {
@@ -225,9 +232,13 @@ export default function Home() {
               <Title align="left" sticky="sticky" font="60px">
                 What we do best
               </Title>
-              <Button>
-                <ButtonText>Explore</ButtonText>
-              </Button>
+              <ButtonContainer>
+                <Link href="/about">
+                  <Button>
+                    <ButtonText>Explore</ButtonText>
+                  </Button>
+                </Link>
+              </ButtonContainer>
             </StickyContainer>
           </StickyGrid>
           <Grid>
@@ -304,7 +315,7 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <SS_Container height="100vh">
+      <SS_Container height="auto">
         <SS_ContainerWrapper bg="#c8cfcf">
           <Grid justify="center" align="flex-start">
             <Title font="50px" align="left" fontWeight="400">
@@ -358,9 +369,13 @@ export default function Home() {
               How MB Developments reduced the costs of laborious tasks by 50%,
               increased clients and automated 95% of an insurance business.
             </Title>
-            <Button>
-              <ButtonText>Explore</ButtonText>
-            </Button>
+            <ButtonContainer>
+              <Link href="/lchinsure">
+                <Button>
+                  <ButtonText>Explore</ButtonText>
+                </Button>
+              </Link>
+            </ButtonContainer>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
             <FullImage src={fiberOptics} alt="LCH Insure " />
@@ -374,12 +389,16 @@ export default function Home() {
               Case Study/Arv Tuning
             </Description>
             <Title font="60px" align="left">
-              How MB Developments reduced the costs of laborious tasks by 50%,
-              increased clients and automated 95% of an insurance business.
+              How MB Developments improved the SEO of a site, resulting in 60%
+              more customers every month
             </Title>
-            <Button>
-              <ButtonText>Explore</ButtonText>
-            </Button>
+            <ButtonContainer>
+              <Link href="/arvTuning">
+                <Button>
+                  <ButtonText>Explore</ButtonText>
+                </Button>
+              </Link>
+            </ButtonContainer>
           </Grid>
           <StickyGrid>
             <FullImage src={arvTuning} alt="ARV Tuning" />
@@ -393,36 +412,23 @@ export default function Home() {
               Case Study/FC Properties
             </Description>
             <Title color="white" font="60px" align="left">
-              How MB Developments reduced the costs of laborious tasks by 50%,
-              increased clients and automated 95% of an insurance business.
+              How MB Developments reduced the time spent on repetitive tasks,
+              freeing resources and improving turnover rates by 85%
             </Title>
-            <Button>
-              <ButtonText>Explore</ButtonText>
-            </Button>
+            <ButtonContainer>
+              <Link href="/fcProperties">
+                <Button>
+                  <ButtonText>Explore</ButtonText>
+                </Button>
+              </Link>
+            </ButtonContainer>
           </Grid>
           <Grid align="flex-start" justify="flex-start" padding="0rem">
             <FullImage src={fcProperties} alt="FC Properties" />
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <ContactUsContainer>
-        <ContactUsWrapper>
-          <ContactUsGrid>
-            <Description align="center">
-              Arrange a free consultation
-            </Description>
-            <Title font="60px" align="center" fontWeight="500">
-              Arrange your non-binding, free inital consulation now
-            </Title>
-            <Button>
-              <ButtonText>Arrange a conversation</ButtonText>
-            </Button>
-          </ContactUsGrid>
-          <ContactUsGrid padding="0rem">
-            <FullImage src={contactUs} layout="fill" />
-          </ContactUsGrid>
-        </ContactUsWrapper>
-      </ContactUsContainer>
+      <ContactUs alt={false} />
       <Footer />
     </>
   );
