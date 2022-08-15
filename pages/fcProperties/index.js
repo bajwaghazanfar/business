@@ -38,6 +38,12 @@ import {
   SlideshowWrapper,
 } from "../../styles/pages/home/home";
 import { Slider } from "../../styles/components/slideshow/Slider";
+import fc1 from "../../public/fcProperties/fc1.png";
+import fc2 from "../../public/fcProperties/fc2.png";
+import fc3 from "../../public/fcProperties/fc3.png";
+import fc4 from "../../public/fcProperties/fc4.png";
+import fc5 from "../../public/fcProperties/fc5.png";
+import fc6 from "../../public/fcProperties/fc6.png";
 
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);
@@ -49,12 +55,12 @@ const Fcproperties = () => {
     }
   }, []);
   const sliderData = [
-    { image: "/fcProperties/fc1.png" },
-    { image: "/fcProperties/fc2.png" },
-    { image: "/fcProperties/fc3.png" },
-    { image: "/fcProperties/fc4.png" },
-    { image: "/fcProperties/fc5.png" },
-    { image: "/fcProperties/fc6.png" },
+    { image: fc1 },
+    { image: fc2 },
+    { image: fc3 },
+    { image: fc4 },
+    { image: fc5 },
+    { image: fc6 },
   ];
   return (
     <>
@@ -77,7 +83,7 @@ const Fcproperties = () => {
         </ArrowWrapper>
       </ArrowContainer>
       <SS_Container
-        top={width > 768 ? "200px" : "0px"}
+        top={width > 768 ? "200px" : "100px"}
         justify="flex-start"
         align="flex-start"
       >
@@ -93,14 +99,14 @@ const Fcproperties = () => {
               </Title>
             </StickyContainer>
           </StickyGrid>
-          <Grid width={width > 768 ? "2rem" : "0.5rem"}>
+          <Grid width={width > 768 ? "2rem" : "0rem"}>
             <FullImage
               src={fcProperties}
               layout="responsive"
               alt="FC Properties"
             />
 
-            <CenterDiv gap="1px">
+            <CenterDiv gap="1px" padding="0rem">
               <Row>
                 <Overview>Industry:</Overview>
                 <Overview>Real estate</Overview>

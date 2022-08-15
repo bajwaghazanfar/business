@@ -5,14 +5,34 @@ import styled, { css } from "styled-components";
 import { H3, H4 } from "../../pages/home/home";
 import { motion } from "framer-motion";
 import { MoveLeft } from "../stagger";
+import Image from "next/image";
 
 export const SliderContainer = styled.div`
   width: 100%;
   height: 100%;
   background: black;
-  padding: 1rem 2rem;
-  border-radius: 5px;
+
+  border-radius: 10px;
   position: relative;
+`;
+export const GridContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5px;
+  @media only screen and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+export const Grid = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 `;
 export const Slide = styled.div`
   width: 100%;
@@ -21,7 +41,7 @@ export const Slide = styled.div`
   flex-direction: column;
 `;
 export const NavButton = styled.button`
-  width: 45px;
+  width: 30px;
   height: 100%;
   outline: none;
   border: none;
@@ -57,15 +77,18 @@ export const DotContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  bottom: 1%;
+  left: 40%;
+  @media only screen and (max-width: 760px) {
+    left: 35%;
+  }
 `;
 export const Dot = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 50%;
   cursor: pointer;
+
   ${(props) =>
     props.active
       ? css`
@@ -76,9 +99,9 @@ export const Dot = styled.div`
         `}
 `;
 export const Title = styled.h2`
-  font-size: 50px;
+  font-size: 40px;
   text-align: left;
-  color: white;
+  color: ${(props) => (props.color ? props.color : "white")};
   font-weight: 400;
 
   @media only screen and (max-width: 760px) {
@@ -116,13 +139,15 @@ export const Description = styled.h4`
     font-size: 15px;
   }
 `;
-export const SlideshowImg = styled.img`
+export const SlideshowImg = styled(Image)`
   width:100%;
-  height:100%;
-  object:fit:cover;
+  height:auto;
+  object:fit:cover;  
+  border-radius: 10px;
   
 `;
-export const Info = ({ data, index, type }) => {
+export const Info = ({ data, index, type, width }) => {
+  console.log(width);
   return (
     <motion.div
       variants={MoveLeft()}
@@ -132,6 +157,18 @@ export const Info = ({ data, index, type }) => {
     >
       {type === "image" ? (
         <SlideshowImg src={data.image} />
+      ) : type === "complex" ? (
+        <GridContainer>
+          <Grid
+            style={width <= 768 ? { display: "none" } : { display: "block" }}
+          >
+            <SlideshowImg src={data.image} />
+          </Grid>
+          <Grid>
+            <Title color="white">{data.title}</Title>
+            <Description>{data.description}</Description>
+          </Grid>
+        </GridContainer>
       ) : (
         <>
           <Title>{data.title}</Title>
@@ -142,7 +179,7 @@ export const Info = ({ data, index, type }) => {
     </motion.div>
   );
 };
-export const Slider = ({ data, type }) => {
+export const Slider = ({ data, type, width }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const next = () => {
     setImageIndex((state) => (state += 1));
@@ -159,8 +196,13 @@ export const Slider = ({ data, type }) => {
   const onDotClick = (index) => {};
 
   return (
-    <SliderContainer>
-      <Info data={data[imageIndex]} index={imageIndex} type={type} />
+    <SliderContainer type={type} width={width}>
+      <Info
+        data={data[imageIndex]}
+        index={imageIndex}
+        type={type}
+        width={width}
+      />
       <NavButton right={true} onClick={next}>
         <ChevronRightIcon style={{ color: "white", fontSize: "30px" }} />
       </NavButton>

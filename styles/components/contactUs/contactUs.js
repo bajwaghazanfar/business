@@ -12,7 +12,7 @@ import contactUs from "../../../public/contactUs.jpg";
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${(props) => (props.mobile ? "100%" : "100vh ")};
 
   display: flex;
   flex-direction: column;
@@ -190,7 +190,7 @@ export const ContactUs = ({ alt, mobile }) => {
   console.log(alt);
   if (alt) {
     return (
-      <ContactUsContainer alt={mobile}>
+      <ContactUsContainer mobile={mobile}>
         <Snackbar
           open={open}
           autoHideDuration={3000}

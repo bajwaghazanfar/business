@@ -89,24 +89,31 @@ export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
+
   const sliderData = [
     {
-      title: "01",
+      title: "FC Properties",
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+      image:
+        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
     {
-      title: "02",
+      title: "LCH Insure",
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+      image:
+        "https://images.unsplash.com/photo-1497215641119-bbe6d71ebaae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
     {
-      title: "03",
+      title: "ARV Tuning",
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+      image:
+        "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     },
   ];
 
@@ -230,7 +237,8 @@ export default function Home() {
           <StickyGrid sticky="sticky">
             <StickyContainer sticky="sticky">
               <Title align="left" sticky="sticky" font="60px">
-                What we do best
+                We create websites that meet your requirements and solve your
+                problems
               </Title>
               <ButtonContainer>
                 <Link href="/about">
@@ -301,7 +309,7 @@ export default function Home() {
                 </Value>
                 <Value>
                   <ValueImgWrapper>
-                    <ValueImg src="/logos/phone-call.svg" />
+                    <ValueImg src="/logos/browser.svg" />
                   </ValueImgWrapper>
                   <ValueTextWrapper>
                     <ValueTitle>Web design</ValueTitle>
@@ -352,8 +360,8 @@ export default function Home() {
           </Grid>
           <Grid align="flex-start" justify="flex-start">
             <SlideshowContainer>
-              <SlideshowWrapper>
-                <Slider data={sliderData} />
+              <SlideshowWrapper width="100%">
+                <Slider data={sliderData} type="complex" width={width} />
               </SlideshowWrapper>
             </SlideshowContainer>
           </Grid>
@@ -400,7 +408,7 @@ export default function Home() {
               </Link>
             </ButtonContainer>
           </Grid>
-          <StickyGrid>
+          <StickyGrid top="0px">
             <FullImage src={arvTuning} alt="ARV Tuning" />
           </StickyGrid>
         </SS_ContainerWrapper>

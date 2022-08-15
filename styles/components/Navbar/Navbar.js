@@ -141,7 +141,7 @@ export const Navbar = () => {
                 Projects
               </H3>
             </Link>
-            <Link href="/about">
+            <Link href="/contactUs">
               <H3
                 style={
                   router.pathname === "/"
@@ -174,7 +174,7 @@ export const Navbar = () => {
             Projects
           </H3>
         </Link>{" "}
-        <Link href="/about">
+        <Link href="/contactUs">
           <H3
             style={
               router.pathname === "/" ? { color: "white" } : { color: "black" }

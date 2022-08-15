@@ -65,7 +65,7 @@ const Contact = () => {
             </StickyContainer>
           </StickyGrid>
         </SS_ContainerWrapper>
-        <ContactUs alt={true} mobile={width > 768 ? true : false} />
+        <ContactUs alt={true} mobile={width <= 768 ? true : false} />
         <Footer />
       </SS_Container>
     </>

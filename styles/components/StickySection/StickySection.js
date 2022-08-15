@@ -141,7 +141,7 @@ export const StickyGrid = styled.div`
   flex-direction: column;
   position: ${(props) => (props.sticky ? props.sticky : "relative")};
   padding: 2rem;
-  top: 50px;
+  top:   top: ${(props) => (props.sticky ? props.top : "50px")};
   gap: 20px;
   @media only screen and (max-width: 760px) {
     align-items: flex-start;
@@ -242,8 +242,7 @@ export const Value = styled.div`
 
   justify-content: center;
   align-items: center;
-  border: 2px solid #c8cfcf;
-  border-radius: 10px;
+  border-bottom: 1px solid #d0d0d0;
 
   @media only screen and (max-width: 760px) {
     display: flex;
