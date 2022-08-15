@@ -32,7 +32,7 @@ export const Grid = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
 `;
 export const Slide = styled.div`
   width: 100%;
@@ -162,7 +162,7 @@ export const Info = ({ data, index, type, width }) => {
           <Grid
             style={width <= 768 ? { display: "none" } : { display: "block" }}
           >
-            <SlideshowImg src={data.image} />
+            <SlideshowImg src={data.image} alt="Slideshow Image" />
           </Grid>
           <Grid>
             <Title color="white">{data.title}</Title>

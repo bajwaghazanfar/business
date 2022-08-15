@@ -12,6 +12,7 @@ export const VideoContainer = styled.div`
   width: 100%;
   height: 100vh;
   background-color: black;
+  position: relative;
 `;
 export const Video = styled.video`
   width: 100%;

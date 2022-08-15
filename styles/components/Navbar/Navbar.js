@@ -158,27 +158,27 @@ export const Navbar = () => {
       <MobileMenu style={open ? { display: "flex" } : { display: "none" }}>
         <Link href="/about">
           <H3
-            style={
-              router.pathname === "/" ? { color: "white" } : { color: "black" }
-            }
+            onClick={() => {
+              setOpen(!open);
+            }}
           >
             About
           </H3>
         </Link>{" "}
         <Link href="/about">
           <H3
-            style={
-              router.pathname === "/" ? { color: "white" } : { color: "black" }
-            }
+            onClick={() => {
+              setOpen(!open);
+            }}
           >
             Projects
           </H3>
         </Link>{" "}
         <Link href="/contactUs">
           <H3
-            style={
-              router.pathname === "/" ? { color: "white" } : { color: "black" }
-            }
+            onClick={() => {
+              setOpen(!open);
+            }}
           >
             Contact Us
           </H3>

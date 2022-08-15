@@ -84,6 +84,9 @@ import { Slider } from "../styles/components/slideshow/Slider";
 import Contact from "./contactUs";
 import Link from "next/link";
 //Next Head
+import slideshowImg1 from "../public/slideshowImg1.avif";
+import slideshowImg2 from "../public/slideshowImg2.avif";
+import slideshowImg3 from "../public/slideshowImg3.avif";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -96,24 +99,21 @@ export default function Home() {
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
-      image:
-        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image: slideshowImg1,
     },
     {
       title: "LCH Insure",
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
-      image:
-        "https://images.unsplash.com/photo-1497215641119-bbe6d71ebaae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image: slideshowImg2,
     },
     {
       title: "ARV Tuning",
       subHeading: "compliance",
       description:
         "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
-      image:
-        "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image: slideshowImg3,
     },
   ];
 

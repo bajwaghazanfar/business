@@ -49,7 +49,7 @@ const Contact = () => {
         </ArrowWrapper>
       </ArrowContainer>
       <SS_Container
-        top={width > 768 ? "200px" : "0px"}
+        top={width > 768 ? "200px" : "100px"}
         justify="flex-start"
         align="flex-start"
       >
