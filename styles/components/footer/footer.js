@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styled from "styled-components";
 import { Button, ButtonText } from "../Buttons/Button";
 
 //H1,H2 etc..
 export const Title = styled.h1`
-  font-size: ${(props) => (props.font ? props.font : " 100px ")};
+  font-size: ${(props) => (props.font ? props.font : " 40px ")};
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : " 400 ")};
 
   color: ${(props) => (props.color ? props.color : "black")};
@@ -98,7 +99,7 @@ export const ImageGrid = styled.div`
 export const SS_Container = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -111,6 +112,8 @@ export const SS_ContainerWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
+
+  z-index: 10;
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
@@ -120,18 +123,7 @@ export const SS_ContainerWrapper = styled.div`
     flex-direction: column;
   }
 `;
-export const StickyGrid = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  top: 50px;
-  gap: 20px;
-  @media only screen and (max-width: 760px) {
-    align-items: flex-start;
-  }
-`;
+
 export const Grid = styled.div`
   width: 100%;
   height: 100%;
@@ -158,21 +150,19 @@ export const CenterDiv = styled.div`
 export const FooterLinksContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
 
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0rem 4rem;
+
   @media only screen and (max-width: 760px) {
     flex-direction: column;
   }
 `;
 export const FooterLinkHeader = styled.h3`
-  font-size: 25px;
+  font-size: 19px;
   font-weight: 600;
   text-align: ${(props) => (props.align ? props.align : "left")};
-  line-height: 35px;
-
+  line-height: 30px;
   color: ${(props) => (props.color ? props.color : "#616161")};
 
   @media only screen and (max-width: 760px) {
@@ -181,14 +171,69 @@ export const FooterLinkHeader = styled.h3`
   }
 `;
 export const FooterLink = styled.h4`
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   text-align: ${(props) => (props.align ? props.align : "left")};
-  line-height: 35px;
-  color: ${(props) => (props.color ? props.color : "black")};
 
+  color: ${(props) => (props.color ? props.color : "black")};
+  cursor: pointer;
   @media only screen and (max-width: 760px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
+export const Grid_Alt = styled.div`
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  @media only screen and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+export const InsightsContainer = styled(motion.div)`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0px;
+`;
+export const InsightsWrapper = styled(motion.div)`
+  width: ${(props) => (props.width ? props.width : "100% ")};
+  height: ${(props) => (props.height ? props.height : "auto ")};
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  gap: ${(props) => (props.gap ? props.gap : "0px")};
+  text-align: left;
+
+  border-top: 1px solid #d1d1d1;
+  margin: 0px;
+`;
+export const H5 = styled.h5`
+  font-size: ${(props) => (props.font ? props.font : " 15px ")};
+  color: ${(props) => (props.color ? props.color : " white ")};
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 0px;
+  @media only screen and (max-width: 760px) {
+    font-size: 15px;
+  }
+`;
+export const H4 = styled(motion.h4)`
+  font-size: ${(props) => (props.font ? props.font : " 20px ")};
+  color: ${(props) => (props.color ? props.color : " white ")};
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: left;
+
+  @media only screen and (max-width: 760px) {
     font-size: 15px;
   }
 `;
@@ -196,18 +241,55 @@ export const Footer = () => {
   return (
     <SS_Container>
       <SS_ContainerWrapper>
-        <Grid justify="center" align="center" padding="0rem">
-          <Title color="black" font="70px" align="left">
-            MB Developments
-          </Title>
+        <Grid padding="2rem">
+          <InsightsContainer>
+            <H4 color="black">Moving forward</H4>
+            <InsightsWrapper>
+              <H5 color="black">@MB Developments 2022</H5>
+              <H5 color="black">11.August.2022</H5>
+            </InsightsWrapper>
+          </InsightsContainer>
         </Grid>
-        <Grid align="center" justify="center" padding="0rem">
-          <FooterLinksContainer>
-            <FooterLinkHeader>Clients</FooterLinkHeader>
-            <FooterLink>ARV Tuning</FooterLink>
-            <FooterLink>FC Properties</FooterLink>
-            <FooterLink>LCH Insurance</FooterLink>
-          </FooterLinksContainer>
+
+        <Grid align="center" justify="center" padding="2rem">
+          <Grid_Alt>
+            <FooterLinksContainer>
+              <FooterLinkHeader>Links</FooterLinkHeader>
+              <Link href="/">
+                <FooterLink>Home</FooterLink>
+              </Link>
+              <Link href="/about">
+                <FooterLink>About</FooterLink>
+              </Link>
+              <Link href="/contactUs">
+                <FooterLink>Contact Us</FooterLink>
+              </Link>
+            </FooterLinksContainer>
+            <FooterLinksContainer>
+              <FooterLinkHeader>Case studies</FooterLinkHeader>
+              <Link href="/arvTuning">
+                <FooterLink>ARV Tuning</FooterLink>
+              </Link>
+              <Link href="/fcProperties">
+                <FooterLink>FC Properties</FooterLink>
+              </Link>
+              <Link href="/lchInsure">
+                <FooterLink>LCH Insurance</FooterLink>
+              </Link>
+            </FooterLinksContainer>
+
+            <FooterLinksContainer>
+              <FooterLinkHeader>Contact</FooterLinkHeader>
+              <FooterLink>Email:bajwaghazanfar0@gmail.com</FooterLink>
+              <FooterLink>07342806885</FooterLink>
+            </FooterLinksContainer>
+          </Grid_Alt>
+          <InsightsContainer>
+            <InsightsWrapper>
+              <H5 color="black">Privacy Policy |imprint</H5>
+              <H5 color="black">Designed by: Ghazanfar Bajwa</H5>
+            </InsightsWrapper>
+          </InsightsContainer>
         </Grid>
       </SS_ContainerWrapper>
     </SS_Container>

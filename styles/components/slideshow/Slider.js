@@ -55,6 +55,7 @@ export const NavButton = styled.button`
   color: white;
   transform: translate(0, 0%);
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
 
@@ -88,6 +89,7 @@ export const Dot = styled.div`
   height: 10px;
   border-radius: 50%;
   cursor: pointer;
+  background-color: grey;
 
   ${(props) =>
     props.active
@@ -162,7 +164,11 @@ export const Info = ({ data, index, type, width }) => {
           <Grid
             style={width <= 768 ? { display: "none" } : { display: "block" }}
           >
-            <SlideshowImg src={data.image} alt="Slideshow Image" />
+            <SlideshowImg
+              src={data.image}
+              alt="Slideshow Image"
+              loading="eager"
+            />
           </Grid>
           <Grid>
             <Title color="white">{data.title}</Title>

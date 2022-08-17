@@ -6,6 +6,7 @@ export const ArrowContainer = styled.div`
   position: absolute;
   z-index: 2;
   mix-blend-mode: difference;
+
   @media only screen and (max-width: 760px) {
     display: none;
   }

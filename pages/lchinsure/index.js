@@ -70,16 +70,16 @@ const Lchinsure = () => {
   return (
     <>
       <Head>
-        <title>Case study LCH Insure -MB Developments</title>
+        <title>Case study LCH Insurance -MB Developments</title>
         <meta
           name="description"
-          content="Case study of LCH Insure, an insurance website created by MB Developments"
+          content="Case study of LCH Insurance, an insurance website created by MB Developments"
         />
       </Head>
       <Head>
         <meta
           property="og:title"
-          content="Case study LCH Insure -MB Developments"
+          content="Case study LCH Insurance -MB Developments"
         />
       </Head>
       <ArrowContainer height={`${height}px`}>
@@ -92,7 +92,7 @@ const Lchinsure = () => {
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
               <Description style={{ fontWeight: "700" }} sticky="sticky">
-                Case Study/FC Properties
+                Case Study/LCH Insurance
               </Description>
               <Title font="60px" align="left" sticky="sticky">
                 How MB Developments reduced the costs of laborious tasks by 50%,
@@ -101,12 +101,12 @@ const Lchinsure = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid width={width > 768 ? "2rem" : "0.5rem"}>
-            <FullImage src={fiberOptics} alt="LCH Insure" />
+            <FullImage src={fiberOptics} alt="LCH Insurance" />
 
             <CenterDiv gap="1px">
               <Row>
                 <Overview>Industry:</Overview>
-                <Overview>Car Insurance</Overview>
+                <Overview>Vehicle Insurance</Overview>
               </Row>
               <hr />
               <Row>
@@ -121,44 +121,41 @@ const Lchinsure = () => {
               <hr />
               <H3 color="black">The Challenge</H3>
               <Description>
-                LCH Insure is an insurance broker founded in 2021, which helped
-                people find cheap vehicle insurance in the UK and Wales. For the
-                entire year, LCH Insure had operated by manually contacting
-                customers for details, which could result in lengthy phone calls
-                and human errors occurring throughout this entire process. In
-                order to mitigate these problems, LCH Insure contacted MB
+                LCH Insurance is an insurance broker founded in 2021 which
+                helped people find cheap vehicle insurance in the UK and Wales.
+                For the entire year, LCH Insurance operated by manually
+                contacting customers for details which resulted in lengthy phone
+                calls and human errors occurring throughout this entire process.
+                To mitigate these problems, LCH Insurance contacted MB
                 Developments to create a web solution, which would automate this
                 entire process, reducing costs and time spent.
               </Description>
 
               <H3 color="black">The solution.</H3>
               <Description>
-                In the first step, MB Developments drafted a plan for the
-                creation of an entire new system, compromised of a frontend and
-                a backend. The solution would be a website, which users could
-                visit and fill out a multi-step form, automating this process
-                and increasing the turnover rate by 80%. Once the form was
-                submitted, it would be sent directly to the companies’ email,
-                which they could process from there. To accomplish this, the
-                team had to gather all the requirements for this new solution,
-                which would be actualized and implemented into a full stack
-                solution.
+                In the first step MB Developments drafted a plan for the
+                creation of an entire new system, compromised of a front-end and
+                a back-end. The solution is a website which users could visit
+                and fill out a multi-step form, automating this process and
+                increasing the turnover rate by 80%. Once the form was
+                submitted, it would be sent directly to LCH Insurance which
+                could then be processed. To accomplish this, the team had to
+                gather all the requirements for this new solution, which would
+                be actualized and implemented into a full stack solution.
                 <br />
                 <br />
                 The second step involved creating the software architectural
-                patterns for the backend system, which would communicate with
-                the Google Gmail API, to send emails to the company’s email. The
-                server, we chose to utilize was Node.js as its fast, easy to
-                setup and would also result in one codebase, meaning less
-                specialty is required to amend future changes.
+                patterns for the back-end system which communicates with the
+                Google Gmail API, to send the submitted form to LCH Insurance.
+                The server used was Node.js as it is fast and quick to set up.
                 <br />
                 <br />
                 After thorough planning and consultation with the management of
-                LCH Insure, development ensued, in which the project was
-                rigorously tested and created within 10 days. The frontend was
-                integrated with the backend, the secret keys were stored
+                LCH Insurance, development ensued in which the project was
+                rigorously tested and created within 10 days. The front-end was
+                integrated with the back-end, the secret keys were stored
                 securely, and the website was deployed to the cloud, ready to
-                use by LCH Insure.
+                use by LCH Insurance.
               </Description>
               <SlideshowContainer>
                 <SlideshowWrapper width="100%" height="440px">

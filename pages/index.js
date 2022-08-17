@@ -160,7 +160,7 @@ export default function Home() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      Building digital solutions to meet your business needs and
+                      Building web solutions to meet your business needs and
                       inject growth
                     </H2>
                   </motion.div>
@@ -172,8 +172,8 @@ export default function Home() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      We have a holistic approach to creating digital solutions
-                      for businesses
+                      We have a holistic approach to creating web solutions for
+                      businesses
                     </H2>
                   </motion.div>
                 )}

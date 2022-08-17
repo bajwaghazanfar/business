@@ -316,7 +316,7 @@ export const ContactUs = ({ alt, mobile }) => {
           <Title font="70px" align="center">
             Arrange your non-binding, free inital consulation now
           </Title>
-          <ButtonContainer>
+          <ButtonContainer align="center " justify="center">
             {" "}
             <Button>
               <ButtonText>Arrange a conversation</ButtonText>

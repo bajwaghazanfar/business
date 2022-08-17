@@ -124,52 +124,50 @@ const Fcproperties = () => {
               <hr />
               <H3 color="black">The Challenge.</H3>
               <Description>
-                FC Properties is a real estate agency founded in 2020, which
-                dealt with the sales of properties throughout the UK and Wales,
-                managing rental properties for landlords and serving as the
-                bridge of communication between landlords and tenants. During
-                the first year of business, FC Properties used Excel to manage
-                rental properties for landlords, provide monthly reports to
-                landlords and track the sales of properties. Laborious,
-                repetitive work took up 80% of the time at FC Properties,
-                restricting the possibility for expansion and other avenues of
-                success. <br />
+                FC Properties is a real estate agency founded in 2020 which
+                deals with the sales of properties throughout the UK and Wales.
+                FC Properties manages rental properties for landlords and serves
+                as the bridge between landlords and tenants. During the first
+                year of business, FC Properties used Excel to manage rental
+                properties for landlords, provide monthly reports to landlords
+                and track the sales of properties. Laborious, repetitive work
+                took up 80% of the time at FC Properties, restricting the
+                opportunities for expansion and other avenues of success. <br />
                 <br />
-                FC Properties approached us in their second year of business and
-                assigned us with the task of creating an intuitive system, which
-                would automate the repetitive work involved with tracking
-                finances, creating a CMS system to advertise properties for rent
-                or sale on their website, add authorization and authentication
-                to their system as well as adding permission based access
-                controls, to restrict access to sensitive data.
+                FC Properties approached MB Developments in their second year of
+                business and assigned us with the task to create an intuitive
+                system. This system will automate the repetitive work involved
+                with tracking finances. In addition to this, MB Developments
+                were also tasked with creating a CMS system to advertise
+                properties for rent or sale on their website, add authorization
+                and authentication to their system as well as adding
+                permission-based access to sensitive data for employees.
               </Description>
 
               <H3 color="black">The solution.</H3>
               <Description>
-                In the first step, MB Developments, in consultation with
-                external management and consultants drafted a plan for the
-                creation of the new system for FC Properties. As part of the
-                planning process, the team gathered all the requirements for
-                this new system, which involved the creation and integration of
-                a frontend and backend system supported by AWS and MongoDB.
+                In the first step MB Developments, in consultation with external
+                management and consultants drafted a plan for the creation of
+                this new system for FC Properties. As part of the planning
+                process, the team gathered all the requirements for this new
+                system which involved the creation and integration of a
+                front-end and back-end system supported by AWS and MongoDB.
                 <br />
                 <br />
                 The second step involved creating the software architectural
-                patterns for the backend system, which would communicate with
-                AWS and MongoDB, picking the technologies involved in the
-                creation of this system, creating test cases for the entire
-                project, and creating web designs for the front end.
+                patterns for the backend system which would communicate with AWS
+                and MongoDB. This stage also involved picking the technologies
+                involved in the creation of this system, creating test cases for
+                the entire project, and creating web designs for the front-end.
                 <br />
                 <br />
                 After extensive planning and consultation with the management of
                 FC Properties, development ensued in which the entire project
-                was created and tested within 20 days. The frontend was
-                integrated with the backend and all sensitive secret keys were
+                was created and tested within 20 days. The front-end was
+                integrated with the back-end and all sensitive secret keys were
                 stored securely to prevent unauthorized access to the sever and
-                database. Test driven development was used to ensure the project
-                was robust and had no vulnerabilities. The project was then
-                reviewed by the client to ensure that all requirements were met
-                and the client was satisfied by the project created.
+                database. Test-driven development was used to ensure the project
+                was robust and had no vulnerabilities.
                 <br />
                 <br />
                 The project was then deployed and handed over to the client.

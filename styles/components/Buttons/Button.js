@@ -5,8 +5,9 @@ export const ButtonContainer = styled.div`
   height: 100px;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: ${(props) =>
+    props.justify ? props.justify : "flex-start "};
+  align-content: ${(props) => (props.align ? props.align : "flex-start ")};
 `;
 
 export const ButtonText = styled.h3`
@@ -31,10 +32,6 @@ export const Button = styled.button`
   position: ${(props) => (props.sticky ? props.sticky : "absolute")};
   position: absolute;
   z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 
   &:hover {
     background: black;
