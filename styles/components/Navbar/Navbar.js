@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import logo from "../../../public/logos/companyLogo/logo6.png";
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;
@@ -21,17 +22,18 @@ export const H1 = styled.h1`
 //Divs
 export const NavbarContainer = styled.div`
   width: 100%;
-  height: 5%;
+  height: 10%;
   position: absolute;
   z-index: 10;
 
   @media (max-width: 768px) {
     z-index: 10;
+    height: 15%;
   }
 `;
 export const NavbarWrapper = styled.div`
   width: 100%;
-  height: 5%;
+  height: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -80,6 +82,11 @@ export const MobileMenu = styled.div`
   justify-content: center;
   align-items: flex-start;
 `;
+export const Logo = styled.img`
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+`;
 export const Navbar = () => {
   const [width, setWidth] = useState(0);
   const [open, setOpen] = useState(false);
@@ -100,15 +107,7 @@ export const Navbar = () => {
       <NavbarWrapper>
         <LeftContainer>
           <Link href="/">
-            <H1
-              style={
-                router.pathname === "/"
-                  ? { color: "white" }
-                  : { color: "black" }
-              }
-            >
-              MB
-            </H1>
+            <Logo src="/logos/companyLogo/logo6.png" />
           </Link>
         </LeftContainer>
 

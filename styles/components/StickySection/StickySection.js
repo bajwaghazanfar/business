@@ -13,17 +13,17 @@ export const Title = styled.h1`
   bottom: 10px;
 
   @media (min-width: 0px) and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 30px;
     text-align: left;
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
   @media (min-width: 760px) and (max-width: 1030px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 export const Description = styled.h3`
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
   color: ${(props) => (props.color ? props.color : "#616161")};
@@ -64,12 +64,31 @@ export const Logo = styled.img`
   border-radius: 5px;
   object-fit: cover;
 `;
+export const FullImageContainer = styled.div`
+  width: 100%;
+  height: 100% > div {
+    position: unset !important;
+  }
+  @media only screen and (max-width: 760px) {
+    display: ${(props) => (props.caseStudy ? "none" : "")};
+  }
+`;
 export const FullImage = styled(Image)`
-  width: 50%;
+  width: 100%;
   height: auto;
 
   object-fit: cover;
   cursor: pointer;
+  border-top-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
+  border-bottom-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
+  border-top-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
+  border-bottom-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
+  @media only screen and (max-width: 760px) {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 `;
 export const ImageContainer = styled(motion.div)`
   width: 800px;
@@ -104,7 +123,7 @@ export const ImageGrid = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   margin-top: 50px;
 `;
 
@@ -112,14 +131,18 @@ export const ImageGrid = styled.div`
 export const SS_Container = styled.div`
   width: 100%;
   height: ${(props) => (props.height ? props.height : "100% ")};
-  position: relative;
+
   display: flex;
   flex-direction: column;
 
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
-
-  top: ${(props) => (props.top ? props.top : "0px")};
+  position: relative;
+  top: ${(props) => (props.top ? props.top : "10px")};
+  padding: ${(props) => (props.padding ? props.padding : "0rem")};
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+  }
 `;
 export const SS_ContainerWrapper = styled.div`
   width: 100%;
@@ -128,10 +151,14 @@ export const SS_ContainerWrapper = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
+
+  padding: ${(props) => (props.caseStudy ? "10rem" : "0rem")};
+  position: relative;
   @media only screen and (max-width: 760px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: ${(props) =>
+      props.reverseMobile ? "column-reverse" : "column"};
+    padding: ${(props) => (props.caseStudy ? "0rem" : "0rem")};
   }
 `;
 export const StickyGrid = styled.div`
@@ -141,16 +168,17 @@ export const StickyGrid = styled.div`
   flex-direction: column;
   position: ${(props) => (props.sticky ? props.sticky : "relative")};
   padding: 2rem;
-  top:   top: ${(props) => (props.sticky ? props.top : "50px")};
+
   gap: 20px;
   @media only screen and (max-width: 760px) {
     align-items: flex-start;
     position: ${(props) => (props.sticky ? "relative" : "")};
+    padding: 2rem;
   }
 `;
 export const StickyGridWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: ${(props) => (props.sticky ? props.sticky : "")};
@@ -162,7 +190,7 @@ export const StickyGridWrapper = styled.div`
     align-items: flex-start;
   }
 `;
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
   width: 100%;
   height: ${(props) => (props.height ? props.height : "100% ")};
   display: flex;
@@ -170,8 +198,22 @@ export const Grid = styled.div`
   justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
+  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
   gap: 20px;
   position: relative;
+  border-top-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
+  border-bottom-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
+  border-top-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
+  border-bottom-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
+  @media only screen and (max-width: 760px) {
+    align-items: flex-start;
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: ${(props) => (props.padding ? props.padding : "2rem ")};
+  }
 `;
 
 export const CenterDiv = styled.div`
@@ -186,6 +228,9 @@ export const CenterDiv = styled.div`
   text-align: left;
   padding: ${(props) => (props.padding ? props.padding : "1rem")};
   border-top: ${(props) => (props.border ? props.border : "none")};
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+  }
 `;
 //3X3 GRID
 export const Grid_3x3 = styled.div`
@@ -220,7 +265,7 @@ export const Projects = styled(motion.div)`
   text-align: left;
   & > div {
     display: flex;
-    flex-basis: calc(50% - 40px);
+    flex-basis: calc(50% - 30px);
     justify-content: center;
     flex-direction: column;
   }
@@ -242,11 +287,13 @@ export const Value = styled.div`
 
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #d0d0d0;
+  background-color: ${(props) => (props.alt ? "black" : " #f8bbd0")};
+  border-radius: 10px;
 
   @media only screen and (max-width: 760px) {
     display: flex;
     flex-direction: column;
+    padding: 2rem;
   }
 `;
 export const ValueImgWrapper = styled.div`
@@ -255,8 +302,12 @@ export const ValueImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  padding: 1rem;
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 export const ValueImg = styled.img`
   width: 40px;
@@ -265,12 +316,12 @@ export const ValueImg = styled.img`
 `;
 export const ValueTitle = styled.h2`
   font-size: 20px;
-  color: black;
-  font-weight: 500;
+  color: ${(props) => (props.alt ? "#f8bbd0" : "  black")};
+  font-weight: 700;
 `;
 export const ValueDescription = styled.p`
-  font-size: 18px;
-  color: black;
+  font-size: 16px;
+  color: ${(props) => (props.alt ? "white" : "  black")};
   font-weight: 400;
   margin: 0px;
 `;
@@ -280,9 +331,12 @@ export const ValueTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: cemter;
+
   gap: 0px;
   padding: 2rem;
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+  }
 `;
 export const StickySectionComponent = ({
   title,

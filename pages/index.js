@@ -57,6 +57,7 @@ import {
   ValueImgWrapper,
   StickyGridWrapper,
   StickyContainer,
+  FullImageContainer,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -74,7 +75,7 @@ import { useInView } from "react-intersection-observer";
 import fiberOptics from "../public/fiber-optics.jpg";
 import fcProperties from "../public/fcProperties.avif";
 import arvTuning from "../public/arvTuning.avif";
-import contactUs from "../public/contactUs.jpg";
+import birmingham from "../public/birmingham.avif";
 import altBg from "../public/altBg.avif";
 import lchLogo from "../public/lch1.png";
 import arvLogo from "../public/arv.png";
@@ -87,6 +88,7 @@ import Link from "next/link";
 import slideshowImg1 from "../public/slideshowImg1.avif";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
+import development from "../public/development.avif";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -116,7 +118,7 @@ export default function Home() {
       image: slideshowImg3,
     },
   ];
-
+  //#0096FF
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHeight(window.document.body.scrollHeight);
@@ -137,21 +139,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MB Developments</title>
+        <title>Obsidian Web Developments</title>
         <meta
           name="description"
-          content="MB Developments create the site of your dreams"
+          content="Obsidian Web Developments create the site of your dreams"
         />
       </Head>
       <Head>
-        <meta property="og:title" content="MB Developments" />
+        <meta property="og:title" content="Obsidian Web Developments" />
       </Head>
       <Container>
         <HomeContainer>
           <LeftContainer>
             <MainWrapper>
               <H2Wrapper>
-                <H3>M.B Developments</H3>
+                <H3>Obsidian Web Developments</H3>
                 {toggle ? (
                   <motion.div
                     variants={FadeUpContainer(0)}
@@ -181,6 +183,7 @@ export default function Home() {
               <AlignLeft>
                 <H4>{toggle ? 0 : 1}</H4>
                 <LineContainer
+                  //style={{ background: "#F7139F" }}
                   animate={{ width: "50%" }}
                   transition={{ ease: "easeOut", duration: 5 }}
                   key={toggle}
@@ -199,10 +202,10 @@ export default function Home() {
             >
               <InsightsContainer variants={FadeUpChildren}>
                 <InsightsWrapper>
-                  <H5>MB Developments</H5>
+                  <H5>Obsidian Web Developments</H5>
                   <H5>11.August.2022</H5>
                 </InsightsWrapper>
-                <H4>MB Developments is launched</H4>
+                <H4>Obsidian Web Developments is launched</H4>
               </InsightsContainer>
             </AlignRight>
           </RightContainer>
@@ -236,7 +239,7 @@ export default function Home() {
         <SS_ContainerWrapper>
           <StickyGrid sticky="sticky">
             <StickyContainer sticky="sticky">
-              <Title align="left" sticky="sticky" font="60px">
+              <Title align="left" sticky="sticky" font="60px" fontWeight="600">
                 We create websites that meet your requirements and solve your
                 problems
               </Title>
@@ -281,101 +284,255 @@ export default function Home() {
                 </Customers>
               </CustomersWrapper>
             </CenterDiv>
-
-            <CenterDiv gap="0px">
-              <H3 color="black"> The services we provide</H3>
-              <ValuesContainer>
-                <Value>
-                  <ValueImgWrapper>
-                    <ValueImg src="/logos/building.svg" />
-                  </ValueImgWrapper>
-                  <ValueTextWrapper>
-                    <ValueTitle>Web Development</ValueTitle>
-                    <ValueDescription>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    </ValueDescription>
-                  </ValueTextWrapper>
-                </Value>
-                <Value>
-                  <ValueImgWrapper>
-                    <ValueImg src="/logos/layers.svg" />
-                  </ValueImgWrapper>
-                  <ValueTextWrapper>
-                    <ValueTitle>Full stack development</ValueTitle>
-                    <ValueDescription>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    </ValueDescription>
-                  </ValueTextWrapper>
-                </Value>
-                <Value>
-                  <ValueImgWrapper>
-                    <ValueImg src="/logos/browser.svg" />
-                  </ValueImgWrapper>
-                  <ValueTextWrapper>
-                    <ValueTitle>Web design</ValueTitle>
-                    <ValueDescription>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    </ValueDescription>
-                  </ValueTextWrapper>
-                </Value>
-              </ValuesContainer>
-            </CenterDiv>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <SS_Container height="auto">
-        <SS_ContainerWrapper bg="#c8cfcf">
-          <Grid justify="center" align="flex-start">
-            <Title font="50px" align="left" fontWeight="400">
-              The Pure virtual framework in numbers
-            </Title>
-            <FrameworkContainer ref={ref}>
-              {inView ? (
-                <>
-                  <Framework>
-                    <CountupHook
-                      end={100}
-                      id="counter1"
-                      description="Change cases"
-                    />
-                  </Framework>
-                  <Framework>
-                    <CountupHook
-                      end={10000}
-                      id="counter2"
-                      description="Lines of code"
-                    />
-                  </Framework>
-                  <Framework>
-                    <CountupHook end={4} id="counter3" description="Clients" />
-                  </Framework>
-                  <Framework>
-                    <CountupHook end={100} id="counter4" description="Effort" />
-                  </Framework>
-                </>
-              ) : (
-                <></>
-              )}
-            </FrameworkContainer>
-          </Grid>
+
+      <SS_Container>
+        <SS_ContainerWrapper>
           <Grid align="flex-start" justify="flex-start">
-            <SlideshowContainer>
-              <SlideshowWrapper width="100%">
-                <Slider data={sliderData} type="complex" width={width} />
-              </SlideshowWrapper>
-            </SlideshowContainer>
+            <FullImageContainer>
+              <FullImage src={development} layout="fill" roundLeft="true" />
+            </FullImageContainer>
+          </Grid>
+          <Grid
+            justify="center"
+            align="flex-start"
+            bg="black "
+            roundRight="true"
+          >
+            <Title font="50px" align="left" fontWeight="700" color="#F8BBD0">
+              Web development agency based in Birmingham
+            </Title>
+            <Description color="white">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+            <Description color="white">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper bg="black">
-          <Grid justify="flex-start" align="flex-start" padding="2rem">
+        <SS_ContainerWrapper>
+          <Grid
+            justify="center"
+            align="flex-start"
+            bg="#F8BBD0 "
+            roundLeft="true"
+          >
+            <Title font="50px" align="left" fontWeight="700">
+              Web development agency based in Birmingham
+            </Title>
+            <Description color="black">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+            <Description color="black">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+          </Grid>
+          <Grid align="flex-start" justify="flex-start" roundRight="true">
+            <FullImageContainer>
+              <FullImage src={birmingham} layout="fill" roundRight="true" />
+            </FullImageContainer>
+          </Grid>
+        </SS_ContainerWrapper>
+      </SS_Container>
+
+      <SS_Container padding="0rem">
+        <SS_ContainerWrapper>
+          <Grid justify="center" align="flex-start" bg="black ">
+            <Title
+              font="50px"
+              align="left"
+              fontWeight="700"
+              color="#F8BBD0"
+              style={{ margin: "0px" }}
+            >
+              Web development services we offer
+            </Title>
+            <Description color="white" style={{ margin: "0px" }}>
+              We understand your industry which help in the exponential growth
+              of your business with proven futuristic vision.
+            </Description>
+          </Grid>
+          <Grid align="flex-start" justify="flex-start" bg="black ">
+            <ValuesContainer>
+              <Value>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/building.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle>Web Development</ValueTitle>
+                  <ValueDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+              <Value>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/layers.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle>Full stack development</ValueTitle>
+                  <ValueDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+              <Value>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/browser.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle>Web design</ValueTitle>
+                  <ValueDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+            </ValuesContainer>
+          </Grid>
+        </SS_ContainerWrapper>
+      </SS_Container>
+
+      <SS_Container padding="0rem">
+        <SS_ContainerWrapper reverseMobile="true">
+          <Grid align="flex-start" justify="flex-start" bg="#F8BBD0 ">
+            <ValuesContainer>
+              <Value alt={true}>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/backend.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle alt={true}>Back-end systems</ValueTitle>
+                  <ValueDescription alt={true}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+              <Value alt={true}>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/frontend.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle alt={true}>Front-end and CMS</ValueTitle>
+                  <ValueDescription alt={true}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+              <Value alt={true}>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/test.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle alt={true}>Test driven development</ValueTitle>
+                  <ValueDescription alt={true}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+              <Value alt={true}>
+                <ValueImgWrapper>
+                  <ValueImg src="/logos/agile.svg" />
+                </ValueImgWrapper>
+                <ValueTextWrapper>
+                  <ValueTitle alt={true}>Agile</ValueTitle>
+                  <ValueDescription alt={true}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ValueDescription>
+                </ValueTextWrapper>
+              </Value>
+            </ValuesContainer>
+          </Grid>
+          <Grid justify="center" align="flex-start" bg="black ">
+            <Title
+              font="50px"
+              align="left"
+              fontWeight="700"
+              color="#F8BBD0"
+              style={{ margin: "0px" }}
+            >
+              Custom requirements delivered by premium web development services
+            </Title>
+            <Description color="white" style={{ margin: "0px" }}>
+              We understand your industry which help in the exponential growth
+              of your business with proven futuristic vision.
+            </Description>
+          </Grid>
+        </SS_ContainerWrapper>
+      </SS_Container>
+      <SS_Container>
+        <SS_ContainerWrapper caseStudy="true">
+          <Grid
+            justify="flex-start"
+            align="flex-start"
+            roundLeft="true"
+            style={{
+              background: "black",
+              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
+            }}
+          >
             <Description style={{ fontWeight: "700" }}>
               Case Study/LCH Insure
             </Description>
-            <Title color="white" font="60px" align="left">
-              How MB Developments reduced the costs of laborious tasks by 50%,
-              increased clients and automated 95% of an insurance business.
+            <Title font="50px" align="left" color="white" fontWeight="600">
+              How Obsidian Web Developments reduced the costs of laborious tasks
+              by 50%, increased clients and automated 95% of an insurance
+              business.
             </Title>
             <ButtonContainer>
               <Link href="/lchinsure">
@@ -385,20 +542,39 @@ export default function Home() {
               </Link>
             </ButtonContainer>
           </Grid>
-          <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <FullImage src={fiberOptics} alt="LCH Insure " />
+          <Grid
+            align="flex-start"
+            justify="flex-start"
+            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
+          >
+            <FullImageContainer caseStudy="true">
+              <FullImage
+                src={fiberOptics}
+                layout="fill"
+                alt="LCH Insure "
+                roundRight="true"
+              />
+            </FullImageContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper>
-          <Grid justify="flex-start" align="flex-start" padding="2rem">
+        <SS_ContainerWrapper caseStudy="true">
+          <Grid
+            justify="flex-start"
+            align="flex-start"
+            roundLeft="true"
+            style={{
+              background: "black",
+              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
+            }}
+          >
             <Description style={{ fontWeight: "700" }}>
               Case Study/Arv Tuning
             </Description>
-            <Title font="60px" align="left">
-              How MB Developments improved the SEO of a site, resulting in 60%
-              more customers every month
+            <Title font="50px" align="left" color="white" fontWeight="600">
+              How Obsidian Web Developments improved the SEO of a site,
+              resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
               <Link href="/arvTuning">
@@ -408,20 +584,39 @@ export default function Home() {
               </Link>
             </ButtonContainer>
           </Grid>
-          <StickyGrid top="0px">
-            <FullImage src={arvTuning} alt="ARV Tuning" />
-          </StickyGrid>
+          <Grid
+            align="flex-start"
+            justify="flex-start"
+            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
+          >
+            <FullImageContainer caseStudy="true">
+              <FullImage
+                src={arvTuning}
+                alt="ARV Tuning"
+                layout="fill"
+                roundRight="true"
+              />
+            </FullImageContainer>
+          </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper bg="black">
-          <Grid justify="flex-start" align="flex-start" padding="2rem">
-            <Description style={{ fontWeight: "700" }}>
+        <SS_ContainerWrapper caseStudy="true">
+          <Grid
+            justify="flex-start"
+            align="flex-start"
+            roundLeft="true"
+            style={{
+              background: "black",
+              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
+            }}
+          >
+            <Description style={{ fontWeight: "600" }} color="white">
               Case Study/FC Properties
             </Description>
-            <Title color="white" font="60px" align="left">
-              How MB Developments reduced the time spent on repetitive tasks,
-              freeing resources and improving turnover rates by 85%
+            <Title font="50px" align="left" color="white" fontWeight="600">
+              How Obsidian Web Developments reduced the time spent on repetitive
+              tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
               <Link href="/fcProperties">
@@ -431,12 +626,23 @@ export default function Home() {
               </Link>
             </ButtonContainer>
           </Grid>
-          <Grid align="flex-start" justify="flex-start" padding="0rem">
-            <FullImage src={fcProperties} alt="FC Properties" />
+          <Grid
+            align="flex-start"
+            justify="flex-start"
+            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
+          >
+            <FullImageContainer caseStudy="true">
+              <FullImage
+                src={fcProperties}
+                alt="FC Properties"
+                layout="fill"
+                roundRight="true"
+              />
+            </FullImageContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <ContactUs alt={false} />
+      <ContactUs alt={false} mobile={true} />
       <Footer />
     </>
   );

@@ -52,6 +52,7 @@ const Contact = () => {
         top={width > 768 ? "200px" : "100px"}
         justify="flex-start"
         align="flex-start"
+        padding="0rem"
       >
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">

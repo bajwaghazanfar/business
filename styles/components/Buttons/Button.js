@@ -11,21 +11,22 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonText = styled.h3`
-  font-size: 20px;
+  font-size: 18px;
   color: ${(props) => (props.alt ? `${props.alt}` : " black")};
-  font-weight: 700;
-
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 export const Button = styled.button`
-  width: ${(props) => (props.width ? `${props.width}` : "fit-content ")};
+  width: ${(props) => (props.width ? `${props.width}` : "auto ")};
 
   height: ${(props) => (props.height ? `${props.height}` : "auto ")};
   padding: 1rem 4rem;
-  background: ${(props) => (props.alt ? `${props.alt}` : "white")};
-  border-radius: 70px;
+  background: ${(props) => (props.alt ? `${props.alt}` : "#FF4081 ")};
+  border-radius: 20px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -33,13 +34,6 @@ export const Button = styled.button`
   position: absolute;
   z-index: 3;
 
-  &:hover {
-    background: black;
-    transition: all 0.5s ease-in-out;
-    ${ButtonText} {
-      color: white;
-    }
-  }
   @media only screen and (max-width: 760px) {
     padding: 0rem 4rem;
   }

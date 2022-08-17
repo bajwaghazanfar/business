@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Button, ButtonContainer, ButtonText } from "../Buttons/Button";
-import { Description, FullImage, Title } from "../StickySection/StickySection";
+import { FullImage } from "../StickySection/StickySection";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
 import Snackbar from "@mui/material/Snackbar";
@@ -9,6 +9,38 @@ import Alert from "@mui/material/Alert";
 import axios from "axios";
 import { useState } from "react";
 import contactUs from "../../../public/contactUs.jpg";
+
+export const Title = styled.h1`
+  font-size: ${(props) => (props.font ? props.font : " 100px ")};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : " 400 ")};
+
+  color: ${(props) => (props.color ? props.color : "black")};
+  text-align: ${(props) => (props.align ? props.align : "center")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+  text-decoration: ${(props) => (props.underline ? props.underline : "")};
+
+  @media (min-width: 0px) and (max-width: 768px) {
+    font-size: 30px;
+    text-align: left;
+    position: ${(props) => (props.sticky ? "relative" : "")};
+  }
+  @media (min-width: 760px) and (max-width: 1030px) {
+    font-size: 30px;
+  }
+`;
+export const Description = styled.h3`
+  font-size: 17px;
+  font-weight: 400;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+
+  color: ${(props) => (props.color ? props.color : "#616161")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
@@ -19,7 +51,7 @@ export const ContactUsContainer = styled.div`
 
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
-  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
+  background-color: ${(props) => (props.bg ? props.bg : "#F8BBD0")};
   top: ${(props) => (props.top ? props.top : "0px")};
 `;
 export const ContactUsWrapper = styled.div`
@@ -29,8 +61,8 @@ export const ContactUsWrapper = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
-
-  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
+  padding: 0rem;
+  background-color: ${(props) => (props.bg ? props.bg : "#F8BBD0")};
   @media only screen and (max-width: 760px) {
     display: flex;
     flex-direction: column;
@@ -41,7 +73,7 @@ export const ContactUsGrid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #c8cfcf;
+  background-color: #f8bbd0;
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-items: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
@@ -309,11 +341,11 @@ export const ContactUs = ({ alt, mobile }) => {
     );
   }
   return (
-    <ContactUsContainer>
+    <ContactUsContainer mobile={mobile}>
       <ContactUsWrapper>
         <ContactUsGrid>
           <Description align="center">Arrange a free consultation</Description>
-          <Title font="70px" align="center">
+          <Title font="70px" align="center" fontWeight="600">
             Arrange your non-binding, free inital consulation now
           </Title>
           <ButtonContainer align="center " justify="center">

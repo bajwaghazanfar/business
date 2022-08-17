@@ -63,7 +63,6 @@ export const RightContainer = styled.div`
 export const MainWrapper = styled.div`
   width: 100%;
   height: auto;
-  padding: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -100,11 +99,12 @@ export const H4 = styled(motion.h4)`
   }
 `;
 export const H3 = styled.h3`
-  font-size: ${(props) => (props.font ? props.font : " 30px ")};
+  font-size: ${(props) => (props.font ? props.font : " 25px ")};
   color: ${(props) => (props.color ? props.color : " white ")};
   font-weight: 500;
   letter-spacing: 1px;
   text-align: left;
+  margin: 0px;
   @media only screen and (max-width: 760px) {
     font-size: 20px;
   }
@@ -113,14 +113,14 @@ export const H3 = styled.h3`
 export const H2 = styled(motion.h2)`
   font-size: 70px;
   text-align: left;
-  color: white;
-  font-weight: 400;
-
+  color: ${(props) => (props.color ? props.color : " white ")};
+  font-weight: 700;
+  margin: 0px;
   @media only screen and (max-width: 760px) {
-    font-size: 40px;
+    font-size: 30px;
   }
   @media (min-width: 760px) and (max-width: 1030px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 export const H2Span = styled.span`
@@ -132,11 +132,11 @@ export const H2Span = styled.span`
   color: white;
   margin-right: 10px;
   @media only screen and (max-width: 760px) {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
   }
   @media (min-width: 760px) and (max-width: 1030px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 export const H2Wrapper = styled.div`
@@ -166,7 +166,7 @@ export const CustomersWrapper = styled.div`
 `;
 export const Customers = styled.div`
   width: 400px;
-  height: 140px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,3 +269,10 @@ export const SlideshowWrapper = styled.div`
     height: 100%;
   }
 `;
+export const ServicesContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+`;
+export const Service = styled.div``;

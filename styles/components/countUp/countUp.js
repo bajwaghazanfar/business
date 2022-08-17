@@ -6,8 +6,8 @@ const CountupHook = ({ end, id, description }) => {
   useCountUp({ ref: id, end: end, duration: 1 });
   return (
     <>
-      <Title id={id} style={{ margin: "0px" }} />
-      <FrameworkDescription>{description}</FrameworkDescription>
+      <Title id={id} style={{ margin: "0px" }} color="white" />
+      <FrameworkDescription color="white"> {description}</FrameworkDescription>
     </>
   );
 };

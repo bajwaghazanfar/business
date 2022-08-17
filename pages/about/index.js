@@ -83,7 +83,7 @@ const About = () => {
         <FullImage src={about} layout="fill" alt="Alternate background image" />
       </FullWidthContainer>
       <SS_Container>
-        <SS_ContainerWrapper bg="#c8cfcf">
+        <SS_ContainerWrapper>
           <Grid justify="flex-start" align="flex-start">
             <Title font="50px" align="left" fontWeight="500">
               Responsibillity for IT means responsibillity for a company's
@@ -159,7 +159,7 @@ const About = () => {
         </SS_ContainerWrapper>
       </SS_Container>{" "}
       <SS_Container>
-        <SS_ContainerWrapper bg="#c8cfcf">
+        <SS_ContainerWrapper bg="#eaddca">
           <Grid padding="0rem">
             <FullWidthContainer>
               <FullImage
@@ -275,6 +275,7 @@ const About = () => {
         </SS_ContainerWrapper>
       </SS_Container>
       <ContactUs alt={false} />
+      <Footer />
     </>
   );
 };

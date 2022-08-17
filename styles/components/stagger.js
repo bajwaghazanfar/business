@@ -1,3 +1,13 @@
+//Box Shadow
+
+export const boxShadowIn = () => {
+  return {
+    visible: { boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.2)" },
+    hidden: {
+      boxShadow: "none",
+    },
+  };
+};
 //MoveLeft animations
 
 export const MoveLeft = () => {

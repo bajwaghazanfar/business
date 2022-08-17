@@ -46,7 +46,7 @@ export const LogoWrapper = styled.div`
   align-items: center;
 `;
 export const Logo = styled.img`
-  width: 80px;
+  width: 100px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
@@ -129,7 +129,8 @@ export const Grid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};
+  justify-content: ${(props) =>
+    props.justify ? props.justify : "flex-start "};
   align-items: ${(props) => (props.align ? props.align : "flex-start ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
 
@@ -242,10 +243,11 @@ export const Footer = () => {
     <SS_Container>
       <SS_ContainerWrapper>
         <Grid padding="2rem">
+          <Logo src="/logos/companyLogo/logo6.png" />
           <InsightsContainer>
             <H4 color="black">Moving forward</H4>
             <InsightsWrapper>
-              <H5 color="black">@MB Developments 2022</H5>
+              <H5 color="black">@Obsidian Web Developments 2022</H5>
               <H5 color="black">11.August.2022</H5>
             </InsightsWrapper>
           </InsightsContainer>
