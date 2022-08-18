@@ -7,7 +7,7 @@ const Sitemap = () => {
 
 export const getServerSideProps = async ({ res }) => {
   
-  const BASE_URL = 'http://localhost:3000'; //This is where you will define your base url. You can also use the default dev url http://localhost:3000
+  const BASE_URL = 'https://www.obsidianwebdevelopment.com'; //This is where you will define your base url. You can also use the default dev url http://localhost:3000
 
   const staticPaths = fs
     .readdirSync("pages")
