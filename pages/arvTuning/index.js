@@ -45,16 +45,16 @@ const Arvtuning = () => {
   return (
     <>
       <Head>
-        <title>Case study ARV Tuning -MB Developments</title>
+        <title>Case study ARV Tuning -Obsidian Web Developments</title>
         <meta
           name="description"
-          content="Case study of ARV Tuning, an insurance website created by MB Developments"
+          content="Case study of ARV Tuning, an insurance website created by Obsidian Web Developments"
         />
       </Head>
       <Head>
         <meta
           property="og:title"
-          content="Case study ARV Tuning -MB Developments"
+          content="Case study ARV Tuning -Obsidian Web Developments"
         />
       </Head>
       <ArrowContainer height={`${height}px`}>
@@ -70,8 +70,9 @@ const Arvtuning = () => {
                 Case Study/Arv Tuning
               </Description>
               <Title font="70px" align="left" sticky="sticky">
-                How MB Developments reduced the costs of laborious tasks by 50%,
-                increased clients and automated 95% of an insurance business.
+                How Obsidian Web Developments reduced the costs of laborious
+                tasks by 50%, increased clients and automated 95% of an
+                insurance business.
               </Title>
             </StickyContainer>
           </StickyGrid>

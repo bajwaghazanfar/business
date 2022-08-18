@@ -31,6 +31,9 @@ import {
   H5,
   SlideshowContainer,
   SlideshowWrapper,
+  Row,
+  RowChild,
+  RowContainer,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -58,6 +61,7 @@ import {
   StickyGridWrapper,
   StickyContainer,
   FullImageContainer,
+  SubTtitle,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -89,7 +93,11 @@ import slideshowImg1 from "../public/slideshowImg1.avif";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
 import development from "../public/development.avif";
-
+//Icons
+import { DiReact } from "react-icons/di";
+import { DiNodejs } from "react-icons/di";
+import { DiVisualstudio } from "react-icons/di";
+import { GrGraphQl } from "react-icons/gr";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
@@ -139,10 +147,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Obsidian Web Developments</title>
+        <title>
+          Birmingham Web Development & Design company| Bespoke Web Development
+          and Design company
+        </title>
         <meta
           name="description"
-          content="Obsidian Web Developments create the site of your dreams"
+          content="Obsidian Web Developments, creating bespoke websites and web designs to meet your requirements."
         />
       </Head>
       <Head>
@@ -210,11 +221,7 @@ export default function Home() {
             </AlignRight>
           </RightContainer>
         </HomeContainer>
-        <ArrowContainer height={`${height}px`}>
-          <ArrowWrapper>
-            <Arrow height={`${height}px`} />
-          </ArrowWrapper>
-        </ArrowContainer>
+
         <VideoContainer>
           {width > 768 ? (
             <Video
@@ -235,7 +242,47 @@ export default function Home() {
           )}
         </VideoContainer>
       </Container>
-      <SS_Container>
+      <RowContainer>
+        <Row>
+          <RowChild>
+            <DiReact
+              style={
+                width <= 768
+                  ? { fontSize: "40px" }
+                  : { fontSize: "80px", color: "black" }
+              }
+            />
+          </RowChild>
+          <RowChild>
+            <DiNodejs
+              style={
+                width <= 768
+                  ? { fontSize: "40px" }
+                  : { fontSize: "80px", color: "black" }
+              }
+            />
+          </RowChild>
+          <RowChild>
+            <DiVisualstudio
+              style={
+                width <= 768
+                  ? { fontSize: "40px" }
+                  : { fontSize: "80px", color: "black" }
+              }
+            />
+          </RowChild>
+          <RowChild>
+            <GrGraphQl
+              style={
+                width <= 768
+                  ? { fontSize: "40px" }
+                  : { fontSize: "80px", color: "black" }
+              }
+            />
+          </RowChild>
+        </Row>
+      </RowContainer>
+      <SS_Container top="100px">
         <SS_ContainerWrapper>
           <StickyGrid sticky="sticky">
             <StickyContainer sticky="sticky">
@@ -246,7 +293,7 @@ export default function Home() {
               <ButtonContainer>
                 <Link href="/about">
                   <Button>
-                    <ButtonText>Explore</ButtonText>
+                    <ButtonText>View websites</ButtonText>
                   </Button>
                 </Link>
               </ButtonContainer>
@@ -288,19 +335,19 @@ export default function Home() {
         </SS_ContainerWrapper>
       </SS_Container>
 
-      <SS_Container>
-        <SS_ContainerWrapper>
+      <SS_Container top="100px">
+        <SS_ContainerWrapper bg="black" padding="4rem">
           <Grid align="flex-start" justify="flex-start">
             <FullImageContainer>
-              <FullImage src={development} layout="fill" roundLeft="true" />
+              <FullImage
+                src={development}
+                layout="fill"
+                roundLeft="true"
+                roundRight="true"
+              />
             </FullImageContainer>
           </Grid>
-          <Grid
-            justify="center"
-            align="flex-start"
-            bg="black "
-            roundRight="true"
-          >
+          <Grid justify="center" align="flex-start" roundRight="true">
             <Title font="50px" align="left" fontWeight="700" color="#F8BBD0">
               Web development agency based in Birmingham
             </Title>
@@ -326,13 +373,8 @@ export default function Home() {
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper>
-          <Grid
-            justify="center"
-            align="flex-start"
-            bg="#F8BBD0 "
-            roundLeft="true"
-          >
+        <SS_ContainerWrapper padding="4rem">
+          <Grid justify="center" align="flex-start" roundLeft="true">
             <Title font="50px" align="left" fontWeight="700">
               Web development agency based in Birmingham
             </Title>
@@ -357,15 +399,20 @@ export default function Home() {
           </Grid>
           <Grid align="flex-start" justify="flex-start" roundRight="true">
             <FullImageContainer>
-              <FullImage src={birmingham} layout="fill" roundRight="true" />
+              <FullImage
+                src={birmingham}
+                layout="fill"
+                roundLeft="true"
+                roundRight="true"
+              />
             </FullImageContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
 
-      <SS_Container padding="0rem">
-        <SS_ContainerWrapper>
-          <Grid justify="center" align="flex-start" bg="black ">
+      <SS_Container>
+        <SS_ContainerWrapper bg="black " padding="4rem">
+          <Grid justify="center" align="flex-start">
             <Title
               font="50px"
               align="left"
@@ -432,9 +479,9 @@ export default function Home() {
         </SS_ContainerWrapper>
       </SS_Container>
 
-      <SS_Container padding="0rem">
-        <SS_ContainerWrapper reverseMobile="true">
-          <Grid align="flex-start" justify="flex-start" bg="#F8BBD0 ">
+      <SS_Container>
+        <SS_ContainerWrapper reverseMobile="true" padding="4rem">
+          <Grid align="flex-start" justify="flex-start">
             <ValuesContainer>
               <Value alt={true}>
                 <ValueImgWrapper>
@@ -498,7 +545,13 @@ export default function Home() {
               </Value>
             </ValuesContainer>
           </Grid>
-          <Grid justify="center" align="flex-start" bg="black ">
+          <Grid
+            justify="center"
+            align="flex-start"
+            bg="black "
+            roundLeft="true"
+            roundRight="true"
+          >
             <Title
               font="50px"
               align="left"
@@ -515,7 +568,8 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <SS_Container>
+
+      <SS_Container id="caseStudy1">
         <SS_ContainerWrapper caseStudy="true">
           <Grid
             justify="flex-start"

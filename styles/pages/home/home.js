@@ -114,7 +114,7 @@ export const H2 = styled(motion.h2)`
   font-size: 70px;
   text-align: left;
   color: ${(props) => (props.color ? props.color : " white ")};
-  font-weight: 700;
+  font-weight: 400;
   margin: 0px;
   @media only screen and (max-width: 760px) {
     font-size: 30px;
@@ -170,7 +170,8 @@ export const Customers = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #c8c8c8;
+  border: 3px solid black;
+  background: #f8bbd0;
   position: relative;
   padding: 5rem;
   @media only screen and (max-width: 760px) {
@@ -276,3 +277,35 @@ export const ServicesContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const Service = styled.div``;
+export const RowContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+export const Row = styled.div`
+  width: 50%;
+  height: 100px;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: -49px 33px 24px -3px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  position: absolute;
+  z-index: 10;
+  @media only screen and (max-width: 760px) {
+    width: 80%;
+    padding: 1rem 2rem;
+  }
+`;
+export const RowChild = styled.div`
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

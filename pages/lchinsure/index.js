@@ -70,16 +70,16 @@ const Lchinsure = () => {
   return (
     <>
       <Head>
-        <title>Case study LCH Insurance -MB Developments</title>
+        <title>Case study LCH Insurance -Obsidian Web Developments</title>
         <meta
           name="description"
-          content="Case study of LCH Insurance, an insurance website created by MB Developments"
+          content="Case study of LCH Insurance, an insurance website created by Obsidian Web Developments"
         />
       </Head>
       <Head>
         <meta
           property="og:title"
-          content="Case study LCH Insurance -MB Developments"
+          content="Case study LCH Insurance -Obsidian Web Developments"
         />
       </Head>
       <ArrowContainer height={`${height}px`}>
@@ -95,8 +95,9 @@ const Lchinsure = () => {
                 Case Study/LCH Insurance
               </Description>
               <Title font="60px" align="left" sticky="sticky">
-                How MB Developments reduced the costs of laborious tasks by 50%,
-                increased clients and automated 95% of an insurance business.
+                How Obsidian Web Developments reduced the costs of laborious
+                tasks by 50%, increased clients and automated 95% of an
+                insurance business.
               </Title>
             </StickyContainer>
           </StickyGrid>
@@ -126,18 +127,18 @@ const Lchinsure = () => {
                 For the entire year, LCH Insurance operated by manually
                 contacting customers for details which resulted in lengthy phone
                 calls and human errors occurring throughout this entire process.
-                To mitigate these problems, LCH Insurance contacted MB
+                To mitigate these problems, LCH Insurance contacted Obsidian Web
                 Developments to create a web solution, which would automate this
                 entire process, reducing costs and time spent.
               </Description>
 
               <H3 color="black">The solution.</H3>
               <Description>
-                In the first step MB Developments drafted a plan for the
-                creation of an entire new system, compromised of a front-end and
-                a back-end. The solution is a website which users could visit
-                and fill out a multi-step form, automating this process and
-                increasing the turnover rate by 80%. Once the form was
+                In the first step Obsidian Web Developments drafted a plan for
+                the creation of an entire new system, compromised of a front-end
+                and a back-end. The solution is a website which users could
+                visit and fill out a multi-step form, automating this process
+                and increasing the turnover rate by 80%. Once the form was
                 submitted, it would be sent directly to LCH Insurance which
                 could then be processed. To accomplish this, the team had to
                 gather all the requirements for this new solution, which would
@@ -168,7 +169,7 @@ const Lchinsure = () => {
               <QuoteContainer>
                 <H3 color="black" font="40px">
                   "We are very grateful for the committed and flexible way of
-                  working of the teams at MB Developments. The optimal
+                  working of the teams at Obsidian Web Developments. The optimal
                   combination of consulting and engineering supports our
                   insolvency proceedings optimally on the IT side."
                 </H3>

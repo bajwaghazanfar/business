@@ -65,16 +65,16 @@ const Fcproperties = () => {
   return (
     <>
       <Head>
-        <title>Case study FC Properties -MB Developments</title>
+        <title>Case study FC Properties -Obsidian Web Developments</title>
         <meta
           name="description"
-          content="Case study of FC Properties, an insurance website created by MB Developments"
+          content="Case study of FC Properties, an insurance website created by Obsidian Web Developments"
         />
       </Head>
       <Head>
         <meta
           property="og:title"
-          content="Case study FC Properties -MB Developments"
+          content="Case study FC Properties -Obsidian Web Developments"
         />
       </Head>
       <ArrowContainer height={`${height}px`}>
@@ -94,8 +94,9 @@ const Fcproperties = () => {
                 Case Study/FC Properties
               </Description>
               <Title font="60px" align="left" sticky="sticky">
-                How MB Developments reduced the time spent on repetitive tasks,
-                freeing resources and improving turnover rates by 85%
+                How Obsidian Web Developments reduced the time spent on
+                repetitive tasks, freeing resources and improving turnover rates
+                by 85%
               </Title>
             </StickyContainer>
           </StickyGrid>
@@ -134,23 +135,24 @@ const Fcproperties = () => {
                 took up 80% of the time at FC Properties, restricting the
                 opportunities for expansion and other avenues of success. <br />
                 <br />
-                FC Properties approached MB Developments in their second year of
-                business and assigned us with the task to create an intuitive
-                system. This system will automate the repetitive work involved
-                with tracking finances. In addition to this, MB Developments
-                were also tasked with creating a CMS system to advertise
-                properties for rent or sale on their website, add authorization
-                and authentication to their system as well as adding
-                permission-based access to sensitive data for employees.
+                FC Properties approached Obsidian Web Developments in their
+                second year of business and assigned us with the task to create
+                an intuitive system. This system will automate the repetitive
+                work involved with tracking finances. In addition to this,
+                Obsidian Web Developments were also tasked with creating a CMS
+                system to advertise properties for rent or sale on their
+                website, add authorization and authentication to their system as
+                well as adding permission-based access to sensitive data for
+                employees.
               </Description>
 
               <H3 color="black">The solution.</H3>
               <Description>
-                In the first step MB Developments, in consultation with external
-                management and consultants drafted a plan for the creation of
-                this new system for FC Properties. As part of the planning
-                process, the team gathered all the requirements for this new
-                system which involved the creation and integration of a
+                In the first step Obsidian Web Developments, in consultation
+                with external management and consultants drafted a plan for the
+                creation of this new system for FC Properties. As part of the
+                planning process, the team gathered all the requirements for
+                this new system which involved the creation and integration of a
                 front-end and back-end system supported by AWS and MongoDB.
                 <br />
                 <br />
@@ -183,7 +185,7 @@ const Fcproperties = () => {
               <QuoteContainer>
                 <H3 color="black" font="40px">
                   "We are very grateful for the committed and flexible way of
-                  working of the teams at MB Developments. The optimal
+                  working of the teams at Obsidian Web Developments. The optimal
                   combination of consulting and engineering supports our
                   insolvency proceedings optimally on the IT side."
                 </H3>

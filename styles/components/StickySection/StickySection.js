@@ -21,6 +21,25 @@ export const Title = styled.h1`
     font-size: 30px;
   }
 `;
+export const SubTtitle = styled.h2`
+  font-size: ${(props) => (props.font ? props.font : " 80px ")};
+  font-weight: ${(props) => (props.fontWeight ? props.fontWeight : " 400 ")};
+
+  color: ${(props) => (props.color ? props.color : "black")};
+  text-align: ${(props) => (props.align ? props.align : "center")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+  text-decoration: ${(props) => (props.underline ? props.underline : "")};
+  bottom: 10px;
+
+  @media (min-width: 0px) and (max-width: 768px) {
+    font-size: 20px;
+    text-align: left;
+    position: ${(props) => (props.sticky ? "relative" : "")};
+  }
+  @media (min-width: 760px) and (max-width: 1030px) {
+    font-size: 20px;
+  }
+`;
 export const Description = styled.h3`
   font-size: 17px;
   font-weight: 400;
@@ -151,8 +170,10 @@ export const SS_ContainerWrapper = styled.div`
   grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
 
-  padding: ${(props) => (props.caseStudy ? "10rem" : "0rem")};
+  padding: ${(props) =>
+    props.caseStudy ? "10rem" : props.padding ? props.padding : "0rem"};
   position: relative;
   @media only screen and (max-width: 760px) {
     display: flex;
@@ -198,7 +219,7 @@ export const Grid = styled(motion.div)`
   justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
-  background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
+  background-color: ${(props) => (props.bg ? props.bg : "none")};
   gap: 20px;
   position: relative;
   border-top-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
