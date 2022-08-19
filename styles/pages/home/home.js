@@ -148,13 +148,6 @@ export const H2Wrapper = styled.div`
   align-items: flex-start;
 `;
 
-export const FullWidthContainer = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 export const CustomersWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -270,14 +263,8 @@ export const SlideshowWrapper = styled.div`
     height: 100%;
   }
 `;
-export const ServicesContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-`;
-export const Service = styled.div``;
-export const RowContainer = styled.div`
+
+export const RowContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -285,7 +272,7 @@ export const RowContainer = styled.div`
   align-items: center;
   position: relative;
 `;
-export const Row = styled.div`
+export const Row = styled(motion.div)`
   width: 50%;
   height: 100px;
   padding: 1rem 0rem;
@@ -293,19 +280,170 @@ export const Row = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  box-shadow: -49px 33px 24px -3px rgba(0, 0, 0, 0.05);
+
+  box-shadow: ${(props) =>
+    props.alternate ? "none" : "-49px 33px 24px -3px rgba(0, 0, 0, 0.05) "};
   border-radius: 20px;
   position: absolute;
   z-index: 10;
+  ${(props) =>
+    props.alternate
+      ? `
+      width:90%; 
+      display:flex; 
+      gap:20px;
+      padding:3rem; 
+      background-color:white; 
+     
+      justify-content:space-between;  
+      background-color: transparent;
+      @media only screen and (max-width: 760px) {
+        display:none;
+        
+      }
+
+      `
+      : ""}
   @media only screen and (max-width: 760px) {
-    width: 80%;
+    width: 90%;
     padding: 1rem 2rem;
   }
 `;
-export const RowChild = styled.div`
+export const RowChild = styled(motion.div)`
   width: 200px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+
+  ${(props) =>
+    props.alternate
+      ? `display:flex; padding:0rem 1rem; background-color:white; width:100%; height:auto;justify-content:flex-start; gap:10px;
+      
+     
+      
+      `
+      : ""}
+`;
+export const RowLogo = styled.div`
+  width: auto;
+  height: auto;
+  background: ${(props) => (props.bg ? props.bg : "")};
+  border-radius: 50%;
+  padding: 0.5rem;
+`;
+export const RowText = styled.p`
+  font-size: 17px;
+  font-weight: 500;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 30px;
+  color: ${(props) => (props.color ? props.color : "#616161")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  bottom: 10px;
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
+export const CenterWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: ${(props) => (props.justify ? props.justify : "center ")};
+  align-items: ${(props) => (props.align ? props.align : "center ")};
+  background: ${(props) => (props.bg ? props.bg : "")};
+  padding: 2rem;
+`;
+export const HalfWidth = styled.div`
+  width: ${(props) => (props.width ? props.width : "50% ")};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: ${(props) => (props.justify ? props.justify : "center ")};
+  align-content: ${(props) => (props.align ? props.align : "center ")};
+  padding: 2rem;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    height: auto;
+    padding: 0rem 0rem;
+  }
+`;
+export const FullWidthContainer = styled.div`
+  width: 100%;
+  height: ${(props) => (props.height ? props.height : " 80vh ")};
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const ServicesContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+`;
+export const Service = styled.div`
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: ${(props) => (props.alternate ? "black" : " #f8bbd0")};
+  border-radius: 10px;
+  padding: 2rem;
+
+  @media only screen and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+`;
+export const ServiceImgWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+`;
+export const ServiceImg = styled.img`
+  width: 40px;
+  height: auto;
+  object-fit: cover;
+`;
+export const ServiceTitle = styled.h2`
+  font-size: 20px;
+  color: ${(props) => (props.alternate ? "#f8bbd0" : "  black")};
+  font-weight: 700;
+`;
+export const ServiceDescription = styled.p`
+  font-size: 16px;
+  color: ${(props) => (props.alternate ? "white" : "  black")};
+  font-weight: 400;
+  margin: 0px;
+`;
+export const ServiceTextWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  gap: 0px;
+
+  @media only screen and (max-width: 760px) {
+    padding: 0rem;
+  }
 `;

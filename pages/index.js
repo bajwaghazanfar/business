@@ -34,6 +34,18 @@ import {
   Row,
   RowChild,
   RowContainer,
+  CenterWrapper,
+  HalfWidth,
+  RowLogo,
+  RowText,
+  FullWidthContainer,
+  ServicesContainer,
+  Service,
+  ServiceImgWrapper,
+  ServiceImg,
+  ServiceTextWrapper,
+  ServiceTitle,
+  ServiceDescription,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -89,15 +101,20 @@ import { Slider } from "../styles/components/slideshow/Slider";
 import Contact from "./contactUs";
 import Link from "next/link";
 //Next Head
-import slideshowImg1 from "../public/slideshowImg1.avif";
+import slideshowImg1 from "../public/about.jpg";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
 import development from "../public/development.avif";
+import reactImg from "../public/react.jpg";
 //Icons
 import { DiReact } from "react-icons/di";
 import { DiNodejs } from "react-icons/di";
 import { DiVisualstudio } from "react-icons/di";
 import { GrGraphQl } from "react-icons/gr";
+import { FcGallery } from "react-icons/fc";
+import { FcSalesPerformance } from "react-icons/fc";
+import { FcAcceptDatabase } from "react-icons/fc";
+import { FcBullish } from "react-icons/fc";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
@@ -108,7 +125,7 @@ export default function Home() {
       title: "FC Properties",
       subHeading: "compliance",
       description:
-        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
       image: slideshowImg1,
     },
     {
@@ -248,8 +265,8 @@ export default function Home() {
             <DiReact
               style={
                 width <= 768
-                  ? { fontSize: "40px" }
-                  : { fontSize: "80px", color: "black" }
+                  ? { fontSize: "60px", color: "#65C9FF " }
+                  : { fontSize: "80px", color: "#65C9FF " }
               }
             />
           </RowChild>
@@ -257,8 +274,8 @@ export default function Home() {
             <DiNodejs
               style={
                 width <= 768
-                  ? { fontSize: "40px" }
-                  : { fontSize: "80px", color: "black" }
+                  ? { fontSize: "60px", color: "#4EC63F" }
+                  : { fontSize: "80px", color: "#4EC63F" }
               }
             />
           </RowChild>
@@ -266,8 +283,8 @@ export default function Home() {
             <DiVisualstudio
               style={
                 width <= 768
-                  ? { fontSize: "40px" }
-                  : { fontSize: "80px", color: "black" }
+                  ? { fontSize: "60px", color: "#4FB1E6 " }
+                  : { fontSize: "80px", color: "#4FB1E6 " }
               }
             />
           </RowChild>
@@ -275,109 +292,48 @@ export default function Home() {
             <GrGraphQl
               style={
                 width <= 768
-                  ? { fontSize: "40px" }
-                  : { fontSize: "80px", color: "black" }
+                  ? { fontSize: "60px", color: "#F76EE9 " }
+                  : { fontSize: "80px", color: "#F76EE9 " }
               }
             />
           </RowChild>
         </Row>
       </RowContainer>
-      <SS_Container top="100px">
-        <SS_ContainerWrapper>
-          <StickyGrid sticky="sticky">
-            <StickyContainer sticky="sticky">
-              <Title align="left" sticky="sticky" font="60px" fontWeight="600">
-                We create websites that meet your requirements and solve your
-                problems
-              </Title>
-              <ButtonContainer>
-                <Link href="/about">
-                  <Button>
-                    <ButtonText>View websites</ButtonText>
-                  </Button>
-                </Link>
-              </ButtonContainer>
-            </StickyContainer>
-          </StickyGrid>
-          <Grid>
-            <CenterDiv gap="0px">
-              <H3 color="black">
-                The optimum between standardization and customization.
-              </H3>
-              <Description>
-                At Purevirtual AG, technological competence meets industry
-                experience - implemented by an experienced team with a lot of
-                expertise and commitment. We believe that a good IT solution
-                must function as silently as possible, even with complex
-                requirements. Companies should concentrate on their operational
-                core business and regard the IT infrastructure as a working
-                tool. Our top priority is to promote your entrepreneurial
-                success. To this end, we develop IT solutions whose individual
-                component promotes the differentiation factors of your company,
-                while proven ways of standardization ensure efficient and silent
-                operation.
-              </Description>
-              <H3 color="black">Customers</H3>
-              <CustomersWrapper>
-                <Customers>
-                  <CustomerLogo src={lchLogo} alt="LCH Insure logo" />
-                </Customers>
-                <Customers>
-                  <CustomerLogo src={arvLogo} alt="ARV Tuning logo" />
-                </Customers>
+      <Container>
+        <CenterWrapper>
+          <HalfWidth>
+            <Title font="50px" align="center" fontWeight="700">
+              What we do
+            </Title>
+            <Description color="black" align="center">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+          </HalfWidth>
+        </CenterWrapper>
+      </Container>
 
-                <Customers>
-                  <CustomerLogo src={fcLogo} alt="FC Properties logo" />
-                </Customers>
-              </CustomersWrapper>
-            </CenterDiv>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
-
-      <SS_Container top="100px">
-        <SS_ContainerWrapper bg="black" padding="4rem">
+      <SS_Container>
+        <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
             <FullImageContainer>
               <FullImage
                 src={development}
                 layout="fill"
-                roundLeft="true"
-                roundRight="true"
+                roundleft="true"
+                roundright="true"
               />
             </FullImageContainer>
           </Grid>
-          <Grid justify="center" align="flex-start" roundRight="true">
-            <Title font="50px" align="left" fontWeight="700" color="#F8BBD0">
+          <Grid justify="center" align="flex-start" roundright="true">
+            <SubTtitle font="50px" align="left" fontWeight="700">
               Web development agency based in Birmingham
-            </Title>
-            <Description color="white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>
-            <Description color="white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
-      <SS_Container>
-        <SS_ContainerWrapper padding="4rem">
-          <Grid justify="center" align="flex-start" roundLeft="true">
-            <Title font="50px" align="left" fontWeight="700">
-              Web development agency based in Birmingham
-            </Title>
+            </SubTtitle>
             <Description color="black">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -395,23 +351,18 @@ export default function Home() {
               aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
               eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
               est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>
-          </Grid>
-          <Grid align="flex-start" justify="flex-start" roundRight="true">
-            <FullImageContainer>
-              <FullImage
-                src={birmingham}
-                layout="fill"
-                roundLeft="true"
-                roundRight="true"
-              />
-            </FullImageContainer>
+            </Description>{" "}
+            <ButtonContainer>
+              <Button>
+                <ButtonText>Explore</ButtonText>
+              </Button>
+            </ButtonContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
 
       <SS_Container>
-        <SS_ContainerWrapper bg="black " padding="4rem">
+        <SS_ContainerWrapper bg="#816885  " padding="4rem">
           <Grid justify="center" align="flex-start">
             <Title
               font="50px"
@@ -427,7 +378,7 @@ export default function Home() {
               of your business with proven futuristic vision.
             </Description>
           </Grid>
-          <Grid align="flex-start" justify="flex-start" bg="black ">
+          <Grid align="flex-start" justify="flex-start">
             <ValuesContainer>
               <Value>
                 <ValueImgWrapper>
@@ -478,103 +429,181 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-
-      <SS_Container>
-        <SS_ContainerWrapper reverseMobile="true" padding="4rem">
-          <Grid align="flex-start" justify="flex-start">
-            <ValuesContainer>
-              <Value alt={true}>
-                <ValueImgWrapper>
-                  <ValueImg src="/logos/backend.svg" />
-                </ValueImgWrapper>
-                <ValueTextWrapper>
-                  <ValueTitle alt={true}>Back-end systems</ValueTitle>
-                  <ValueDescription alt={true}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ValueDescription>
-                </ValueTextWrapper>
-              </Value>
-              <Value alt={true}>
-                <ValueImgWrapper>
-                  <ValueImg src="/logos/frontend.svg" />
-                </ValueImgWrapper>
-                <ValueTextWrapper>
-                  <ValueTitle alt={true}>Front-end and CMS</ValueTitle>
-                  <ValueDescription alt={true}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ValueDescription>
-                </ValueTextWrapper>
-              </Value>
-              <Value alt={true}>
-                <ValueImgWrapper>
-                  <ValueImg src="/logos/test.svg" />
-                </ValueImgWrapper>
-                <ValueTextWrapper>
-                  <ValueTitle alt={true}>Test driven development</ValueTitle>
-                  <ValueDescription alt={true}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ValueDescription>
-                </ValueTextWrapper>
-              </Value>
-              <Value alt={true}>
-                <ValueImgWrapper>
-                  <ValueImg src="/logos/agile.svg" />
-                </ValueImgWrapper>
-                <ValueTextWrapper>
-                  <ValueTitle alt={true}>Agile</ValueTitle>
-                  <ValueDescription alt={true}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ValueDescription>
-                </ValueTextWrapper>
-              </Value>
-            </ValuesContainer>
-          </Grid>
-          <Grid
-            justify="center"
-            align="flex-start"
-            bg="black "
-            roundLeft="true"
-            roundRight="true"
-          >
+      <RowContainer>
+        <Row
+          bg="none"
+          alternate={true}
+          drag="x"
+          dragConstraints={{ left: 100, right: 100 }}
+        >
+          <RowChild bg="white" alternate={true}>
+            <RowLogo bg="#90CAF9 ">
+              <FcGallery
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
+          </RowChild>
+          <RowChild bg="white" alternate={true}>
+            <RowLogo bg="#FFFACD">
+              <FcBullish
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
+          </RowChild>
+          <RowChild bg="white" alternate={true}>
+            <RowLogo bg="#EAFED6 ">
+              <FcSalesPerformance
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
+          </RowChild>
+          <RowChild bg="white" alternate={true}>
+            <RowLogo bg="	#FEE1D6">
+              <FcAcceptDatabase
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
+          </RowChild>
+        </Row>
+      </RowContainer>
+      <Container>
+        <CenterWrapper justify="flex-start" align="flex-start">
+          <HalfWidth>
             <Title
               font="50px"
               align="left"
               fontWeight="700"
-              color="#F8BBD0"
-              style={{ margin: "0px" }}
+              justify="flex-start"
+              align="flex-start"
             >
-              Custom requirements delivered by premium web development services
+              What we do
             </Title>
-            <Description color="white" style={{ margin: "0px" }}>
-              We understand your industry which help in the exponential growth
-              of your business with proven futuristic vision.
+            <Description color="black">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
             </Description>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
-
+          </HalfWidth>
+          <FullWidthContainer>
+            <FullImage
+              src={reactImg}
+              layout="fill"
+              roundleft="true"
+              roundright="true"
+            />
+          </FullWidthContainer>
+        </CenterWrapper>
+        <CenterWrapper bg="#816885  ">
+          <HalfWidth>
+            <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
+              What we do
+            </Title>
+            <Description color="white" style={{ textAlign: "center" }}>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+          </HalfWidth>
+          <HalfWidth>
+            <ServicesContainer>
+              <Service>
+                <ServiceImgWrapper>
+                  <ServiceImg src="/logos/building.svg" />
+                </ServiceImgWrapper>
+                <ServiceTextWrapper>
+                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ServiceDescription>
+                </ServiceTextWrapper>
+              </Service>
+              <Service>
+                <ServiceImgWrapper>
+                  <ServiceImg src="/logos/building.svg" />
+                </ServiceImgWrapper>
+                <ServiceTextWrapper>
+                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ServiceDescription>
+                </ServiceTextWrapper>
+              </Service>
+              <Service>
+                <ServiceImgWrapper>
+                  <ServiceImg src="/logos/building.svg" />
+                </ServiceImgWrapper>
+                <ServiceTextWrapper>
+                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ServiceDescription>
+                </ServiceTextWrapper>
+              </Service>
+              <Service>
+                <ServiceImgWrapper>
+                  <ServiceImg src="/logos/building.svg" />
+                </ServiceImgWrapper>
+                <ServiceTextWrapper>
+                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceDescription>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  </ServiceDescription>
+                </ServiceTextWrapper>
+              </Service>
+            </ServicesContainer>
+          </HalfWidth>
+        </CenterWrapper>
+      </Container>
       <SS_Container id="caseStudy1">
         <SS_ContainerWrapper caseStudy="true">
           <Grid
             justify="flex-start"
             align="flex-start"
-            roundLeft="true"
+            roundleft="true"
             style={{
               background: "black",
               boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
@@ -606,7 +635,7 @@ export default function Home() {
                 src={fiberOptics}
                 layout="fill"
                 alt="LCH Insure "
-                roundRight="true"
+                roundright="true"
               />
             </FullImageContainer>
           </Grid>
@@ -617,7 +646,7 @@ export default function Home() {
           <Grid
             justify="flex-start"
             align="flex-start"
-            roundLeft="true"
+            roundleft="true"
             style={{
               background: "black",
               boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
@@ -648,7 +677,7 @@ export default function Home() {
                 src={arvTuning}
                 alt="ARV Tuning"
                 layout="fill"
-                roundRight="true"
+                roundright="true"
               />
             </FullImageContainer>
           </Grid>
@@ -659,7 +688,7 @@ export default function Home() {
           <Grid
             justify="flex-start"
             align="flex-start"
-            roundLeft="true"
+            roundleft="true"
             style={{
               background: "black",
               boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
@@ -690,7 +719,7 @@ export default function Home() {
                 src={fcProperties}
                 alt="FC Properties"
                 layout="fill"
-                roundRight="true"
+                roundright="true"
               />
             </FullImageContainer>
           </Grid>

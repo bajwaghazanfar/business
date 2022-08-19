@@ -174,34 +174,36 @@ const About = () => {
             <TwoColumnGridContainer>
               <TwoColumnGrid>
                 <ValueDescription color="black">
-                  Purevirtual AG combines over ten years of technological
-                  expertise from various IT service providers with another ten
-                  years of industry experience in management consulting,
-                  software development, construction, automotive and production.
-                  This consulting and implementation power is based on a solid
-                  entrepreneurial foundation and makes Purevirtual AG a stable,
-                  long-term and future-oriented partner for companies. Due to
-                  the medium-sized character of our team, we always focus on the
-                  essentials and put the solutions in the foreground. On this
-                  binding and down-to-earth basis, we bring cutting-edge
-                  technologies together with the needs of medium-sized companies
-                  with a constant eye on the actual needs.
+                  Obsidian Web Developments combines over ten years of
+                  technological expertise from various IT service providers with
+                  another ten years of industry experience in management
+                  consulting, software development, construction, automotive and
+                  production. This consulting and implementation power is based
+                  on a solid entrepreneurial foundation and makesObsidian Web
+                  Developments a stable, long-term and future-oriented partner
+                  for companies. Due to the medium-sized character of our team,
+                  we always focus on the essentials and put the solutions in the
+                  foreground. On this binding and down-to-earth basis, we bring
+                  cutting-edge technologies together with the needs of
+                  medium-sized companies with a constant eye on the actual
+                  needs.
                 </ValueDescription>
               </TwoColumnGrid>
               <TwoColumnGrid>
                 <ValueDescription color="black">
-                  Purevirtual AG combines over ten years of technological
-                  expertise from various IT service providers with another ten
-                  years of industry experience in management consulting,
-                  software development, construction, automotive and production.
-                  This consulting and implementation power is based on a solid
-                  entrepreneurial foundation and makes Purevirtual AG a stable,
-                  long-term and future-oriented partner for companies. Due to
-                  the medium-sized character of our team, we always focus on the
-                  essentials and put the solutions in the foreground. On this
-                  binding and down-to-earth basis, we bring cutting-edge
-                  technologies together with the needs of medium-sized companies
-                  with a constant eye on the actual needs.
+                  Obsidian Web Developments combines over ten years of
+                  technological expertise from various IT service providers with
+                  another ten years of industry experience in management
+                  consulting, software development, construction, automotive and
+                  production. This consulting and implementation power is based
+                  on a solid entrepreneurial foundation and makesObsidian Web
+                  Developments a stable, long-term and future-oriented partner
+                  for companies. Due to the medium-sized character of our team,
+                  we always focus on the essentials and put the solutions in the
+                  foreground. On this binding and down-to-earth basis, we bring
+                  cutting-edge technologies together with the needs of
+                  medium-sized companies with a constant eye on the actual
+                  needs.
                 </ValueDescription>
               </TwoColumnGrid>
             </TwoColumnGridContainer>
@@ -234,9 +236,9 @@ const About = () => {
                     Agile and motivated
                   </H4>
                   <ValueDescription color="black">
-                    Purevirtual AG combines over ten years of technological
-                    expertise from various IT service providers with another ten
-                    years of indus
+                    Obsidian Web Developments combines over ten years of
+                    technological expertise from various IT service providers
+                    with another ten years of indus
                   </ValueDescription>
                 </CenterDiv>
               </Diffrent>
@@ -249,9 +251,9 @@ const About = () => {
                     Agile and motivated
                   </H4>
                   <ValueDescription color="black">
-                    Purevirtual AG combines over ten years of technological
-                    expertise from various IT service providers with another ten
-                    years of indus
+                    Obsidian Web Developments combines over ten years of
+                    technological expertise from various IT service providers
+                    with another ten years of indus
                   </ValueDescription>
                 </CenterDiv>
               </Diffrent>
@@ -264,9 +266,9 @@ const About = () => {
                     Agile and motivated
                   </H4>
                   <ValueDescription color="black">
-                    Purevirtual AG combines over ten years of technological
-                    expertise from various IT service providers with another ten
-                    years of indus
+                    Obsidian Web Developments combines over ten years of
+                    technological expertise from various IT service providers
+                    with another ten years of indus
                   </ValueDescription>
                 </CenterDiv>
               </Diffrent>

@@ -42,7 +42,7 @@ export const SubTtitle = styled.h2`
 `;
 export const Description = styled.h3`
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
   color: ${(props) => (props.color ? props.color : "#616161")};
@@ -54,6 +54,7 @@ export const Description = styled.h3`
     font-size: 15px;
   }
 `;
+
 export const StickyContainer = styled.div`
   width: 100%;
   height: auto;
@@ -88,20 +89,21 @@ export const FullImageContainer = styled.div`
   height: 100% > div {
     position: unset !important;
   }
+  border: 2px solid red;
   @media only screen and (max-width: 760px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }
 `;
 export const FullImage = styled(Image)`
   width: 100%;
-  height: auto;
+  height: 100%;
 
   object-fit: cover;
   cursor: pointer;
-  border-top-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
-  border-bottom-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
-  border-top-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
-  border-bottom-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
+  border-top-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
+  border-bottom-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
+  border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+  border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
   @media only screen and (max-width: 760px) {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -222,10 +224,10 @@ export const Grid = styled(motion.div)`
   background-color: ${(props) => (props.bg ? props.bg : "none")};
   gap: 20px;
   position: relative;
-  border-top-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
-  border-bottom-left-radius: ${(props) => (props.roundLeft ? "10px" : "0px")};
-  border-top-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
-  border-bottom-right-radius: ${(props) => (props.roundRight ? "10px" : "0px")};
+  border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+  border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+  border-top-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
+  border-bottom-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
   @media only screen and (max-width: 760px) {
     align-items: flex-start;
     position: ${(props) => (props.sticky ? "relative" : "")};
@@ -308,7 +310,7 @@ export const Value = styled.div`
 
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => (props.alt ? "black" : " #f8bbd0")};
+  background-color: ${(props) => (props.alternate ? "black" : " #f8bbd0")};
   border-radius: 10px;
 
   @media only screen and (max-width: 760px) {
@@ -337,12 +339,12 @@ export const ValueImg = styled.img`
 `;
 export const ValueTitle = styled.h2`
   font-size: 20px;
-  color: ${(props) => (props.alt ? "#f8bbd0" : "  black")};
+  color: ${(props) => (props.alternate ? "#f8bbd0" : "  black")};
   font-weight: 700;
 `;
 export const ValueDescription = styled.p`
   font-size: 16px;
-  color: ${(props) => (props.alt ? "white" : "  black")};
+  color: ${(props) => (props.alternate ? "white" : "  black")};
   font-weight: 400;
   margin: 0px;
 `;

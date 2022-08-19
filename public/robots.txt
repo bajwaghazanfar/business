@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.obsidianwebdevelopment.com
+
+# Sitemaps
+Sitemap: https://www.obsidianwebdevelopment.com/sitemap.xml

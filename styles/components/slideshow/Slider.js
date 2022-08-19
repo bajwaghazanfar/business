@@ -12,7 +12,7 @@ export const SliderContainer = styled.div`
   height: 100%;
   background: black;
 
-  border-radius: 10px;
+  border-radius: 40px;
   position: relative;
 `;
 export const GridContainer = styled.div`
@@ -143,10 +143,16 @@ export const Description = styled.h4`
 `;
 export const SlideshowImg = styled(Image)`
   width:100%;
-  height:auto;
+  height:100%;
   object:fit:cover;  
   border-radius: 10px;
   
+`;
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 10px;
 `;
 export const Info = ({ data, index, type, width }) => {
   console.log(width);
@@ -164,11 +170,13 @@ export const Info = ({ data, index, type, width }) => {
           <Grid
             style={width <= 768 ? { display: "none" } : { display: "block" }}
           >
-            <SlideshowImg
-              src={data.image}
-              alt="Slideshow Image"
-              loading="eager"
-            />
+            <ImageContainer>
+              <SlideshowImg
+                src={data.image}
+                alt="Slideshow Image"
+                loading="eager"
+              />
+            </ImageContainer>
           </Grid>
           <Grid>
             <Title color="white">{data.title}</Title>

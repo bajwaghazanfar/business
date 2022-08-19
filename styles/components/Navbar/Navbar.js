@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "../../../public/logos/companyLogo/logo6.png";
+import logo from "../../../public/logos/companyLogo/logo7.png";
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;

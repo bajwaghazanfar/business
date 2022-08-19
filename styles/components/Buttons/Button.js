@@ -13,7 +13,7 @@ export const ButtonContainer = styled.div`
 export const ButtonText = styled.h3`
   font-size: 18px;
   color: ${(props) => (props.alt ? `${props.alt}` : " black")};
-  font-weight: 300;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
@@ -26,7 +26,7 @@ export const Button = styled.button`
   height: ${(props) => (props.height ? `${props.height}` : "auto ")};
   padding: 1rem 4rem;
   background: ${(props) => (props.alt ? `${props.alt}` : "#FF4081 ")};
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   outline: none;
   cursor: pointer;
