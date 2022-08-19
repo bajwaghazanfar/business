@@ -17,13 +17,13 @@ import {
   Title,
 } from "../../styles/components/StickySection/StickySection";
 
-import about from "../../public/about1.jpg";
+import about from "../../public/about1.webp";
 import Head from "next/head";
 import Gear from "../../public/logos/settings.png";
 import Power from "../../public/logos/power.png";
 import Calendar from "../../public/logos/calendar.png";
 import Edit from "../../public/logos/edit.png";
-import philosophy from "../../public/philosophy.jpg";
+import philosophy from "../../public/philosophy.webp";
 philosophy;
 import {
   Diffrent,
