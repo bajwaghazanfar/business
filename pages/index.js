@@ -244,6 +244,7 @@ export default function Home() {
             src={altBg}
             layout="fill"
             alt="Alternate background image"
+            priority
           />
         </VideoContainer>
       </Container>
@@ -430,11 +431,11 @@ export default function Home() {
       <RowContainer>
         <Row
           bg="none"
-          alternate={true}
+          alternate="true"
           drag="x"
           dragConstraints={{ left: 100, right: 100 }}
         >
-          <RowChild bg="white" alternate={true}>
+          <RowChild bg="white" alternate="true">
             <RowLogo bg="#90CAF9 ">
               <FcGallery
                 style={
@@ -446,7 +447,7 @@ export default function Home() {
             </RowLogo>
             <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild bg="white" alternate={true}>
+          <RowChild bg="white" alternate="true">
             <RowLogo bg="#FFFACD">
               <FcBullish
                 style={
@@ -458,7 +459,7 @@ export default function Home() {
             </RowLogo>
             <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild bg="white" alternate={true}>
+          <RowChild bg="white" alternate="true">
             <RowLogo bg="#EAFED6 ">
               <FcSalesPerformance
                 style={
@@ -470,7 +471,7 @@ export default function Home() {
             </RowLogo>
             <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild bg="white" alternate={true}>
+          <RowChild bg="white" alternate="true">
             <RowLogo bg="	#FEE1D6">
               <FcAcceptDatabase
                 style={

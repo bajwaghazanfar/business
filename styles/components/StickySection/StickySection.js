@@ -89,7 +89,7 @@ export const FullImageContainer = styled.div`
   height: 100% > div {
     position: unset !important;
   }
-
+  position: relative;
   @media only screen and (max-width: 760px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }
