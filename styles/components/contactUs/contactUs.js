@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Button, ButtonContainer, ButtonText } from "../Buttons/Button";
-import { FullImage } from "../StickySection/StickySection";
+import { FullImage, FullImageContainer } from "../StickySection/StickySection";
 import * as Yup from "yup";
 import { Formik, useFormik } from "formik";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import axios from "axios";
 import { useState } from "react";
-import contactUs from "../../../public/contactUs.jpg";
+import contactUs from "../../../public/contactUs.webp";
 
 export const Title = styled.h1`
   font-size: ${(props) => (props.font ? props.font : " 100px ")};
@@ -80,13 +80,7 @@ export const ContactUsGrid = styled.div`
   gap: 20px;
   position: relative;
 `;
-export const Image = styled(motion.img)`
-  width: 100%;
-  height: 100%;
 
-  object-fit: cover;
-  cursor: pointer;
-`;
 //Form
 export const FormContainer = styled.div`
   width: 100%;
@@ -356,11 +350,9 @@ export const ContactUs = ({ alt, mobile }) => {
           </ButtonContainer>
         </ContactUsGrid>
         <ContactUsGrid padding="0rem">
-          <Image
-            src="https://www.purevirtual.com/wp-content/uploads/2021/01/contact-us.jpg"
-            alt="Contact Us image"
-            layout="fill"
-          />
+          <FullImageContainer>
+            <FullImage src={contactUs} layout="fill" alt="Contact Us image" />
+          </FullImageContainer>
         </ContactUsGrid>
       </ContactUsWrapper>
     </ContactUsContainer>

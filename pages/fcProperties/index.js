@@ -38,12 +38,12 @@ import {
   SlideshowWrapper,
 } from "../../styles/pages/home/home";
 import { Slider } from "../../styles/components/slideshow/Slider";
-import fc1 from "../../public/fcProperties/fc1.png";
-import fc2 from "../../public/fcProperties/fc2.png";
-import fc3 from "../../public/fcProperties/fc3.png";
-import fc4 from "../../public/fcProperties/fc4.png";
-import fc5 from "../../public/fcProperties/fc5.png";
-import fc6 from "../../public/fcProperties/fc6.png";
+import fc1 from "../../public/fcProperties/fc1.webp";
+import fc2 from "../../public/fcProperties/fc2.webp";
+import fc3 from "../../public/fcProperties/fc3.webp";
+import fc4 from "../../public/fcProperties/fc4.webp";
+import fc5 from "../../public/fcProperties/fc5.webp";
+import fc6 from "../../public/fcProperties/fc6.webp";
 
 const Fcproperties = () => {
   const [height, setHeight] = useState(null);

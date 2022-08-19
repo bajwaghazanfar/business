@@ -85,11 +85,11 @@ export const Logo = styled.img`
   object-fit: cover;
 `;
 export const FullImageContainer = styled.div`
-  width: 100%;
+  width: ${(props) => (props.width ? props.width : "100% ")};
   height: 100% > div {
     position: unset !important;
   }
-  border: 2px solid red;
+
   @media only screen and (max-width: 760px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }

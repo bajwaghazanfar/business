@@ -32,21 +32,21 @@ import {
   QuoteContainer,
   Row,
 } from "../../styles/pages/bHeard/bHeard";
-import fiberOptics from "../../public/fiber-optics.jpg";
+import fiberOptics from "../../public/fiber-optics.webp";
 import Head from "next/head";
 import {
   SlideshowContainer,
   SlideshowWrapper,
 } from "../../styles/pages/home/home";
 import { Slider } from "../../styles/components/slideshow/Slider";
-import lch1 from "../../public/lchInsure/lch1.png";
-import lch2 from "../../public/lchInsure/lch2.png";
-import lch3 from "../../public/lchInsure/lch3.png";
-import lch4 from "../../public/lchInsure/lch4.png";
-import lch5 from "../../public/lchInsure/lch5.png";
-import lch6 from "../../public/lchInsure/lch6.png";
-import lch7 from "../../public/lchInsure/lch7.png";
-import lch8 from "../../public/lchInsure/lch8.png";
+import lch1 from "../../public/lchInsure/lch1.webp";
+import lch2 from "../../public/lchInsure/lch2.webp";
+import lch3 from "../../public/lchInsure/lch3.webp";
+import lch4 from "../../public/lchInsure/lch4.webp";
+import lch5 from "../../public/lchInsure/lch5.webp";
+import lch6 from "../../public/lchInsure/lch6.webp";
+import lch7 from "../../public/lchInsure/lch7.webp";
+import lch8 from "../../public/lchInsure/lch8.webp";
 const Lchinsure = () => {
   const [height, setHeight] = useState(null);
 

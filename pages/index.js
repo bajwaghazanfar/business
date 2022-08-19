@@ -88,7 +88,7 @@ import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //Image imports
-import fiberOptics from "../public/fiber-optics.jpg";
+import fiberOptics from "../public/fiber-optics.webp";
 import fcProperties from "../public/fcProperties.avif";
 import arvTuning from "../public/arvTuning.avif";
 import birmingham from "../public/birmingham.avif";
@@ -101,11 +101,11 @@ import { Slider } from "../styles/components/slideshow/Slider";
 import Contact from "./contactUs";
 import Link from "next/link";
 //Next Head
-import slideshowImg1 from "../public/about.jpg";
+import slideshowImg1 from "../public/about.webp";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
 import development from "../public/development.avif";
-import reactImg from "../public/react.jpg";
+import reactImg from "../public/react.webp";
 //Icons
 import { DiReact } from "react-icons/di";
 import { DiNodejs } from "react-icons/di";
@@ -240,23 +240,11 @@ export default function Home() {
         </HomeContainer>
 
         <VideoContainer>
-          {width > 768 ? (
-            <Video
-              controls={false}
-              autoPlay={true}
-              muted={true}
-              loop={true}
-              playsInline
-            >
-              <source src="/video4.mp4" />
-            </Video>
-          ) : (
-            <FullImage
-              src={altBg}
-              layout="fill"
-              alt="Alternate background image"
-            />
-          )}
+          <FullImage
+            src={altBg}
+            layout="fill"
+            alt="Alternate background image"
+          />
         </VideoContainer>
       </Container>
       <RowContainer>
@@ -327,6 +315,7 @@ export default function Home() {
                 layout="fill"
                 roundleft="true"
                 roundright="true"
+                alt="Web Development logo"
               />
             </FullImageContainer>
           </Grid>
@@ -382,7 +371,10 @@ export default function Home() {
             <ValuesContainer>
               <Value>
                 <ValueImgWrapper>
-                  <ValueImg src="/logos/building.svg" />
+                  <ValueImg
+                    src="/logos/building.svg"
+                    alt="In house web development"
+                  />
                 </ValueImgWrapper>
                 <ValueTextWrapper>
                   <ValueTitle>Web Development</ValueTitle>
@@ -397,7 +389,10 @@ export default function Home() {
               </Value>
               <Value>
                 <ValueImgWrapper>
-                  <ValueImg src="/logos/layers.svg" />
+                  <ValueImg
+                    src="/logos/layers.svg"
+                    alt="In house full stack web development logo"
+                  />
                 </ValueImgWrapper>
                 <ValueTextWrapper>
                   <ValueTitle>Full stack development</ValueTitle>
@@ -412,7 +407,10 @@ export default function Home() {
               </Value>
               <Value>
                 <ValueImgWrapper>
-                  <ValueImg src="/logos/browser.svg" />
+                  <ValueImg
+                    src="/logos/browser.svg"
+                    alt="Premium web design services logo"
+                  />
                 </ValueImgWrapper>
                 <ValueTextWrapper>
                   <ValueTitle>Web design</ValueTitle>
@@ -535,7 +533,10 @@ export default function Home() {
             <ServicesContainer>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg src="/logos/building.svg" />
+                  <ServiceImg
+                    src="/logos/building.svg"
+                    alt="In house full stack web development"
+                  />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
                   <ServiceTitle>Web Development</ServiceTitle>
@@ -550,7 +551,10 @@ export default function Home() {
               </Service>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg src="/logos/building.svg" />
+                  <ServiceImg
+                    src="/logos/building.svg"
+                    alt="In house full stack web development"
+                  />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
                   <ServiceTitle>Web Development</ServiceTitle>
@@ -565,7 +569,10 @@ export default function Home() {
               </Service>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg src="/logos/building.svg" />
+                  <ServiceImg
+                    src="/logos/building.svg"
+                    alt="In house full stack web development"
+                  />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
                   <ServiceTitle>Web Development</ServiceTitle>
@@ -580,7 +587,10 @@ export default function Home() {
               </Service>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg src="/logos/building.svg" />
+                  <ServiceImg
+                    src="/logos/building.svg"
+                    alt="In house full stack web development"
+                  />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
                   <ServiceTitle>Web Development</ServiceTitle>

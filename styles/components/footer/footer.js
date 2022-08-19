@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import styled from "styled-components";
 import { Button, ButtonText } from "../Buttons/Button";
-
+import { FullImage, FullImageContainer } from "../StickySection/StickySection";
+import logo from "../../../public/logos/companyLogo/logo6.webp";
 //H1,H2 etc..
 export const Title = styled.h1`
   font-size: ${(props) => (props.font ? props.font : " 40px ")};
@@ -243,7 +244,14 @@ export const Footer = () => {
     <SS_Container>
       <SS_ContainerWrapper>
         <Grid padding="2rem">
-          <Logo src="/logos/companyLogo/logo6.png" />
+          <FullImageContainer width="10%">
+            <FullImage
+              src={logo}
+              layout="responsive"
+              roundright="true"
+              roundleft="true"
+            />
+          </FullImageContainer>
           <InsightsContainer>
             <H4 color="black">Moving forward</H4>
             <InsightsWrapper>

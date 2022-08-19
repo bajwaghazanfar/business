@@ -3,7 +3,9 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "../../../public/logos/companyLogo/logo7.png";
+import logo from "../../../public/logos/companyLogo/logo6.webp";
+import Image from "next/image";
+
 //Fonts
 export const H3 = styled.h3`
   font-size: 15px;
@@ -82,10 +84,14 @@ export const MobileMenu = styled.div`
   justify-content: center;
   align-items: flex-start;
 `;
-export const Logo = styled.img`
+export const Logo = styled(Image)`
   width: 80px;
   height: auto;
   border-radius: 10px;
+`;
+export const LogoContainer = styled.div`
+  width: 80px;
+  height: auto;
 `;
 export const Navbar = () => {
   const [width, setWidth] = useState(0);
@@ -107,7 +113,13 @@ export const Navbar = () => {
       <NavbarWrapper>
         <LeftContainer>
           <Link href="/">
-            <Logo src="/logos/companyLogo/logo6.png" />
+            <LogoContainer>
+              <Logo
+                src={logo}
+                layout="responsive"
+                alt="Web development and web design company logo"
+              />
+            </LogoContainer>
           </Link>
         </LeftContainer>
 
