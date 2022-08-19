@@ -494,7 +494,6 @@ export default function Home() {
               align="left"
               fontWeight="700"
               justify="flex-start"
-              align="flex-start"
             >
               What we do
             </Title>
