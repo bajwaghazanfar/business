@@ -118,7 +118,6 @@ export const Navbar = () => {
                 src={logo}
                 layout="responsive"
                 alt="Web development and web design company logo"
-                priority
               />
             </LogoContainer>
           </Link>

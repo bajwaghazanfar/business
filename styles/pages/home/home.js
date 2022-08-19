@@ -266,7 +266,8 @@ export const SlideshowWrapper = styled.div`
 
 export const RowContainer = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,8 +275,9 @@ export const RowContainer = styled(motion.div)`
 `;
 export const Row = styled(motion.div)`
   width: 50%;
-  height: 100px;
+  height: auto;
   padding: 1rem 0rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,13 +385,17 @@ export const ServicesContainer = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  @media only screen and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 export const Service = styled.div`
-  width: 400px;
+  width: 700px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -400,6 +406,7 @@ export const Service = styled.div`
   padding: 2rem;
 
   @media only screen and (max-width: 760px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2rem;

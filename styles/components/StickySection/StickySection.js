@@ -14,7 +14,7 @@ export const Title = styled.h1`
 
   @media (min-width: 0px) and (max-width: 768px) {
     font-size: 30px;
-    text-align: left;
+
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
   @media (min-width: 760px) and (max-width: 1030px) {
@@ -86,9 +86,7 @@ export const Logo = styled.img`
 `;
 export const FullImageContainer = styled.div`
   width: ${(props) => (props.width ? props.width : "100% ")};
-  height: 100% > div {
-    position: unset !important;
-  }
+  height: 100% 
   position: relative;
   @media only screen and (max-width: 760px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};

@@ -90,7 +90,7 @@ import { useInView } from "react-intersection-observer";
 //Image imports
 import fiberOptics from "../public/fiber-optics.webp";
 import fcProperties from "../public/fcProperties.avif";
-import arvTuning from "../public/arvTuning.avif";
+import about from "../public/about.webp";
 import birmingham from "../public/birmingham.avif";
 import altBg from "../public/altBg.avif";
 import lchLogo from "../public/lch1.png";
@@ -100,12 +100,13 @@ import Head from "next/head";
 import { Slider } from "../styles/components/slideshow/Slider";
 import Contact from "./contactUs";
 import Link from "next/link";
-//Next Head
+//Next Slideshow images
 import slideshowImg1 from "../public/about.webp";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
 import development from "../public/development.avif";
 import reactImg from "../public/react.webp";
+import arvTuning from "../public/arvTuning.avif";
 //Icons
 import { DiReact } from "react-icons/di";
 import { DiNodejs } from "react-icons/di";
@@ -115,11 +116,15 @@ import { FcGallery } from "react-icons/fc";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
+import Xarrow from "react-xarrows";
+import { useRef } from "react";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
 
+  //ref
+  const box1Ref = useRef(null);
   const sliderData = [
     {
       title: "FC Properties",
@@ -176,7 +181,7 @@ export default function Home() {
       <Head>
         <meta property="og:title" content="Obsidian Web Developments" />
       </Head>
-      <Container>
+      <Container style={{ background: "#816885 " }}>
         <HomeContainer>
           <LeftContainer>
             <MainWrapper>
@@ -240,54 +245,83 @@ export default function Home() {
         </HomeContainer>
 
         <VideoContainer>
-          <FullImage
-            src={altBg}
-            layout="fill"
-            alt="Alternate background image"
-            priority
-          />
+          {width > 768 ? (
+            <Video
+              controls={false}
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              playsInline
+            >
+              <source src="/video4.mp4" />
+            </Video>
+          ) : (
+            <FullImage
+              src={altBg}
+              layout="fill"
+              alt="Alternate background image"
+            />
+          )}
         </VideoContainer>
       </Container>
       <RowContainer>
-        <Row>
-          <RowChild>
-            <DiReact
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#65C9FF " }
-                  : { fontSize: "80px", color: "#65C9FF " }
-              }
-            />
+        <Row
+          bg="none"
+          alternate="true"
+          drag="x"
+          dragConstraints={{ left: 100, right: 100 }}
+        >
+          <RowChild bg="white" alternate="true">
+            <RowLogo bg="#90CAF9 ">
+              <FcGallery
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild>
-            <DiNodejs
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4EC63F" }
-                  : { fontSize: "80px", color: "#4EC63F" }
-              }
-            />
+          <RowChild bg="white" alternate="true">
+            <RowLogo bg="#FFFACD">
+              <FcBullish
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild>
-            <DiVisualstudio
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4FB1E6 " }
-                  : { fontSize: "80px", color: "#4FB1E6 " }
-              }
-            />
+          <RowChild bg="white" alternate="true">
+            <RowLogo bg="#EAFED6 ">
+              <FcSalesPerformance
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
-          <RowChild>
-            <GrGraphQl
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#F76EE9 " }
-                  : { fontSize: "80px", color: "#F76EE9 " }
-              }
-            />
+          <RowChild bg="white" alternate="true">
+            <RowLogo bg="	#FEE1D6">
+              <FcAcceptDatabase
+                style={
+                  width <= 768
+                    ? { fontSize: "40px", color: "#4EC63F" }
+                    : { fontSize: "40px", color: "#4EC63F" }
+                }
+              />
+            </RowLogo>
+            <RowText>Execptional service and award winning portfolio</RowText>
           </RowChild>
         </Row>
       </RowContainer>
+
       <Container>
         <CenterWrapper>
           <HalfWidth>
@@ -306,7 +340,6 @@ export default function Home() {
           </HalfWidth>
         </CenterWrapper>
       </Container>
-
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
@@ -350,7 +383,6 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-
       <SS_Container>
         <SS_ContainerWrapper bg="#816885  " padding="4rem">
           <Grid justify="center" align="flex-start">
@@ -429,59 +461,42 @@ export default function Home() {
         </SS_ContainerWrapper>
       </SS_Container>
       <RowContainer>
-        <Row
-          bg="none"
-          alternate="true"
-          drag="x"
-          dragConstraints={{ left: 100, right: 100 }}
-        >
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#90CAF9 ">
-              <FcGallery
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
+        <Row>
+          <RowChild>
+            <DiReact
+              style={
+                width <= 768
+                  ? { fontSize: "60px", color: "#65C9FF " }
+                  : { fontSize: "80px", color: "#65C9FF " }
+              }
+            />
           </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#FFFACD">
-              <FcBullish
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
+          <RowChild>
+            <DiNodejs
+              style={
+                width <= 768
+                  ? { fontSize: "60px", color: "#4EC63F" }
+                  : { fontSize: "80px", color: "#4EC63F" }
+              }
+            />
           </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#EAFED6 ">
-              <FcSalesPerformance
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
+          <RowChild>
+            <DiVisualstudio
+              style={
+                width <= 768
+                  ? { fontSize: "60px", color: "#4FB1E6 " }
+                  : { fontSize: "80px", color: "#4FB1E6 " }
+              }
+            />
           </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="	#FEE1D6">
-              <FcAcceptDatabase
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
+          <RowChild>
+            <GrGraphQl
+              style={
+                width <= 768
+                  ? { fontSize: "60px", color: "#F76EE9 " }
+                  : { fontSize: "80px", color: "#F76EE9 " }
+              }
+            />
           </RowChild>
         </Row>
       </RowContainer>
@@ -530,9 +545,9 @@ export default function Home() {
               est, qui dolorem ipsum quia dolor sit amet, co
             </Description>
           </HalfWidth>
-          <HalfWidth>
+          <HalfWidth width="80%">
             <ServicesContainer>
-              <Service>
+              <Service id="service1">
                 <ServiceImgWrapper>
                   <ServiceImg
                     src="/logos/building.svg"
@@ -608,7 +623,26 @@ export default function Home() {
           </HalfWidth>
         </CenterWrapper>
       </Container>
-      <SS_Container id="caseStudy1">
+
+      <Container>
+        <CenterWrapper>
+          <HalfWidth>
+            <Title font="50px" align="center" fontWeight="700" id="start">
+              View our web development case studies below
+            </Title>
+            <Description color="black" style={{ textAlign: "center" }}>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, co
+            </Description>
+          </HalfWidth>
+        </CenterWrapper>
+      </Container>
+      <SS_Container>
         <SS_ContainerWrapper caseStudy="true">
           <Grid
             justify="flex-start"
@@ -622,14 +656,20 @@ export default function Home() {
             <Description style={{ fontWeight: "700" }}>
               Case Study/LCH Insure
             </Description>
-            <Title font="50px" align="left" color="white" fontWeight="600">
+            <Title
+              font="50px"
+              align="left"
+              color="white"
+              fontWeight="600"
+              id="caseStudy1"
+            >
               How Obsidian Web Developments reduced the costs of laborious tasks
               by 50%, increased clients and automated 95% of an insurance
               business.
             </Title>
             <ButtonContainer>
               <Link href="/lchinsure">
-                <Button>
+                <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
               </Link>

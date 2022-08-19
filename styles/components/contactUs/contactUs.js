@@ -339,7 +339,7 @@ export const ContactUs = ({ alt, mobile }) => {
       <ContactUsWrapper>
         <ContactUsGrid>
           <Description align="center">Arrange a free consultation</Description>
-          <Title font="70px" align="center" fontWeight="600">
+          <Title font="50px" align="center" fontWeight="600">
             Arrange your non-binding, free inital consulation now
           </Title>
           <ButtonContainer align="center " justify="center">
