@@ -46,6 +46,7 @@ import {
   ServiceTextWrapper,
   ServiceTitle,
   ServiceDescription,
+  RightContainerImage,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -181,7 +182,7 @@ export default function Home() {
       <Head>
         <meta property="og:title" content="Obsidian Web Developments" />
       </Head>
-      <Container style={{ background: "#816885 " }}>
+      <Container style={{ background: "	#28282B " }}>
         <HomeContainer>
           <LeftContainer>
             <MainWrapper>
@@ -195,8 +196,8 @@ export default function Home() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      Building web solutions to meet your business needs and
-                      inject growth
+                      Building custom made websites, tailored to meet your
+                      requirements
                     </H2>
                   </motion.div>
                 ) : (
@@ -207,8 +208,8 @@ export default function Home() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      We have a holistic approach to creating web solutions for
-                      businesses
+                      Responsive, blazing fast and delivered on time and within
+                      budget
                     </H2>
                   </motion.div>
                 )}
@@ -225,104 +226,71 @@ export default function Home() {
             </MainWrapper>
           </LeftContainer>
           <RightContainer>
-            <AlignRight
-              direction="row"
-              justify="space-evenly"
-              variants={FadeUpContainer(0)}
-              initial="hidden"
-              animate="visible"
-              key={toggle}
-            >
-              <InsightsContainer variants={FadeUpChildren}>
-                <InsightsWrapper>
-                  <H5>Obsidian Web Developments</H5>
-                  <H5>11.August.2022</H5>
-                </InsightsWrapper>
-                <H4>Obsidian Web Developments is launched</H4>
-              </InsightsContainer>
-            </AlignRight>
+            <ImageGrid>
+              <RightContainerImage src="https://images.pexels.com/photos/7241628/pexels-photo-7241628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </ImageGrid>
           </RightContainer>
         </HomeContainer>
-
-        <VideoContainer>
-          {width > 768 ? (
-            <Video
-              controls={false}
-              autoPlay={true}
-              muted={true}
-              loop={true}
-              playsInline
-            >
-              <source src="/video4.mp4" />
-            </Video>
-          ) : (
-            <FullImage
-              src={altBg}
-              layout="fill"
-              alt="Alternate background image"
-            />
-          )}
-        </VideoContainer>
       </Container>
-      <RowContainer>
-        <Row
-          bg="none"
-          alternate="true"
-          drag="x"
-          dragConstraints={{ left: 100, right: 100 }}
-        >
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#90CAF9 ">
-              <FcGallery
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
-          </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#FFFACD">
-              <FcBullish
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
-          </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="#EAFED6 ">
-              <FcSalesPerformance
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
-          </RowChild>
-          <RowChild bg="white" alternate="true">
-            <RowLogo bg="	#FEE1D6">
-              <FcAcceptDatabase
-                style={
-                  width <= 768
-                    ? { fontSize: "40px", color: "#4EC63F" }
-                    : { fontSize: "40px", color: "#4EC63F" }
-                }
-              />
-            </RowLogo>
-            <RowText>Execptional service and award winning portfolio</RowText>
-          </RowChild>
-        </Row>
-      </RowContainer>
 
       <Container>
+        <RowContainer>
+          <Row
+            bg="none"
+            alternate="true"
+            drag="x"
+            dragConstraints={{ left: 100, right: 100 }}
+          >
+            <RowChild bg="white" alternate="true">
+              <RowLogo bg="#90CAF9 ">
+                <FcGallery
+                  style={
+                    width <= 768
+                      ? { fontSize: "40px", color: "#4EC63F" }
+                      : { fontSize: "40px", color: "#4EC63F" }
+                  }
+                />
+              </RowLogo>
+              <RowText>Execptional service and award winning portfolio</RowText>
+            </RowChild>
+            <RowChild bg="white" alternate="true">
+              <RowLogo bg="#FFFACD">
+                <FcBullish
+                  style={
+                    width <= 768
+                      ? { fontSize: "40px", color: "#4EC63F" }
+                      : { fontSize: "40px", color: "#4EC63F" }
+                  }
+                />
+              </RowLogo>
+              <RowText>Execptional service and award winning portfolio</RowText>
+            </RowChild>
+            <RowChild bg="white" alternate="true">
+              <RowLogo bg="#EAFED6 ">
+                <FcSalesPerformance
+                  style={
+                    width <= 768
+                      ? { fontSize: "40px", color: "#4EC63F" }
+                      : { fontSize: "40px", color: "#4EC63F" }
+                  }
+                />
+              </RowLogo>
+              <RowText>Execptional service and award winning portfolio</RowText>
+            </RowChild>
+            <RowChild bg="white" alternate="true">
+              <RowLogo bg="	#FEE1D6">
+                <FcAcceptDatabase
+                  style={
+                    width <= 768
+                      ? { fontSize: "40px", color: "#4EC63F" }
+                      : { fontSize: "40px", color: "#4EC63F" }
+                  }
+                />
+              </RowLogo>
+              <RowText>Execptional service and award winning portfolio</RowText>
+            </RowChild>
+          </Row>
+        </RowContainer>
         <CenterWrapper>
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700">

@@ -7,6 +7,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
+  position: relative;
+  top: 50px;
 `;
 export const VideoContainer = styled.div`
   width: 100%;
@@ -23,13 +25,12 @@ export const Video = styled.video`
 export const HomeContainer = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: 5;
 
   display: flex;
   justify-content: center;
   align-items: center;
   display: grid;
+
   grid-template-columns: 50% 50%;
   @media only screen and (max-width: 760px) {
     display: flex;
@@ -54,11 +55,33 @@ export const RightContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
   @media only screen and (max-width: 760px) {
     display: none;
   }
+`;
+export const ImageGrid = styled.div`
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+`;
+
+export const RightContainerImage = styled.img`
+  width: 100%;
+  height: ${(props) => (props.height ? props.height : " 80% ")};
+
+  object-fit: cover;
+  border-radius: 10px;
 `;
 export const MainWrapper = styled.div`
   width: 100%;

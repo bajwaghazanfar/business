@@ -109,7 +109,11 @@ export const Navbar = () => {
     setWidth(innerWidth);
   }, [width]);
   return (
-    <NavbarContainer>
+    <NavbarContainer
+      style={
+        router.pathname === "/" ? { background: "	#28282B " } : { color: "" }
+      }
+    >
       <NavbarWrapper>
         <LeftContainer>
           <Link href="/">
