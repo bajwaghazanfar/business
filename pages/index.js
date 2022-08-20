@@ -119,6 +119,9 @@ import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
 import Xarrow from "react-xarrows";
 import { useRef } from "react";
+//Bg
+import bgImage from "../public/bgImage.webp";
+import bgImage2 from "../public/bg2.webp";
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
@@ -227,7 +230,25 @@ export default function Home() {
           </LeftContainer>
           <RightContainer>
             <ImageGrid>
-              <RightContainerImage src="https://images.pexels.com/photos/7241628/pexels-photo-7241628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              {toggle ? (
+                <RightContainerImage
+                  src={bgImage}
+                  variants={FadeUpChildren}
+                  initial="hidden"
+                  animate="visible"
+                  key={toggle}
+                  alt="Obsidian web developments with a client"
+                />
+              ) : (
+                <RightContainerImage
+                  src={bgImage2}
+                  variants={FadeUpChildren}
+                  initial="hidden"
+                  animate="visible"
+                  key={toggle}
+                  alt="Laptop coding website"
+                />
+              )}
             </ImageGrid>
           </RightContainer>
         </HomeContainer>
@@ -352,7 +373,7 @@ export default function Home() {
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper bg="#816885  " padding="4rem">
+        <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start">
             <Title
               font="50px"
@@ -498,7 +519,7 @@ export default function Home() {
             />
           </FullWidthContainer>
         </CenterWrapper>
-        <CenterWrapper bg="#816885  ">
+        <CenterWrapper bg="#28282B  ">
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
               What we do
@@ -743,7 +764,7 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <ContactUs alt={false} mobile={true} />
+      <ContactUs alt={false} />
       <Footer />
     </>
   );

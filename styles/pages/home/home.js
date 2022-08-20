@@ -76,7 +76,7 @@ export const ImageGrid = styled.div`
   border-radius: 10px;
 `;
 
-export const RightContainerImage = styled.img`
+export const RightContainerImage = styled(motion(Image))`
   width: 100%;
   height: ${(props) => (props.height ? props.height : " 80% ")};
 

@@ -73,7 +73,7 @@ export const ContactUsGrid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f8bbd0;
+  background-color: #28282b;
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-items: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
@@ -338,8 +338,10 @@ export const ContactUs = ({ alt, mobile }) => {
     <ContactUsContainer mobile={mobile}>
       <ContactUsWrapper>
         <ContactUsGrid>
-          <Description align="center">Arrange a free consultation</Description>
-          <Title font="50px" align="center" fontWeight="600">
+          <Description align="center" color="white">
+            Arrange a free consultation
+          </Description>
+          <Title font="50px" align="center" fontWeight="600" color="#F8BBD0">
             Arrange your non-binding, free inital consulation now
           </Title>
           <ButtonContainer align="center " justify="center">
