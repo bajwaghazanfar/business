@@ -101,11 +101,7 @@ const Fcproperties = () => {
             </StickyContainer>
           </StickyGrid>
           <Grid width={width > 768 ? "2rem" : "0rem"}>
-            <FullImage
-              src={fcProperties}
-              layout="responsive"
-              alt="FC Properties"
-            />
+            <FullImage src={fcProperties} alt="FC Properties" />
 
             <CenterDiv gap="1px" padding="0rem">
               <Row>
