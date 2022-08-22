@@ -85,6 +85,8 @@ export const MobileMenu = styled.div`
   align-items: flex-start;
 `;
 export const Logo = styled(Image)`
+  width: 80px;
+  height: auto;
   border-radius: 10px;
 `;
 export const LogoContainer = styled.div`
@@ -115,16 +117,7 @@ export const Navbar = () => {
       }
     >
       <NavbarWrapper>
-        <LeftContainer>
-          <Link href="/">
-            <LogoContainer>
-              <Logo
-                src={logo}
-                alt="Web development and web design company logo"
-              />
-            </LogoContainer>
-          </Link>
-        </LeftContainer>
+        <LeftContainer></LeftContainer>
 
         {width < 768 ? (
           <HamburgerLogo onClick={openMenu}>
