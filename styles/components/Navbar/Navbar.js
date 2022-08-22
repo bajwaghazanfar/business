@@ -111,7 +111,9 @@ export const Navbar = () => {
   return (
     <NavbarContainer
       style={
-        router.pathname === "/" ? { background: "	#28282B " } : { color: "" }
+        router.pathname === "/"
+          ? { background: "	#28282B " }
+          : { background: "	#28282B " }
       }
     >
       <NavbarWrapper>
@@ -133,24 +135,24 @@ export const Navbar = () => {
           </HamburgerLogo>
         ) : (
           <RightContainer>
-            <Link href="/about">
+            <Link href="/web-design-web-development-company-birmingham/about">
               <H3
                 style={
                   router.pathname === "/"
                     ? { color: "white" }
-                    : { color: "black" }
+                    : { color: "white" }
                 }
               >
                 About
               </H3>
             </Link>
 
-            <Link href="/about">
+            <Link href="/web-design-web-development-company-birmingham/about">
               <H3
                 style={
                   router.pathname === "/"
                     ? { color: "white" }
-                    : { color: "black" }
+                    : { color: "white" }
                 }
               >
                 Projects
@@ -161,7 +163,7 @@ export const Navbar = () => {
                 style={
                   router.pathname === "/"
                     ? { color: "white" }
-                    : { color: "black" }
+                    : { color: "white" }
                 }
               >
                 Contact Us
@@ -171,7 +173,7 @@ export const Navbar = () => {
         )}
       </NavbarWrapper>
       <MobileMenu style={open ? { display: "flex" } : { display: "none" }}>
-        <Link href="/about">
+        <Link href="/web-design-web-development-company-birmingham/about">
           <H3
             onClick={() => {
               setOpen(!open);
@@ -180,7 +182,7 @@ export const Navbar = () => {
             About
           </H3>
         </Link>{" "}
-        <Link href="/about">
+        <Link href="/web-design-web-development-company-birmingham/about">
           <H3
             onClick={() => {
               setOpen(!open);

@@ -136,7 +136,7 @@ export const Vertical_Image = styled.img`
 
   object-fit: cover;
 `;
-export const ImageGrid = styled.div`
+export const ImageGrid = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;

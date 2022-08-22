@@ -122,6 +122,7 @@ import { useRef } from "react";
 //Bg
 import bgImage from "../public/bgImage.webp";
 import bgImage2 from "../public/bg2.webp";
+
 export default function Home() {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
@@ -229,23 +230,20 @@ export default function Home() {
             </MainWrapper>
           </LeftContainer>
           <RightContainer>
-            <ImageGrid>
+            <ImageGrid
+              variants={FadeUpChildren}
+              initial="hidden"
+              animate="visible"
+              key={toggle}
+            >
               {toggle ? (
                 <RightContainerImage
                   src={bgImage}
-                  variants={FadeUpChildren}
-                  initial="hidden"
-                  animate="visible"
-                  key={toggle}
                   alt="Obsidian web developments with a client"
                 />
               ) : (
                 <RightContainerImage
                   src={bgImage2}
-                  variants={FadeUpChildren}
-                  initial="hidden"
-                  animate="visible"
-                  key={toggle}
                   alt="Laptop coding website"
                 />
               )}

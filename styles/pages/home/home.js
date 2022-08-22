@@ -76,9 +76,9 @@ export const ImageGrid = styled.div`
   border-radius: 10px;
 `;
 
-export const RightContainerImage = styled(motion(Image))`
+export const RightContainerImage = styled(Image)`
   width: 100%;
-  height: ${(props) => (props.height ? props.height : " 80% ")};
+  height: ${(props) => (props.height ? props.height : " 100% ")};
 
   object-fit: cover;
   border-radius: 10px;
@@ -381,6 +381,9 @@ export const CenterWrapper = styled.div`
   align-items: ${(props) => (props.align ? props.align : "center ")};
   background: ${(props) => (props.bg ? props.bg : "")};
   padding: 2rem;
+  @media only screen and (max-width: 760px) {
+    padding: 0rem 0rem;
+  }
 `;
 export const HalfWidth = styled.div`
   width: ${(props) => (props.width ? props.width : "50% ")};
@@ -454,9 +457,16 @@ export const ServiceImg = styled.img`
   object-fit: cover;
 `;
 export const ServiceTitle = styled.h2`
-  font-size: 20px;
+  font-size: 25px;
   color: ${(props) => (props.alternate ? "#f8bbd0" : "  black")};
   font-weight: 700;
+`;
+export const ServiceSubText = styled.p`
+  font-size: 17px;
+  text-align: center;
+  color: ${(props) => (props.alternate ? "white" : "  black")};
+  font-weight: 500;
+  margin: 0px;
 `;
 export const ServiceDescription = styled.p`
   font-size: 16px;
@@ -464,16 +474,48 @@ export const ServiceDescription = styled.p`
   font-weight: 400;
   margin: 0px;
 `;
+export const ServicePrice = styled.p`
+  font-size: 20px;
+  text-align: left;
+  color: ${(props) => (props.alternate ? "white" : "  black")};
+  font-weight: 800;
+  margin: 0px;
+`;
 export const ServiceTextWrapper = styled.div`
   width: 100%;
   height: auto;
   display: flex;
+
   flex-direction: column;
   justify-content: flex-start;
-
-  gap: 0px;
+  gap: 10px;
 
   @media only screen and (max-width: 760px) {
     padding: 0rem;
+  }
+`;
+export const TwoColumnGrid = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+export const Li = styled.li`
+  color: white;
+  font-weight: 500;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 30px;
+  color: ${(props) => (props.color ? props.color : "#616161")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  bottom: 10px;
+  @media only screen and (max-width: 760px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
   }
 `;

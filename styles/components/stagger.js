@@ -1,3 +1,22 @@
+// FAQ Animation
+
+export const FAQAnimation = () => {
+  return {
+    visible: {
+      height: "auto",
+    },
+    hidden: {
+      height: 0,
+      transitionEnd: {
+        display: "none",
+      },
+    },
+    exit: {
+      display: "none",
+    },
+  };
+};
+
 //Box Shadow
 
 export const boxShadowIn = () => {
@@ -20,7 +39,7 @@ export const MoveLeft = () => {
   };
 };
 //Fade animations
-export const FadeUpContainer = (delay, stagger) => {
+export const FadeUpContainer = (delay, stagger, duration) => {
   return {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -29,6 +48,7 @@ export const FadeUpContainer = (delay, stagger) => {
       transition: {
         staggerChildren: stagger,
         delay: delay,
+        duration: duration,
       },
     },
   };
