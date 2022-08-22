@@ -32,7 +32,7 @@ export const HomeContainer = styled.div`
   display: grid;
 
   grid-template-columns: 50% 50%;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -60,7 +60,7 @@ export const RightContainer = styled.div`
   gap: 10px;
   justify-content: flex-start;
   align-items: flex-start;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: none;
   }
 `;
@@ -92,7 +92,7 @@ export const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
   }
   @media (min-width: 760px) and (max-width: 1030px) {
@@ -106,7 +106,7 @@ export const H5 = styled.h5`
   letter-spacing: 1px;
   text-align: left;
   margin: 0px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -117,7 +117,7 @@ export const H4 = styled(motion.h4)`
   letter-spacing: 1px;
   text-align: left;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -128,7 +128,7 @@ export const H3 = styled.h3`
   letter-spacing: 1px;
   text-align: left;
   margin: 0px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -139,7 +139,7 @@ export const H2 = styled(motion.h2)`
   color: ${(props) => (props.color ? props.color : " white ")};
   font-weight: 400;
   margin: 0px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 30px;
   }
   @media (min-width: 760px) and (max-width: 1030px) {
@@ -154,7 +154,7 @@ export const H2Span = styled.span`
 
   color: white;
   margin-right: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 30px;
     text-align: center;
   }
@@ -190,7 +190,7 @@ export const Customers = styled.div`
   background: #f8bbd0;
   position: relative;
   padding: 5rem;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
     height: 100%;
     padding: 1rem;
@@ -281,7 +281,7 @@ export const SlideshowWrapper = styled.div`
   width: ${(props) => (props.width ? props.width : "60% ")};
   height: ${(props) => (props.height ? props.height : "700px ")};
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
     height: 100%;
   }
@@ -322,14 +322,14 @@ export const Row = styled(motion.div)`
      
       justify-content:space-between;  
       background-color: transparent;
-      @media only screen and (max-width: 760px) {
+      @media only screen and (max-width: 770px) {
         display:none;
         
       }
 
       `
       : ""}
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 90%;
     padding: 1rem 2rem;
   }
@@ -367,7 +367,7 @@ export const RowText = styled.p`
   position: ${(props) => (props.sticky ? props.sticky : "")};
 
   bottom: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }
@@ -390,7 +390,7 @@ export const HalfWidth = styled.div`
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
   padding: 2rem;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
     height: auto;
     padding: 0rem 0rem;
@@ -412,7 +412,7 @@ export const ServicesContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -428,7 +428,7 @@ export const Service = styled.div`
   border-radius: 10px;
   padding: 2rem;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -442,7 +442,7 @@ export const ServiceImgWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
     justify-content: flex-start;
     align-items: flex-start;
@@ -487,7 +487,7 @@ export const ServiceTextWrapper = styled.div`
   justify-content: flex-start;
   gap: 10px;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
   }
 `;
@@ -496,7 +496,7 @@ export const TwoColumnGrid = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -511,7 +511,7 @@ export const Li = styled.li`
   position: ${(props) => (props.sticky ? props.sticky : "")};
 
   bottom: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }

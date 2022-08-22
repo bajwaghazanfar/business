@@ -24,7 +24,7 @@ export const Title = styled.h1`
     text-align: left;
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 770px) and (max-width: 1030px) {
     font-size: 30px;
   }
 `;
@@ -36,7 +36,7 @@ export const Description = styled.h3`
   color: ${(props) => (props.color ? props.color : "#616161")};
   position: ${(props) => (props.sticky ? props.sticky : "")};
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }
@@ -63,7 +63,7 @@ export const ContactUsWrapper = styled.div`
   align-items: center;
   padding: 0rem;
   background-color: ${(props) => (props.bg ? props.bg : "#F8BBD0")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -101,7 +101,7 @@ export const Form = styled.form`
   justify-content: flex-start;
   z-index: 10;
   gap: 5px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position:relative;
   }
   }
@@ -163,7 +163,7 @@ export const Row = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     flex-direction: column;
   }
 `;

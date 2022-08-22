@@ -8,7 +8,7 @@ export const H5 = styled.h5`
   letter-spacing: 1px;
   text-align: left;
   margin: 0px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -19,7 +19,7 @@ export const H4 = styled(motion.h4)`
   letter-spacing: 1px;
   text-align: left;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -30,7 +30,7 @@ export const H3 = styled.h3`
   font-weight: 400;
   letter-spacing: 1px;
   text-align: left;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 20px;
   }
 `;
@@ -41,10 +41,10 @@ export const H2 = styled(motion.h2)`
   color: ${(props) => (props.color ? props.color : " white ")};
   font-weight: 400;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 40px;
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 770px) and (max-width: 1030px) {
     font-size: 40px;
   }
 `;
@@ -62,7 +62,7 @@ export const ValueContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 4px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
   }
@@ -85,7 +85,7 @@ export const ValueTop = styled.div`
   align-items: center;
   border-bottom: 1px solid #e3e3e3;
   padding-bottom: 1rem;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     width: 100%;
   }
 `;
@@ -105,10 +105,10 @@ export const ValueTitle = styled(motion.h2)`
   color: ${(props) => (props.color ? props.color : " white ")};
   font-weight: 400;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     font-size: 40px;
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 770px) and (max-width: 1030px) {
     font-size: 40px;
   }
 `;
@@ -125,7 +125,7 @@ export const TwoColumnGridContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -153,7 +153,7 @@ export const Diffrent = styled.div`
   gap: 10px;
 
   border-bottom: 1px solid #d1d1d1;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     grid-template-columns: 15% 85%;
   }
 `;

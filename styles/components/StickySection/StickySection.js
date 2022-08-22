@@ -17,7 +17,7 @@ export const Title = styled.h1`
 
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 770px) and (max-width: 1030px) {
     font-size: 30px;
   }
 `;
@@ -36,7 +36,7 @@ export const SubTtitle = styled.h2`
     text-align: left;
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 770px) and (max-width: 1030px) {
     font-size: 20px;
   }
 `;
@@ -49,7 +49,7 @@ export const Description = styled.h3`
   position: ${(props) => (props.sticky ? props.sticky : "")};
 
   bottom: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }
@@ -62,7 +62,7 @@ export const StickyContainer = styled.div`
   margin: 0px;
 
   top: 10%;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }
@@ -88,7 +88,7 @@ export const FullImageContainer = styled.div`
   width: ${(props) => (props.width ? props.width : "100% ")};
   height: 100% 
   position: relative;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }
 `;
@@ -102,7 +102,7 @@ export const FullImage = styled(Image)`
   border-bottom-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
   border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
   border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -159,7 +159,7 @@ export const SS_Container = styled.div`
   position: relative;
   top: ${(props) => (props.top ? props.top : "10px")};
   padding: ${(props) => (props.padding ? props.padding : "0rem")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
   }
 `;
@@ -175,7 +175,7 @@ export const SS_ContainerWrapper = styled.div`
   padding: ${(props) =>
     props.caseStudy ? "10rem" : props.padding ? props.padding : "0rem"};
   position: relative;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: ${(props) =>
       props.reverseMobile ? "column-reverse" : "column"};
@@ -191,7 +191,7 @@ export const StickyGrid = styled.div`
   padding: 2rem;
 
   gap: 20px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     align-items: flex-start;
     position: ${(props) => (props.sticky ? "relative" : "")};
     padding: 2rem;
@@ -207,7 +207,7 @@ export const StickyGridWrapper = styled.div`
 
   padding: 2rem;
   gap: 20px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     align-items: flex-start;
   }
 `;
@@ -226,7 +226,7 @@ export const Grid = styled(motion.div)`
   border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
   border-top-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
   border-bottom-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     align-items: flex-start;
     position: ${(props) => (props.sticky ? "relative" : "")};
     border-top-left-radius: 0px;
@@ -249,7 +249,7 @@ export const CenterDiv = styled.div`
   text-align: left;
   padding: ${(props) => (props.padding ? props.padding : "1rem")};
   border-top: ${(props) => (props.border ? props.border : "none")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
   }
 `;
@@ -311,7 +311,7 @@ export const Value = styled.div`
   background-color: ${(props) => (props.alternate ? "black" : " #f8bbd0")};
   border-radius: 10px;
 
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -324,7 +324,7 @@ export const ValueImgWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
     justify-content: flex-start;
     align-items: flex-start;
@@ -355,7 +355,7 @@ export const ValueTextWrapper = styled.div`
 
   gap: 0px;
   padding: 2rem;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     padding: 0rem;
   }
 `;
