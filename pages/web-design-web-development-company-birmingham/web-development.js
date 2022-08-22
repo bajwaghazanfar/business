@@ -51,6 +51,7 @@ import {
   Li,
   ServiceSubText,
   ServicePrice,
+  ServiceSubTextSpan,
 } from "../../styles/pages/home/home";
 import {
   Button,
@@ -791,8 +792,11 @@ export default function WebDevelopment() {
                     Bronze
                   </ServiceTitle>
                   <ServiceSubText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    We will
+                    <ServiceSubTextSpan> custom-build</ServiceSubTextSpan> a
+                    website based on your samples provided, direction and brand
+                    guidlines.
+                    <ServiceSubTextSpan>Front-end only</ServiceSubTextSpan>
                   </ServiceSubText>
                   <ServiceSubText
                     style={{ fontWeight: "800", textAlign: "left" }}
@@ -800,12 +804,14 @@ export default function WebDevelopment() {
                     Website package details
                   </ServiceSubText>
                   <CenterDiv>
-                    <Li color="black">Architecture</Li>
-                    <Li color="black">Business</Li>
-                    <Li color="black">Beauty</Li>
-                    <Li color="black">Blog</Li>
-                    <Li color="black">Consulting</Li>
-                    <Li color="black">Construction</Li>
+                    <Li color="black">Custom-built front-end template</Li>
+                    <Li color="black">Customization of template</Li>
+                    <Li color="black">Mobile responsive & optimization</Li>
+                    <Li color="black">Google maps</Li>
+                    <Li color="black">Contact forms(as many as you like)</Li>
+                    <Li color="black">
+                      Website hosted and domain setup included
+                    </Li>
                     <ServicePrice>£2000</ServicePrice>
                   </CenterDiv>
                 </ServiceTextWrapper>
@@ -816,8 +822,12 @@ export default function WebDevelopment() {
                     Silver
                   </ServiceTitle>
                   <ServiceSubText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    We will custom-build a website based on your samples
+                    provided, direction, brand identity and project
+                    requirements.
+                    <ServiceSubTextSpan>
+                      Front-end and back-end included
+                    </ServiceSubTextSpan>
                   </ServiceSubText>
                   <ServiceSubText
                     style={{ fontWeight: "800", textAlign: "left" }}
@@ -825,12 +835,22 @@ export default function WebDevelopment() {
                     Website package details
                   </ServiceSubText>
                   <CenterDiv>
-                    <Li color="black">Architecture</Li>
-                    <Li color="black">Business</Li>
-                    <Li color="black">Beauty</Li>
-                    <Li color="black">Blog</Li>
-                    <Li color="black">Consulting</Li>
-                    <Li color="black">Construction</Li>
+                    <Li color="black">Custom-built front-end template</Li>
+                    <Li color="black">Customization of template</Li>
+                    <Li color="black">Mobile responsive & optimization</Li>
+                    <Li color="black">Google maps</Li>
+                    <Li color="black">Contact forms(as many as you like)</Li>
+                    <Li color="black">Google analytics</Li>
+                    <Li color="black">404 redirect</Li>
+                    <Li color="black">XML sitemap</Li>
+                    <Li color="black">
+                      Back-end development(server and database for complex
+                      requirements)
+                    </Li>
+                    <Li color="black">Test driven development</Li>
+                    <Li color="black">
+                      Website and server hosted and domain setup included
+                    </Li>
                     <ServicePrice>£3000</ServicePrice>
                   </CenterDiv>
                 </ServiceTextWrapper>
@@ -841,8 +861,12 @@ export default function WebDevelopment() {
                     Gold
                   </ServiceTitle>
                   <ServiceSubText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                    We will custom-build a website from scratch with mockups on
+                    a development server in order to meet your complex project
+                    requirements.
+                    <ServiceSubTextSpan>
+                      Front-end and back-end included
+                    </ServiceSubTextSpan>
                   </ServiceSubText>
                   <ServiceSubText
                     style={{ fontWeight: "800", textAlign: "left" }}
@@ -850,12 +874,27 @@ export default function WebDevelopment() {
                     Website package details
                   </ServiceSubText>
                   <CenterDiv>
-                    <Li color="black">Architecture</Li>
-                    <Li color="black">Business</Li>
-                    <Li color="black">Beauty</Li>
-                    <Li color="black">Blog</Li>
-                    <Li color="black">Consulting</Li>
-                    <Li color="black">Construction</Li>
+                    <Li color="black">Customized front-end </Li>
+
+                    <Li color="black">Mobile responsive & optimization</Li>
+                    <Li color="black">Google maps</Li>
+                    <Li color="black">Contact forms(as many as you like)</Li>
+                    <Li color="black">Google analytics</Li>
+                    <Li color="black">404 redirect</Li>
+                    <Li color="black">XML sitemap</Li>
+                    <Li color="black">
+                      Back-end development(server and database for complex
+                      requirements)
+                    </Li>
+                    <Li color="black">
+                      Website and server hosted and domain setup included
+                    </Li>
+                    <Li color="black">1 month of maintanence</Li>
+                    <Li color="black">Complex front-end animations</Li>
+                    <Li color="black">
+                      Optimisation for maximum performance and SEO
+                    </Li>
+                    <Li color="black"> </Li>
                     <ServicePrice>£4000</ServicePrice>
                   </CenterDiv>
                 </ServiceTextWrapper>

@@ -4,15 +4,15 @@ export const FAQAnimation = () => {
   return {
     visible: {
       height: "auto",
+      display: "flex",
+      opacity: 1,
     },
     hidden: {
       height: 0,
       transitionEnd: {
         display: "none",
+        opacity: 0,
       },
-    },
-    exit: {
-      display: "none",
     },
   };
 };

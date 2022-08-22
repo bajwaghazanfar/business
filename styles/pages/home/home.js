@@ -465,6 +465,12 @@ export const ServiceSubText = styled.p`
   font-weight: 500;
   margin: 0px;
 `;
+export const ServiceSubTextSpan = styled.span`
+  font-size: 17px;
+  text-align: center;
+  color: ${(props) => (props.alternate ? "white" : "  black")};
+  font-weight: 800;
+`;
 export const ServiceDescription = styled.p`
   font-size: 16px;
   color: ${(props) => (props.alternate ? "white" : "  black")};

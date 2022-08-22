@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { CenterWrapper, HalfWidth } from "../../pages/home/home";
 import { FAQAnimation } from "../stagger";
 
@@ -28,6 +28,7 @@ export const FAQContainer = styled(motion.div)`
 export const FAQ = styled(motion.div)`
   width: 100%;
   height: 100%;
+
   display: grid;
   grid-template-columns: 10% 90%;
   background-color: #28282b;
@@ -77,7 +78,6 @@ export const FAQ_Description = styled.h3`
 export const FAQComponent = React.memo(({ state, dispatch }) => {
   return (
     <CenterWrapper>
-      {" "}
       <HalfWidth width="70%">
         <FAQContainer>
           <FAQ
@@ -86,25 +86,29 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             }}
           >
             <FAQ_Left>
-              <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              {state.item1 ? (
+                <AiOutlineMinus
+                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                />
+              ) : (
+                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              )}
             </FAQ_Left>
             <FAQ_Right>
-              <FAQ_Title>How much do you charge to build a website?</FAQ_Title>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <FAQ_TextWrapper
-                  variants={FAQAnimation()}
-                  animate={state.item1 ? "visible" : "hidden"}
-                >
-                  <FAQ_Description color="white">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut
-                  </FAQ_Description>
-                </FAQ_TextWrapper>
-              </AnimatePresence>
+              <FAQ_Title>What does front-end mean?</FAQ_Title>
+
+              <FAQ_TextWrapper
+                variants={FAQAnimation()}
+                animate={state.item1 ? "visible" : "hidden"}
+              >
+                <FAQ_Description color="white">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut
+                </FAQ_Description>
+              </FAQ_TextWrapper>
             </FAQ_Right>
           </FAQ>
           <FAQ
@@ -113,25 +117,29 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             }}
           >
             <FAQ_Left>
-              <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              {state.item2 ? (
+                <AiOutlineMinus
+                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                />
+              ) : (
+                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              )}
             </FAQ_Left>
             <FAQ_Right>
-              <FAQ_Title>How much do you charge to build a website?</FAQ_Title>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <FAQ_TextWrapper
-                  variants={FAQAnimation()}
-                  animate={state.item2 ? "visible" : "hidden"}
-                >
-                  <FAQ_Description color="white">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut
-                  </FAQ_Description>
-                </FAQ_TextWrapper>
-              </AnimatePresence>
+              <FAQ_Title>What does back-end mean?</FAQ_Title>
+
+              <FAQ_TextWrapper
+                variants={FAQAnimation()}
+                animate={state.item2 ? "visible" : "hidden"}
+              >
+                <FAQ_Description color="white">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut
+                </FAQ_Description>
+              </FAQ_TextWrapper>
             </FAQ_Right>
           </FAQ>{" "}
           <FAQ
@@ -140,25 +148,29 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             }}
           >
             <FAQ_Left>
-              <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              {state.item3 ? (
+                <AiOutlineMinus
+                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                />
+              ) : (
+                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              )}
             </FAQ_Left>
             <FAQ_Right>
               <FAQ_Title>How much do you charge to build a website?</FAQ_Title>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <FAQ_TextWrapper
-                  variants={FAQAnimation()}
-                  animate={state.item3 ? "visible" : "hidden"}
-                >
-                  <FAQ_Description color="white">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut
-                  </FAQ_Description>
-                </FAQ_TextWrapper>
-              </AnimatePresence>
+
+              <FAQ_TextWrapper
+                variants={FAQAnimation()}
+                animate={state.item3 ? "visible" : "hidden"}
+              >
+                <FAQ_Description color="white">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut
+                </FAQ_Description>
+              </FAQ_TextWrapper>
             </FAQ_Right>
           </FAQ>{" "}
           <FAQ
@@ -167,25 +179,29 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             }}
           >
             <FAQ_Left>
-              <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              {state.item4 ? (
+                <AiOutlineMinus
+                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                />
+              ) : (
+                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              )}
             </FAQ_Left>
             <FAQ_Right>
-              <FAQ_Title>How much do you charge to build a website?</FAQ_Title>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <FAQ_TextWrapper
-                  variants={FAQAnimation()}
-                  animate={state.item4 ? "visible" : "hidden"}
-                >
-                  <FAQ_Description color="white">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut
-                  </FAQ_Description>
-                </FAQ_TextWrapper>
-              </AnimatePresence>
+              <FAQ_Title>Which package shall I select?</FAQ_Title>
+
+              <FAQ_TextWrapper
+                variants={FAQAnimation()}
+                animate={state.item4 ? "visible" : "hidden"}
+              >
+                <FAQ_Description color="white">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut
+                </FAQ_Description>
+              </FAQ_TextWrapper>
             </FAQ_Right>
           </FAQ>{" "}
           <FAQ
@@ -194,25 +210,29 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             }}
           >
             <FAQ_Left>
-              <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              {state.item5 ? (
+                <AiOutlineMinus
+                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                />
+              ) : (
+                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+              )}
             </FAQ_Left>
             <FAQ_Right>
-              <FAQ_Title>How much do you charge to build a website?</FAQ_Title>
-              <AnimatePresence initial={false} exitBeforeEnter>
-                <FAQ_TextWrapper
-                  variants={FAQAnimation()}
-                  animate={state.item5 ? "visible" : "hidden"}
-                >
-                  <FAQ_Description color="white">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut
-                  </FAQ_Description>
-                </FAQ_TextWrapper>
-              </AnimatePresence>
+              <FAQ_Title>Is SEO included?</FAQ_Title>
+
+              <FAQ_TextWrapper
+                variants={FAQAnimation()}
+                animate={state.item5 ? "visible" : "hidden"}
+              >
+                <FAQ_Description color="white">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut
+                </FAQ_Description>
+              </FAQ_TextWrapper>
             </FAQ_Right>
           </FAQ>
         </FAQContainer>
