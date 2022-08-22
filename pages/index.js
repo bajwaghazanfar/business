@@ -186,6 +186,71 @@ export default function Home() {
       <Head>
         <meta property="og:title" content="Obsidian Web Developments" />
       </Head>
+      <Container style={{ background: "	#28282B " }}>
+        <HomeContainer>
+          <LeftContainer>
+            <MainWrapper>
+              <H2Wrapper>
+                <H3>Obsidian Web Developments</H3>
+                {toggle ? (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren}>
+                      Building custom made websites, tailored to meet your
+                      requirements
+                    </H2>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren}>
+                      Responsive, blazing fast and delivered on time and within
+                      budget
+                    </H2>
+                  </motion.div>
+                )}
+              </H2Wrapper>
+              <AlignLeft>
+                <H4>{toggle ? 0 : 1}</H4>
+                <LineContainer
+                  //style={{ background: "#F7139F" }}
+                  animate={{ width: "50%" }}
+                  transition={{ ease: "easeOut", duration: 5 }}
+                  key={toggle}
+                />
+              </AlignLeft>
+            </MainWrapper>
+          </LeftContainer>
+          <RightContainer>
+            <ImageGrid
+              variants={FadeUpChildren}
+              initial="hidden"
+              animate="visible"
+              key={toggle}
+            >
+              {toggle ? (
+                <RightContainerImage
+                  src={bgImage}
+                  alt="Obsidian web developments with a client"
+                />
+              ) : (
+                <RightContainerImage
+                  src={bgImage2}
+                  alt="Laptop coding website"
+                />
+              )}
+            </ImageGrid>
+          </RightContainer>
+        </HomeContainer>
+      </Container>
 
       <Container>
         <RowContainer>
