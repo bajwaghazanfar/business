@@ -337,6 +337,7 @@ export default function Home() {
                 roundleft="true"
                 roundright="true"
                 alt="Web Development logo"
+                priority={true}
               />
             </FullImageContainer>
           </Grid>

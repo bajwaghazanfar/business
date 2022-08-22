@@ -381,9 +381,6 @@ export const CenterWrapper = styled.div`
   align-items: ${(props) => (props.align ? props.align : "center ")};
   background: ${(props) => (props.bg ? props.bg : "")};
   padding: 2rem;
-  @media only screen and (max-width: 760px) {
-    padding: 0rem 0rem;
-  }
 `;
 export const HalfWidth = styled.div`
   width: ${(props) => (props.width ? props.width : "50% ")};
