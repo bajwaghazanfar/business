@@ -117,7 +117,17 @@ export const Navbar = () => {
       }
     >
       <NavbarWrapper>
-        <LeftContainer></LeftContainer>
+        <LeftContainer>
+          <Link href="/">
+            <LogoContainer>
+              <Logo
+                src={logo}
+                layout="responsive"
+                alt="Web development and web design company logo"
+              />
+            </LogoContainer>
+          </Link>
+        </LeftContainer>
 
         {width < 768 ? (
           <HamburgerLogo onClick={openMenu}>
