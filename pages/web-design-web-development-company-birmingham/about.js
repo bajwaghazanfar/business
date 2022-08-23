@@ -1,11 +1,4 @@
 import {
-  Arrow,
-  ArrowContainer,
-  ArrowWrapper,
-} from "../../styles/components/arrow/arrow";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import {
   Container,
   HomeContainer,
   Video,
@@ -74,7 +67,7 @@ import {
   StickyGridWrapper,
   StickyContainer,
   FullImageContainer,
-  SubTtitle,
+  SubTitle,
 } from "../../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -357,9 +350,9 @@ export default function AboutUs() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTtitle font="50px" align="left" fontWeight="700">
+            <SubTitle font="50px" align="left" fontWeight="700">
               Authentic and hard-working
-            </SubTtitle>
+            </SubTitle>
             <Description color="black">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -389,14 +382,9 @@ export default function AboutUs() {
       <SS_Container>
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTtitle
-              font="50px"
-              align="left"
-              fontWeight="700"
-              color="#F8BBD0"
-            >
+            <SubTitle font="50px" align="left" fontWeight="700" color="#F8BBD0">
               100% custom coded websites. We don't use templates
-            </SubTtitle>
+            </SubTitle>
             <Description color="white">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

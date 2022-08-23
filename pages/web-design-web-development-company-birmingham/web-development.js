@@ -79,7 +79,7 @@ import {
   StickyGridWrapper,
   StickyContainer,
   FullImageContainer,
-  SubTtitle,
+  SubTitle,
 } from "../../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -376,9 +376,9 @@ export default function WebDevelopment() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTtitle font="50px" align="left" fontWeight="700">
+            <SubTitle font="50px" align="left" fontWeight="700">
               Web desgin & Development
-            </SubTtitle>
+            </SubTitle>
             <Description color="black">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -408,14 +408,9 @@ export default function WebDevelopment() {
       <SS_Container>
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTtitle
-              font="50px"
-              align="left"
-              fontWeight="700"
-              color="#F8BBD0"
-            >
+            <SubTitle font="50px" align="left" fontWeight="700" color="#F8BBD0">
               Web design & Web Development industries
-            </SubTtitle>
+            </SubTitle>
             <Description color="white">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

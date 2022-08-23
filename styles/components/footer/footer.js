@@ -270,6 +270,9 @@ export const Footer = () => {
               </Link>
               <Link href="/about">
                 <FooterLink>About</FooterLink>
+              </Link>{" "}
+              <Link href="/contactUs">
+                <FooterLink>Contact Us</FooterLink>
               </Link>
               <Link href="/contactUs">
                 <FooterLink>Contact Us</FooterLink>

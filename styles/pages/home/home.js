@@ -73,7 +73,6 @@ export const ImageGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
 `;
 
 export const RightContainerImage = styled(Image)`
@@ -81,7 +80,7 @@ export const RightContainerImage = styled(Image)`
   height: ${(props) => (props.height ? props.height : " 100% ")};
 
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 2px;
 `;
 export const MainWrapper = styled.div`
   width: 100%;
@@ -133,7 +132,7 @@ export const H3 = styled.h3`
   }
 `;
 
-export const H2 = styled(motion.h2)`
+export const H2 = styled(motion.h1)`
   font-size: 70px;
   text-align: left;
   color: ${(props) => (props.color ? props.color : " white ")};

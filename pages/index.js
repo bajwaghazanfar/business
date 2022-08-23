@@ -74,7 +74,10 @@ import {
   StickyGridWrapper,
   StickyContainer,
   FullImageContainer,
-  SubTtitle,
+  SubTitle,
+  DescriptionSpan,
+  SubHeading,
+  A,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -83,7 +86,7 @@ import {
   ContactUsGrid,
   ContactUsWrapper,
 } from "../styles/components/contactUs/contactUs";
-import { Footer } from "../styles/components/footer/footer";
+
 import CountupHook from "../styles/components/countUp/countUp";
 import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
 import { motion } from "framer-motion";
@@ -117,11 +120,16 @@ import { FcGallery } from "react-icons/fc";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
+import { GoBrowser } from "react-icons/go";
+import { MdEmail } from "react-icons/md";
+import { AiFillPhone } from "react-icons/ai";
 import Xarrow from "react-xarrows";
 import { useRef } from "react";
 //Bg
 import bgImage from "../public/bgImage.webp";
 import bgImage2 from "../public/bg2.webp";
+import { Footer } from "../styles/components/footer/footer";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -180,28 +188,28 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Obsidian Web Developments, creating bespoke websites and web designs to meet your requirements."
+          content="Obsidian Web Development, creating bespoke websites and web designs to meet your requirements."
         />
       </Head>
       <Head>
-        <meta property="og:title" content="Obsidian Web Developments" />
+        <meta property="og:title" content="Obsidian Web Development" />
       </Head>
       <Container style={{ background: "	#28282B " }}>
         <HomeContainer>
           <LeftContainer>
             <MainWrapper>
               <H2Wrapper>
-                <H3>Obsidian Web Developments</H3>
+                <H3>Obsidian Web Development</H3>
                 {toggle ? (
                   <motion.div
                     variants={FadeUpContainer(0)}
                     initial="hidden"
                     animate="visible"
                     key={toggle}
+                    priority
                   >
                     <H2 variants={FadeUpChildren}>
-                      Building custom made websites, tailored to meet your
-                      requirements
+                      #1 Web design agency in Birmingham
                     </H2>
                   </motion.div>
                 ) : (
@@ -210,10 +218,11 @@ export default function Home() {
                     initial="hidden"
                     animate="visible"
                     key={toggle}
+                    priority
                   >
                     <H2 variants={FadeUpChildren}>
-                      Responsive, blazing fast and delivered on time and within
-                      budget
+                      Premium Web Design and Web Development services in
+                      Birmingham
                     </H2>
                   </motion.div>
                 )}
@@ -239,7 +248,7 @@ export default function Home() {
               {toggle ? (
                 <RightContainerImage
                   src={bgImage}
-                  alt="Obsidian web developments with a client"
+                  alt="Obsidian web development with a client"
                 />
               ) : (
                 <RightContainerImage
@@ -270,7 +279,7 @@ export default function Home() {
                   }
                 />
               </RowLogo>
-              <RowText>Execptional service and award winning portfolio</RowText>
+              <RowText>10+ years in Web Development commercially</RowText>
             </RowChild>
             <RowChild bg="white" alternate="true">
               <RowLogo bg="#FFFACD">
@@ -282,7 +291,9 @@ export default function Home() {
                   }
                 />
               </RowLogo>
-              <RowText>Execptional service and award winning portfolio</RowText>
+              <RowText>
+                Execptional service and custom built web solutions
+              </RowText>
             </RowChild>
             <RowChild bg="white" alternate="true">
               <RowLogo bg="#EAFED6 ">
@@ -294,7 +305,7 @@ export default function Home() {
                   }
                 />
               </RowLogo>
-              <RowText>Execptional service and award winning portfolio</RowText>
+              <RowText>Flexible pricing per individual project</RowText>
             </RowChild>
             <RowChild bg="white" alternate="true">
               <RowLogo bg="	#FEE1D6">
@@ -306,23 +317,28 @@ export default function Home() {
                   }
                 />
               </RowLogo>
-              <RowText>Execptional service and award winning portfolio</RowText>
+              <RowText>Front-end and back-end development</RowText>
             </RowChild>
           </Row>
         </RowContainer>
         <CenterWrapper>
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700">
-              What we do
+              #1 Web Development agency in Birmingham
             </Title>
             <Description color="black" align="center">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Obsidian Web Development is an award winning
+              <DescriptionSpan> Web development</DescriptionSpan> and{" "}
+              <DescriptionSpan>
+                Web Design Agency based in Birmingham
+              </DescriptionSpan>
+              , with a team passionate about delivering web solutions for
+              clients with complex requirements. Our focal point is{" "}
+              <DescriptionSpan>Web Development</DescriptionSpan> and{" "}
+              <DescriptionSpan>Web Design</DescriptionSpan>, we aim to combine
+              various state of the art technologies to meet your project
+              requirements on time, within budget and most important of all to a
+              high standard.
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -342,31 +358,45 @@ export default function Home() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTtitle font="50px" align="left" fontWeight="700">
-              Web development agency based in Birmingham
-            </SubTtitle>
+            <SubTitle font="50px" align="left" fontWeight="700">
+              Web Design Birmingham
+            </SubTitle>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              We are a newly founded Web Development and Web Design agency based
+              in Birmingham with over{" "}
+              <DescriptionSpan>
+                10+ years in Web Development and Web Design commercially
+              </DescriptionSpan>
+              . Our team of developers have gained vital experience with large
+              corporations all over the world, to grasp the intricacies of{" "}
+              <DescriptionSpan>
+                Web Development, Web Design and SEO
+              </DescriptionSpan>
+              . We pride ourselves on understanding these services to a
+              high-level and delivering quality web solutions that meet your
+              project requirements no matter how complex.
             </Description>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>{" "}
+              <DescriptionSpan>
+                Code runs in our blood, literally!
+              </DescriptionSpan>{" "}
+              Which is why we are passionate about custom built websites that
+              are not built from Wordpress templates which are bloated, slow and
+              restrict the capaballities for creative expansion. Our Web
+              Development team will produce websites that score perfect{" "}
+              <A href="https://web.dev/">lighthouse scores</A> and rank well on
+              Google.
+              <br />
+            </Description>
+
             <ButtonContainer>
-              <Button>
-                <ButtonText>Explore</ButtonText>
-              </Button>
+              <Link href="web-design-web-development-company-birmingham/web-development">
+                <Button>
+                  <ButtonText>
+                    View our Birmingham Web Development services
+                  </ButtonText>
+                </Button>
+              </Link>
             </ButtonContainer>
           </Grid>
         </SS_ContainerWrapper>
@@ -384,8 +414,10 @@ export default function Home() {
               Web development services we offer
             </Title>
             <Description color="white" style={{ margin: "0px" }}>
-              We understand your industry which help in the exponential growth
-              of your business with proven futuristic vision.
+              At Obsidian Web Development, we offer the best Web Development
+              service in Birmingham. Our focal point is custom-built web
+              solutions which utilises the latest technologies to create your
+              perfect website that solves your business needs and ensues growth.
             </Description>
           </Grid>
           <Grid align="flex-start" justify="flex-start">
@@ -400,11 +432,11 @@ export default function Home() {
                 <ValueTextWrapper>
                   <ValueTitle>Web Development</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Custom built, fast and SEO-friendly websites are the
+                    cornerstone of our business. Our Web Development service is
+                    guaranteed to meet your business needs, automate repetitive
+                    tasks and increase the annual your business generates
+                    through our SEO tactics.
                   </ValueDescription>
                 </ValueTextWrapper>
               </Value>
@@ -418,11 +450,12 @@ export default function Home() {
                 <ValueTextWrapper>
                   <ValueTitle>Full stack development</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Full stack development is another cornerstone of our
+                    business. This service is geared towards business that
+                    require a solution to meet complex project requirements.
+                    Full stack development is compromised of 3 factors. A
+                    front-end, back-end and cloud services for any database
+                    access etc..
                   </ValueDescription>
                 </ValueTextWrapper>
               </Value>
@@ -434,13 +467,13 @@ export default function Home() {
                   />
                 </ValueImgWrapper>
                 <ValueTextWrapper>
-                  <ValueTitle>Web design</ValueTitle>
+                  <ValueTitle> Web design</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Alongside Web Development and Full stack development, we
+                    also offer Web Design as a service aswell. We produce modern
+                    sleek web designs using industry leading tools such as Figma
+                    to create responsive, eye-catching web designs that are
+                    guaranteed to increase user's session lengths
                   </ValueDescription>
                 </ValueTextWrapper>
               </Value>
@@ -497,7 +530,7 @@ export default function Home() {
               fontWeight="700"
               justify="flex-start"
             >
-              What we do
+              Web Developers that deliver quality results
             </Title>
             <Description color="black">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -509,19 +542,11 @@ export default function Home() {
               est, qui dolorem ipsum quia dolor sit amet, co
             </Description>
           </HalfWidth>
-          <FullWidthContainer>
-            <FullImage
-              src={reactImg}
-              layout="fill"
-              roundleft="true"
-              roundright="true"
-            />
-          </FullWidthContainer>
         </CenterWrapper>
         <CenterWrapper bg="#28282B  ">
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
-              What we do
+              How it works
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -561,7 +586,7 @@ export default function Home() {
                   />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceTitle>Web Design</ServiceTitle>
                   <ServiceDescription>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -579,7 +604,7 @@ export default function Home() {
                   />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceTitle>SEO</ServiceTitle>
                   <ServiceDescription>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -597,7 +622,7 @@ export default function Home() {
                   />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceTitle>CMS Integration</ServiceTitle>
                   <ServiceDescription>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -651,7 +676,7 @@ export default function Home() {
               fontWeight="600"
               id="caseStudy1"
             >
-              How Obsidian Web Developments reduced the costs of laborious tasks
+              How Obsidian Web Development reduced the costs of laborious tasks
               by 50%, increased clients and automated 95% of an insurance
               business.
             </Title>
@@ -694,8 +719,8 @@ export default function Home() {
               Case Study/Arv Tuning
             </Description>
             <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Developments improved the SEO of a site,
-              resulting in 60% more customers every month
+              How Obsidian Web Development improved the SEO of a site, resulting
+              in 60% more customers every month
             </Title>
             <ButtonContainer>
               <Link href="/arvTuning">
@@ -736,7 +761,7 @@ export default function Home() {
               Case Study/FC Properties
             </Description>
             <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Developments reduced the time spent on repetitive
+              How Obsidian Web Development reduced the time spent on repetitive
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>

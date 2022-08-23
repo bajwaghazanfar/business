@@ -147,7 +147,7 @@ export const Navbar = () => {
               </H3>
             </Link>
 
-            <Link href="/web-design-web-development-company-birmingham/about">
+            <Link href="/web-design-web-development-company-birmingham/web-development">
               <H3
                 style={
                   router.pathname === "/"
@@ -155,7 +155,7 @@ export const Navbar = () => {
                     : { color: "white" }
                 }
               >
-                Projects
+                Services
               </H3>
             </Link>
             <Link href="/contactUs">
@@ -182,13 +182,13 @@ export const Navbar = () => {
             About
           </H3>
         </Link>{" "}
-        <Link href="/web-design-web-development-company-birmingham/about">
+        <Link href="/web-design-web-development-company-birmingham/web-development">
           <H3
             onClick={() => {
               setOpen(!open);
             }}
           >
-            Projects
+            Services
           </H3>
         </Link>{" "}
         <Link href="/contactUs">

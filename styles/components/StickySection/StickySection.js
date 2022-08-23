@@ -21,8 +21,8 @@ export const Title = styled.h1`
     font-size: 30px;
   }
 `;
-export const SubTtitle = styled.h2`
-  font-size: ${(props) => (props.font ? props.font : " 80px ")};
+export const SubTitle = styled.h2`
+  font-size: ${(props) => (props.font ? props.font : " 40px ")};
   font-weight: ${(props) => (props.fontWeight ? props.fontWeight : " 400 ")};
 
   color: ${(props) => (props.color ? props.color : "black")};
@@ -40,7 +40,21 @@ export const SubTtitle = styled.h2`
     font-size: 20px;
   }
 `;
-export const Description = styled.h3`
+export const SubHeading = styled.h3`
+  font-size: 20px;
+  font-weight: 600;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 35px;
+  color: ${(props) => (props.color ? props.color : "#616161")};
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  bottom: 10px;
+  @media only screen and (max-width: 770px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
+export const Description = styled.h4`
   font-size: 17px;
   font-weight: 500;
   text-align: ${(props) => (props.align ? props.align : "left")};
@@ -54,7 +68,34 @@ export const Description = styled.h3`
     font-size: 15px;
   }
 `;
+export const A = styled.a`
+  font-size: 17px;
+  font-weight: 800;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 35px;
+  color: black;
+  text-decoration: underline;
 
+  bottom: 10px;
+  @media only screen and (max-width: 770px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
+export const DescriptionSpan = styled.span`
+  font-size: 17px;
+  font-weight: 800;
+  text-align: ${(props) => (props.align ? props.align : "left")};
+  line-height: 35px;
+  color: black;
+  position: ${(props) => (props.sticky ? props.sticky : "")};
+
+  bottom: 10px;
+  @media only screen and (max-width: 770px) {
+    position: ${(props) => (props.sticky ? "relative" : "")};
+    font-size: 15px;
+  }
+`;
 export const StickyContainer = styled.div`
   width: 100%;
   height: auto;
