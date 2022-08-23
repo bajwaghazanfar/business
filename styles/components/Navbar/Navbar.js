@@ -106,6 +106,7 @@ export const Navbar = () => {
     "/contactUs",
     "/web-design-web-development-company-birmingham/lchinsure",
     "/web-design-web-development-company-birmingham/fcProperties",
+    "/web-design-web-development-company-birmingham/arvTuning",
   ];
   const setBgColor = () => {
     const isPresent = routes.indexOf(router.pathname);
@@ -153,11 +154,7 @@ export const Navbar = () => {
           <RightContainer>
             <Link href="/web-design-web-development-company-birmingham/about">
               <H3
-                style={
-                  router.pathname === "/"
-                    ? { color: "white" }
-                    : { color: "white" }
-                }
+                style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
                 About
               </H3>
@@ -165,22 +162,14 @@ export const Navbar = () => {
 
             <Link href="/web-design-web-development-company-birmingham/web-development">
               <H3
-                style={
-                  router.pathname === "/"
-                    ? { color: "white" }
-                    : { color: "white" }
-                }
+                style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
                 Services
               </H3>
             </Link>
             <Link href="/contactUs">
               <H3
-                style={
-                  router.pathname === "/"
-                    ? { color: "white" }
-                    : { color: "white" }
-                }
+                style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
                 Contact Us
               </H3>

@@ -3,15 +3,15 @@ import {
   Arrow,
   ArrowContainer,
   ArrowWrapper,
-} from "../../styles/components/arrow/arrow";
-import { Button, ButtonText } from "../../styles/components/Buttons/Button";
+} from "../../../styles/components/arrow/arrow";
+import { Button, ButtonText } from "../../../styles/components/Buttons/Button";
 import {
   ContactUs,
   ContactUsContainer,
   ContactUsGrid,
   ContactUsWrapper,
-} from "../../styles/components/contactUs/contactUs";
-import { Footer } from "../../styles/components/footer/footer";
+} from "../../../styles/components/contactUs/contactUs";
+import { Footer } from "../../../styles/components/footer/footer";
 import {
   CenterDiv,
   Description,
@@ -24,15 +24,15 @@ import {
   StickyGrid,
   StickyGridWrapper,
   Title,
-} from "../../styles/components/StickySection/StickySection";
+} from "../../../styles/components/StickySection/StickySection";
 import {
   H3,
   HR,
   Overview,
   QuoteContainer,
   Row,
-} from "../../styles/pages/bHeard/bHeard";
-import arvTuning from "../../public/arvTuning.avif";
+} from "../../../styles/pages/bHeard/bHeard";
+import arvTuning from "../../../public/arvTuning.avif";
 import Head from "next/head";
 
 const Arvtuning = () => {

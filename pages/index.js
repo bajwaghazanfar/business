@@ -722,7 +722,7 @@ export default function Home() {
               business.
             </Title>
             <ButtonContainer>
-              <Link href="/lchinsure">
+              <Link href="/web-design-web-development-company-birmingham/lchinsure">
                 <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -765,7 +765,7 @@ export default function Home() {
               resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
-              <Link href="/arvTuning">
+              <Link href="/web-design-web-development-company-birmingham/arvTuning">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -808,7 +808,7 @@ export default function Home() {
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
-              <Link href="/fcProperties">
+              <Link href="/web-design-web-development-company-birmingham/fcProperties">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
