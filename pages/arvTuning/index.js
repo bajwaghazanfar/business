@@ -66,10 +66,10 @@ const Arvtuning = () => {
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
-              <Description style={{ fontWeight: "700" }} sticky="sticky">
+              <Description style={{ fontWeight: "500" }} sticky="sticky">
                 Case Study/Arv Tuning
               </Description>
-              <Title font="70px" align="left" sticky="sticky">
+              <Title font="60px" align="left" sticky="sticky">
                 How Obsidian Web Developments reduced the costs of laborious
                 tasks by 50%, increased clients and automated 95% of an
                 insurance business.

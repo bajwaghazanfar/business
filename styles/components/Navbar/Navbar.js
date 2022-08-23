@@ -13,6 +13,9 @@ export const H3 = styled.h3`
   font-weight: 600;
   margin: 0px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 export const H1 = styled.h1`
   font-size: 40px;
@@ -98,8 +101,22 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   //Next router
   const router = useRouter();
+  //Routes for bg color
+  const routes = [
+    "/contactUs",
+    "/web-design-web-development-company-birmingham/lchinsure",
+    "/web-design-web-development-company-birmingham/fcProperties",
+  ];
+  const setBgColor = () => {
+    const isPresent = routes.indexOf(router.pathname);
 
-  console.log(router.pathname);
+    if (isPresent > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  console.log(setBgColor(), "bgcollorrr");
   const openMenu = () => {
     setOpen(!open);
   };
@@ -111,9 +128,7 @@ export const Navbar = () => {
   return (
     <NavbarContainer
       style={
-        router.pathname === "/"
-          ? { background: "	#28282B " }
-          : { background: "	#28282B " }
+        setBgColor() ? { background: "	none " } : { background: "	#28282B " }
       }
     >
       <NavbarWrapper>

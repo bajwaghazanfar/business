@@ -8,7 +8,7 @@ import React from "react";
 export const FAQ_Title = styled.div`
   font-size: 25px;
   text-align: center;
-  color: #f8bbd0;
+  color: ${(props) => (props.color ? props.color : " #f8bbd0;")};
   font-weight: 800;
   margin: 0px;
 `;
@@ -20,7 +20,10 @@ export const FAQContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  @media only screen and (max-width: 760px) {
+  position: relative;
+  top: 10px;
+
+  @media only screen and (max-width: 770px) {
     margin-bottom: 100px;
   }
 `;
@@ -31,10 +34,14 @@ export const FAQ = styled(motion.div)`
 
   display: grid;
   grid-template-columns: 10% 90%;
-  background-color: #28282b;
+  background-color: ${(props) => (props.bg ? props.bg : "#28282b; ")};
   padding: 1rem;
+
   border-radius: 10px;
   cursor: pointer;
+  @media only screen and (max-width: 770px) {
+    gap: 50px;
+  }
 `;
 
 export const FAQ_Left = styled.div`
@@ -70,7 +77,7 @@ export const FAQ_Description = styled.h3`
   position: ${(props) => (props.sticky ? props.sticky : "")};
 
   bottom: 10px;
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
   }

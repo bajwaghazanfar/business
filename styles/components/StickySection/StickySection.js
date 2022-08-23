@@ -11,7 +11,10 @@ export const Title = styled.h1`
   position: ${(props) => (props.sticky ? props.sticky : "")};
   text-decoration: ${(props) => (props.underline ? props.underline : "")};
   bottom: 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   @media (min-width: 0px) and (max-width: 768px) {
     font-size: 30px;
 

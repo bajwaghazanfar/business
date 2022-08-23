@@ -294,6 +294,9 @@ export const RowContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media only screen and (max-width: 770px) {
+    display: none;
+  }
 `;
 export const Row = styled(motion.div)`
   width: 50%;
@@ -476,6 +479,13 @@ export const ServiceDescription = styled.p`
   font-weight: 400;
   margin: 0px;
 `;
+export const ServiceA = styled.a`
+  font-size: 16px;
+  color: ${(props) => (props.alternate ? "white" : "  black")};
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0px;
+`;
 export const ServicePrice = styled.p`
   font-size: 20px;
   text-align: left;
@@ -501,6 +511,8 @@ export const TwoColumnGrid = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
+  justify-content: flex-start;
+  align-items: flex-start;
   @media only screen and (max-width: 770px) {
     width: 100%;
     display: flex;

@@ -47,6 +47,8 @@ import {
   ServiceTitle,
   ServiceDescription,
   RightContainerImage,
+  TwoColumnGrid,
+  ServiceA,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -71,46 +73,32 @@ import {
   ValueDescription,
   ValueTextWrapper,
   ValueImgWrapper,
-  StickyGridWrapper,
-  StickyContainer,
   FullImageContainer,
   SubTitle,
   DescriptionSpan,
-  SubHeading,
   A,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
-import {
-  ContactUs,
-  ContactUsContainer,
-  ContactUsGrid,
-  ContactUsWrapper,
-} from "../styles/components/contactUs/contactUs";
+import { ContactUs } from "../styles/components/contactUs/contactUs";
 
-import CountupHook from "../styles/components/countUp/countUp";
 import { FadeUpChildren, FadeUpContainer } from "../styles/components/stagger";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //Image imports
 import fiberOptics from "../public/fiber-optics.webp";
 import fcProperties from "../public/fcProperties.avif";
-import about from "../public/about.webp";
-import birmingham from "../public/birmingham.avif";
-import altBg from "../public/altBg.avif";
-import lchLogo from "../public/lch1.png";
-import arvLogo from "../public/arv.png";
-import fcLogo from "../public/fc.png";
+
 import Head from "next/head";
-import { Slider } from "../styles/components/slideshow/Slider";
-import Contact from "./contactUs";
+
 import Link from "next/link";
 //Next Slideshow images
 import slideshowImg1 from "../public/about.webp";
 import slideshowImg2 from "../public/slideshowImg2.avif";
 import slideshowImg3 from "../public/slideshowImg3.avif";
 import development from "../public/development.avif";
-import reactImg from "../public/react.webp";
+
 import arvTuning from "../public/arvTuning.avif";
+import undraw1 from "../public/undraw/undraw1.svg";
 //Icons
 import { DiReact } from "react-icons/di";
 import { DiNodejs } from "react-icons/di";
@@ -120,16 +108,26 @@ import { FcGallery } from "react-icons/fc";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
-import { GoBrowser } from "react-icons/go";
+import { IoMdBrowsers } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
-import Xarrow from "react-xarrows";
+import { FiExternalLink } from "react-icons/fi";
+import { BsArrowRight } from "react-icons/bs";
 import { useRef } from "react";
 //Bg
 import bgImage from "../public/bgImage.webp";
 import bgImage2 from "../public/bg2.webp";
 import { Footer } from "../styles/components/footer/footer";
 import dynamic from "next/dynamic";
+import {
+  FAQ,
+  FAQContainer,
+  FAQ_Description,
+  FAQ_Left,
+  FAQ_Right,
+  FAQ_TextWrapper,
+  FAQ_Title,
+} from "../styles/components/faq/faq";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -188,18 +186,18 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Obsidian Web Development, creating bespoke websites and web designs to meet your requirements."
+          content="Obsidian Web Developments, creating bespoke websites and web designs to meet your requirements."
         />
       </Head>
       <Head>
-        <meta property="og:title" content="Obsidian Web Development" />
+        <meta property="og:title" content="Obsidian Web Developments" />
       </Head>
       <Container style={{ background: "	#28282B " }}>
         <HomeContainer>
           <LeftContainer>
             <MainWrapper>
               <H2Wrapper>
-                <H3>Obsidian Web Development</H3>
+                <H3>Obsidian Web Developments</H3>
                 {toggle ? (
                   <motion.div
                     variants={FadeUpContainer(0)}
@@ -246,7 +244,7 @@ export default function Home() {
               {toggle ? (
                 <RightContainerImage
                   src={bgImage}
-                  alt="Obsidian web development with a client"
+                  alt="Obsidian web developments with a client"
                 />
               ) : (
                 <RightContainerImage
@@ -325,7 +323,7 @@ export default function Home() {
               #1 Web Development agency in Birmingham
             </Title>
             <Description color="black" align="center">
-              Obsidian Web Development is an award winning
+              Obsidian Web Developments is an award winning
               <DescriptionSpan> Web development</DescriptionSpan> and{" "}
               <DescriptionSpan>
                 Web Design Agency based in Birmingham
@@ -411,11 +409,18 @@ export default function Home() {
               Web development services we offer
             </Title>
             <Description color="white" style={{ margin: "0px" }}>
-              At Obsidian Web Development, we offer the best Web Development
+              At Obsidian Web Developments, we offer the best Web Development
               service in Birmingham. Our focal point is custom-built web
               solutions which utilises the latest technologies to create your
               perfect website that solves your business needs and ensues growth.
             </Description>
+            <ButtonContainer>
+              <Link href="web-design-web-development-company-birmingham/web-development">
+                <Button>
+                  <ButtonText>View web development services</ButtonText>
+                </Button>
+              </Link>
+            </ButtonContainer>
           </Grid>
           <Grid align="flex-start" justify="flex-start">
             <ValuesContainer>
@@ -546,90 +551,135 @@ export default function Home() {
               How it works
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Get the quality website that meets your business needs. Here's how
+              to get started in just 3 simple steps.
             </Description>
           </HalfWidth>
           <HalfWidth width="80%">
             <ServicesContainer>
               <Service id="service1">
                 <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
+                  <IoMdBrowsers style={{ fontSize: "30px", color: "BLACK" }} />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
+                  <ServiceTitle>
+                    Browse through our site and pick a service
+                  </ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Browse through our site and view our various services such
+                    as{" "}
+                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                      Web Development
+                    </ServiceA>
+                    ,{" "}
+                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                      Web Design
+                    </ServiceA>{" "}
+                    or{" "}
+                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                      SEO
+                    </ServiceA>
+                    .
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
+                  <MdEmail style={{ fontSize: "30px", color: "BLACK" }} />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>Web Design</ServiceTitle>
+                  <ServiceTitle>
+                    Contact us through our contact form
+                  </ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Intrested in a service, contact us and be sure to leave your
+                    phone number, query and a suitable time to call you
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
               <Service>
                 <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
+                  <AiFillPhone style={{ fontSize: "30px", color: "BLACK" }} />
                 </ServiceImgWrapper>
                 <ServiceTextWrapper>
-                  <ServiceTitle>SEO</ServiceTitle>
+                  <ServiceTitle>
+                    We will give you a call shortly after
+                  </ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ServiceDescription>
-                </ServiceTextWrapper>
-              </Service>
-              <Service>
-                <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
-                </ServiceImgWrapper>
-                <ServiceTextWrapper>
-                  <ServiceTitle>CMS Integration</ServiceTitle>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Our team will take a look at the project requirements and
+                    will give you a call back with more info and a suitable
+                    quote
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
             </ServicesContainer>
+            <TwoColumnGrid>
+              <CenterWrapper>
+                <Title
+                  font="50px"
+                  align="left"
+                  fontWeight="700"
+                  color="#f8bbd0"
+                >
+                  Explore{" "}
+                  <BsArrowRight
+                    style={
+                      width <= 768 ? { display: "none" } : { display: "flex" }
+                    }
+                  />
+                </Title>
+              </CenterWrapper>
+              <FAQContainer>
+                <Link href="/web-design-web-development-company-birmingham/about">
+                  <FAQ bg="#f8bbd0">
+                    <FAQ_Left>
+                      <FiExternalLink
+                        style={{ fontSize: "40px", color: "#28282b" }}
+                      />
+                    </FAQ_Left>
+                    <FAQ_Right>
+                      <FAQ_Title color="#28282b">About</FAQ_Title>
+                    </FAQ_Right>
+                  </FAQ>
+                </Link>
+                <Link href="/web-design-web-development-company-birmingham/web-development">
+                  <FAQ bg="#f8bbd0">
+                    <FAQ_Left>
+                      <FiExternalLink
+                        style={{ fontSize: "40px", color: "#28282b" }}
+                      />
+                    </FAQ_Left>
+                    <FAQ_Right>
+                      <FAQ_Title color="#28282b">Web development</FAQ_Title>
+                    </FAQ_Right>
+                  </FAQ>
+                </Link>
+                <Link href="/web-design-web-development-company-birmingham/web-development">
+                  <FAQ bg="#f8bbd0">
+                    <FAQ_Left>
+                      <FiExternalLink
+                        style={{ fontSize: "40px", color: "#28282b" }}
+                      />
+                    </FAQ_Left>
+                    <FAQ_Right>
+                      <FAQ_Title color="#28282b">Web design</FAQ_Title>
+                    </FAQ_Right>
+                  </FAQ>
+                </Link>{" "}
+                <Link href="/contactUs">
+                  <FAQ bg="#f8bbd0">
+                    <FAQ_Left>
+                      <FiExternalLink
+                        style={{ fontSize: "40px", color: "#28282b" }}
+                      />
+                    </FAQ_Left>
+                    <FAQ_Right>
+                      <FAQ_Title color="#28282b">Contact Us</FAQ_Title>
+                    </FAQ_Right>
+                  </FAQ>
+                </Link>
+              </FAQContainer>
+            </TwoColumnGrid>
           </HalfWidth>
         </CenterWrapper>
       </Container>
@@ -673,7 +723,7 @@ export default function Home() {
               fontWeight="600"
               id="caseStudy1"
             >
-              How Obsidian Web Development reduced the costs of laborious tasks
+              How Obsidian Web Developments reduced the costs of laborious tasks
               by 50%, increased clients and automated 95% of an insurance
               business.
             </Title>
@@ -716,8 +766,8 @@ export default function Home() {
               Case Study/Arv Tuning
             </Description>
             <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Development improved the SEO of a site, resulting
-              in 60% more customers every month
+              How Obsidian Web Developments improved the SEO of a site,
+              resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
               <Link href="/arvTuning">
@@ -758,7 +808,7 @@ export default function Home() {
               Case Study/FC Properties
             </Description>
             <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Development reduced the time spent on repetitive
+              How Obsidian Web Developments reduced the time spent on repetitive
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
