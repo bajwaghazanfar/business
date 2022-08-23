@@ -200,7 +200,30 @@ export default function Home() {
             <MainWrapper>
               <H2Wrapper>
                 <H3>Obsidian Web Development</H3>
-                <H2 priority={true}>#1 Web design agency in Birmingham</H2>
+                {toggle ? (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren} priority={true}>
+                      #1 Web design agency in Birmingham
+                    </H2>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    variants={FadeUpContainer(0)}
+                    initial="hidden"
+                    animate="visible"
+                    key={toggle}
+                  >
+                    <H2 variants={FadeUpChildren}>
+                      Premium Web Design and Web Development services in
+                      Birmingham
+                    </H2>
+                  </motion.div>
+                )}
               </H2Wrapper>
               <AlignLeft>
                 <H4>{toggle ? 0 : 1}</H4>
