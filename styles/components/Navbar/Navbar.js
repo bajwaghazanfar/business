@@ -123,6 +123,7 @@ export const Navbar = () => {
               <Logo
                 src={logo}
                 layout="responsive"
+                priority={true}
                 alt="Web development and web design company logo"
               />
             </LogoContainer>
