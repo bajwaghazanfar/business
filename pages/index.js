@@ -345,7 +345,7 @@ export default function Home() {
             <FullImageContainer>
               <FullImage
                 src={development}
-                layout="fill"
+                layout={`${width <= 770 ? "responsive" : "fill"}`}
                 roundleft="true"
                 roundright="true"
                 alt="Web Development logo"
@@ -387,9 +387,7 @@ export default function Home() {
             <ButtonContainer>
               <Link href="web-design-web-development-company-birmingham/web-development">
                 <Button>
-                  <ButtonText>
-                    View our Birmingham Web Development services
-                  </ButtonText>
+                  <ButtonText>View web design birmingham </ButtonText>
                 </Button>
               </Link>
             </ButtonContainer>
@@ -417,7 +415,7 @@ export default function Home() {
             <ButtonContainer>
               <Link href="web-design-web-development-company-birmingham/web-development">
                 <Button>
-                  <ButtonText>View web development services</ButtonText>
+                  <ButtonText>View web development Birmingham</ButtonText>
                 </Button>
               </Link>
             </ButtonContainer>
@@ -437,8 +435,8 @@ export default function Home() {
                     Custom built, fast and SEO-friendly websites are the
                     cornerstone of our business. Our Web Development service is
                     guaranteed to meet your business needs, automate repetitive
-                    tasks and increase the annual your business generates
-                    through our SEO tactics.
+                    tasks and increase the annual revenue your business
+                    generates through our SEO tactics.
                   </ValueDescription>
                 </ValueTextWrapper>
               </Value>
@@ -532,16 +530,14 @@ export default function Home() {
               fontWeight="700"
               justify="flex-start"
             >
-              Web Developers that deliver quality results
+              Birmingham Web Development agency
             </Title>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Most web development agencies will customize a pre-built,
+              wordpress website with a bloated theme that has poor performance
+              and poor SEO. At Obsidian Web Developments, we pride ourselves on
+              building websites that are blazing-fast, responsive, easy to
+              navigate and have great SEO.
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -691,13 +687,11 @@ export default function Home() {
               View our web development case studies below
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Interested in the work we do? We build{" "}
+              <DescriptionSpan>business solutions</DescriptionSpan> that add
+              real value to a business. Interested in automation or dashboards
+              for your employees? <br />
+              <DescriptionSpan> View our work below</DescriptionSpan>
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -738,6 +732,7 @@ export default function Home() {
           <Grid
             align="flex-start"
             justify="flex-start"
+            padding="0rem"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
             <FullImageContainer caseStudy="true">
@@ -778,6 +773,7 @@ export default function Home() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
@@ -820,6 +816,7 @@ export default function Home() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}

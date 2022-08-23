@@ -54,7 +54,7 @@ export const FadeUpContainer = (delay, stagger, duration) => {
   };
 };
 export const FadeUpChildren = {
-  hidden: { opacity: 0.1, y: 100 },
+  hidden: { opacity: 0.1, y: 50 },
   visible: {
     opacity: 1,
     y: 0,

@@ -21,7 +21,7 @@ export const Title = styled.h1`
 
   @media (min-width: 0px) and (max-width: 768px) {
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     position: ${(props) => (props.sticky ? "relative" : "")};
   }
   @media (min-width: 770px) and (max-width: 1030px) {

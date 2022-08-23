@@ -130,8 +130,9 @@ export const Logo = styled.img`
 `;
 export const FullImageContainer = styled.div`
   width: ${(props) => (props.width ? props.width : "100% ")};
-  height: 100% 
+  height: 100%;
   position: relative;
+
   @media only screen and (max-width: 770px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }
