@@ -206,7 +206,7 @@ export default function Home() {
                     initial="hidden"
                     animate="visible"
                     key={toggle}
-                    priority
+                    priority={true}
                   >
                     <H2 variants={FadeUpChildren}>
                       #1 Web design agency in Birmingham
@@ -218,7 +218,7 @@ export default function Home() {
                     initial="hidden"
                     animate="visible"
                     key={toggle}
-                    priority
+                    priority={true}
                   >
                     <H2 variants={FadeUpChildren}>
                       Premium Web Design and Web Development services in
