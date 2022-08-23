@@ -200,32 +200,7 @@ export default function Home() {
             <MainWrapper>
               <H2Wrapper>
                 <H3>Obsidian Web Development</H3>
-                {toggle ? (
-                  <motion.div
-                    variants={FadeUpContainer(0)}
-                    initial="hidden"
-                    animate="visible"
-                    key={toggle}
-                    priority={true}
-                  >
-                    <H2 variants={FadeUpChildren}>
-                      #1 Web design agency in Birmingham
-                    </H2>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    variants={FadeUpContainer(0)}
-                    initial="hidden"
-                    animate="visible"
-                    key={toggle}
-                    priority={true}
-                  >
-                    <H2 variants={FadeUpChildren}>
-                      Premium Web Design and Web Development services in
-                      Birmingham
-                    </H2>
-                  </motion.div>
-                )}
+                <H2 priority={true}>#1 Web design agency in Birmingham</H2>
               </H2Wrapper>
               <AlignLeft>
                 <H4>{toggle ? 0 : 1}</H4>
@@ -353,7 +328,6 @@ export default function Home() {
                 roundleft="true"
                 roundright="true"
                 alt="Web Development logo"
-                priority={true}
               />
             </FullImageContainer>
           </Grid>
