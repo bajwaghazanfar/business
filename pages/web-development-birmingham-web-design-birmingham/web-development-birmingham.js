@@ -80,6 +80,7 @@ import {
   StickyContainer,
   FullImageContainer,
   SubTitle,
+  DescriptionSpan,
 } from "../../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
 import {
@@ -201,12 +202,12 @@ export default function WebDevelopment() {
     <>
       <Head>
         <title>
-          Birmingham Web Development & Design company| Bespoke Web Development
-          and Design company
+          Your #1 Birmingham Web Development Specialists | Obsidian Web
+          Developments
         </title>
         <meta
           name="description"
-          content="Obsidian Web Developments, creating bespoke websites and web designs to meet your requirements."
+          content="Our  Web Development strategies in Birmingham will ensure that you have the most optimal website that meets your business requirements. We have 10+ years commercially in web development and specifically web development Birmingham, so rest assured you can count on us to build the most optimal business solution for you! "
         />
       </Head>
       <Head>
@@ -237,7 +238,7 @@ export default function WebDevelopment() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      Authentic. Hardworking. Passionate. Code runs in our blood
+                      #1 Web Design and Development Birmingham
                     </H2>
                   </motion.div>
                 )}
@@ -347,16 +348,21 @@ export default function WebDevelopment() {
         <CenterWrapper>
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700">
-              Bespoke Web Design & Web Development
+              Web development Birmingham
             </Title>
             <Description color="black" align="center">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Obsidian Web Developments is an award winning
+              <DescriptionSpan> Web development</DescriptionSpan> and{" "}
+              <DescriptionSpan>
+                Web Design Agency based in Birmingham
+              </DescriptionSpan>
+              , with a team passionate about delivering web solutions for
+              clients with complex requirements. Our focal point is{" "}
+              <DescriptionSpan>Web Development</DescriptionSpan> and{" "}
+              <DescriptionSpan>Web Design</DescriptionSpan>, we aim to combine
+              various state of the art technologies to meet your project
+              requirements on time, within budget and most important of all to a
+              high standard.
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -377,29 +383,41 @@ export default function WebDevelopment() {
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
             <SubTitle font="50px" align="left" fontWeight="700">
-              Web desgin & Development
+              Bespoke Web Development
             </SubTitle>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Most web development agencies in Birmingham will create a website
+              for you that is
+              <DescriptionSpan>
+                {" "}
+                slow, unneccesarily expensive, has poor SEO
+              </DescriptionSpan>{" "}
+              and uses a{" "}
+              <DescriptionSpan>pre-purchased template</DescriptionSpan>. At
+              Obsidian Web Developments, we pride ourselves on creating
+              <DescriptionSpan> custom-built websites</DescriptionSpan> from the
+              ground up that meet your requirements and has a unique web design
+              which you are happy with. We also ensure that your website is
+              <DescriptionSpan>
+                {" "}
+                fast, responsive on mobile devices
+              </DescriptionSpan>{" "}
+              and has the best <DescriptionSpan>SEO</DescriptionSpan> so your
+              website ranks high on Google, resulting in more customers.
             </Description>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              At Obsidian Web Developments, we create{" "}
+              <DescriptionSpan>
+                solutions for businesses, ensuing sucess, rapid growth and
+                scalabillity
+              </DescriptionSpan>
+              . Our Web Development services are bespoke meaning we don't use
+              any templates and our project are built from the ground up for
+              every client.
             </Description>
             <ButtonContainer>
               <Button>
-                <ButtonText>View Web Development pricing</ButtonText>
+                <ButtonText>View Web Development Birmingham pricing</ButtonText>
               </Button>
             </ButtonContainer>
           </Grid>
@@ -412,9 +430,8 @@ export default function WebDevelopment() {
               Web design & Web Development industries
             </SubTitle>
             <Description color="white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis
+              We create websites for every industry. See your industry below?
+              We've probably created a website for it
             </Description>
             <TwoColumnGrid>
               <CenterDiv>
@@ -631,7 +648,7 @@ export default function WebDevelopment() {
         </CenterWrapper>
       </Container>
       <SS_Container>
-        <SS_ContainerWrapper caseStudy="true" bg="#28282B  ">
+        <SS_ContainerWrapper caseStudy="true" bg="	#28282B ">
           <Grid
             justify="flex-start"
             align="flex-start"
@@ -656,7 +673,7 @@ export default function WebDevelopment() {
               business.
             </Title>
             <ButtonContainer>
-              <Link href="/lchinsure">
+              <Link href="/web-development-birmingham-web-design-birmingham/lchinsure">
                 <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -666,6 +683,7 @@ export default function WebDevelopment() {
           <Grid
             align="flex-start"
             justify="flex-start"
+            padding="0rem"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
             <FullImageContainer caseStudy="true">
@@ -680,7 +698,7 @@ export default function WebDevelopment() {
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper caseStudy="true" bg="#28282B  ">
+        <SS_ContainerWrapper caseStudy="true" bg="	#28282B ">
           <Grid
             justify="flex-start"
             align="flex-start"
@@ -698,7 +716,7 @@ export default function WebDevelopment() {
               resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
-              <Link href="/arvTuning">
+              <Link href="/web-development-birmingham-web-design-birmingham/arvTuning">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -706,6 +724,7 @@ export default function WebDevelopment() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
@@ -722,7 +741,7 @@ export default function WebDevelopment() {
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper caseStudy="true" bg="#28282B  ">
+        <SS_ContainerWrapper caseStudy="true" bg="	#28282B ">
           <Grid
             justify="flex-start"
             align="flex-start"
@@ -740,7 +759,7 @@ export default function WebDevelopment() {
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
-              <Link href="/fcProperties">
+              <Link href="/web-development-birmingham-web-design-birmingham/fcProperties">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -748,6 +767,7 @@ export default function WebDevelopment() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}

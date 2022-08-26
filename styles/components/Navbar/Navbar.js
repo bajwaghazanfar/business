@@ -104,9 +104,9 @@ export const Navbar = () => {
   //Routes for bg color
   const routes = [
     "/contactUs",
-    "/web-design-web-development-company-birmingham/lchinsure",
-    "/web-design-web-development-company-birmingham/fcProperties",
-    "/web-design-web-development-company-birmingham/arvTuning",
+    "/web-development-birmingham-web-design-birmingham/lchinsure",
+    "/web-development-birmingham-web-design-birmingham/fcProperties",
+    "/web-development-birmingham-web-design-birmingham/arvTuning",
   ];
   const setBgColor = () => {
     const isPresent = routes.indexOf(router.pathname);
@@ -152,7 +152,7 @@ export const Navbar = () => {
           </HamburgerLogo>
         ) : (
           <RightContainer>
-            <Link href="/web-design-web-development-company-birmingham/about">
+            <Link href="/web-development-birmingham-web-design-birmingham/about">
               <H3
                 style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
@@ -160,7 +160,7 @@ export const Navbar = () => {
               </H3>
             </Link>
 
-            <Link href="/web-design-web-development-company-birmingham/web-development">
+            <Link href="/web-development-birmingham-web-design-birmingham/web-development">
               <H3
                 style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
@@ -178,7 +178,7 @@ export const Navbar = () => {
         )}
       </NavbarWrapper>
       <MobileMenu style={open ? { display: "flex" } : { display: "none" }}>
-        <Link href="/web-design-web-development-company-birmingham/about">
+        <Link href="/web-development-birmingham-web-design-birmingham/about">
           <H3
             onClick={() => {
               setOpen(!open);
@@ -187,7 +187,7 @@ export const Navbar = () => {
             About
           </H3>
         </Link>{" "}
-        <Link href="/web-design-web-development-company-birmingham/web-development">
+        <Link href="/web-development-birmingham-web-design-birmingham/web-development">
           <H3
             onClick={() => {
               setOpen(!open);

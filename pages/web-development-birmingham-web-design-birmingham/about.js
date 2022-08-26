@@ -638,7 +638,7 @@ export default function AboutUs() {
               business.
             </Title>
             <ButtonContainer>
-              <Link href="/lchinsure">
+              <Link href="/web-design-web-development-company-birmingham/lchinsure">
                 <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -648,6 +648,7 @@ export default function AboutUs() {
           <Grid
             align="flex-start"
             justify="flex-start"
+            padding="0rem"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
             <FullImageContainer caseStudy="true">
@@ -680,7 +681,7 @@ export default function AboutUs() {
               resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
-              <Link href="/arvTuning">
+              <Link href="/web-design-web-development-company-birmingham/arvTuning">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -688,6 +689,7 @@ export default function AboutUs() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
@@ -722,7 +724,7 @@ export default function AboutUs() {
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
-              <Link href="/fcProperties">
+              <Link href="/web-design-web-development-company-birmingham/fcProperties">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -730,6 +732,7 @@ export default function AboutUs() {
             </ButtonContainer>
           </Grid>
           <Grid
+            padding="0rem"
             align="flex-start"
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}

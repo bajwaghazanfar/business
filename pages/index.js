@@ -181,12 +181,12 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Birmingham Web Development & Design company| Bespoke Web Development
-          and Design company
+          #1 Web Development Birmingham | Web design Birmingham | Obsidian Web
+          Developments
         </title>
         <meta
           name="description"
-          content="Obsidian Web Developments, creating bespoke websites and web designs to meet your requirements."
+          content="Obsidian Web Developments, #1  Web Development Birmingham and web design agency. We custom-build bespoke websites using state of the art technologies to meet your requirements"
         />
       </Head>
       <Head>
@@ -206,7 +206,7 @@ export default function Home() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren} priority={true}>
-                      #1 Web design agency in Birmingham
+                      #1 Web Development Birmingham
                     </H2>
                   </motion.div>
                 ) : (
@@ -385,7 +385,7 @@ export default function Home() {
             </Description>
 
             <ButtonContainer>
-              <Link href="web-design-web-development-company-birmingham/web-development">
+              <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                 <Button>
                   <ButtonText>View web design birmingham </ButtonText>
                 </Button>
@@ -413,9 +413,9 @@ export default function Home() {
               perfect website that solves your business needs and ensues growth.
             </Description>
             <ButtonContainer>
-              <Link href="web-design-web-development-company-birmingham/web-development">
+              <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                 <Button>
-                  <ButtonText>View web development Birmingham</ButtonText>
+                  <ButtonText>View web Development Birmingham</ButtonText>
                 </Button>
               </Link>
             </ButtonContainer>
@@ -530,7 +530,7 @@ export default function Home() {
               fontWeight="700"
               justify="flex-start"
             >
-              Birmingham Web Development agency
+              Web Development Birmingham
             </Title>
             <Description color="black">
               Most web development agencies will customize a pre-built,
@@ -564,15 +564,15 @@ export default function Home() {
                   <ServiceDescription>
                     Browse through our site and view our various services such
                     as{" "}
-                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Development
                     </ServiceA>
                     ,{" "}
-                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Design
                     </ServiceA>{" "}
                     or{" "}
-                    <ServiceA href="/web-design-web-development-company-birmingham/web-development">
+                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       SEO
                     </ServiceA>
                     .
@@ -626,7 +626,7 @@ export default function Home() {
                 </Title>
               </CenterWrapper>
               <FAQContainer>
-                <Link href="/web-design-web-development-company-birmingham/about">
+                <Link href="/web-development-birmingham-web-design-birmingham/about">
                   <FAQ bg="#f8bbd0">
                     <FAQ_Left>
                       <FiExternalLink
@@ -638,7 +638,7 @@ export default function Home() {
                     </FAQ_Right>
                   </FAQ>
                 </Link>
-                <Link href="/web-design-web-development-company-birmingham/web-development">
+                <Link href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
                   <FAQ bg="#f8bbd0">
                     <FAQ_Left>
                       <FiExternalLink
@@ -650,7 +650,7 @@ export default function Home() {
                     </FAQ_Right>
                   </FAQ>
                 </Link>
-                <Link href="/web-design-web-development-company-birmingham/web-development">
+                <Link href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
                   <FAQ bg="#f8bbd0">
                     <FAQ_Left>
                       <FiExternalLink
@@ -722,7 +722,7 @@ export default function Home() {
               business.
             </Title>
             <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/lchinsure">
+              <Link href="/web-development-birmingham-web-design-birmingham/lchinsure">
                 <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -765,7 +765,7 @@ export default function Home() {
               resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/arvTuning">
+              <Link href="/web-development-birmingham-web-design-birmingham/arvTuning">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -808,7 +808,7 @@ export default function Home() {
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/fcProperties">
+              <Link href="/web-development-birmingham-web-design-birmingham/fcProperties">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
