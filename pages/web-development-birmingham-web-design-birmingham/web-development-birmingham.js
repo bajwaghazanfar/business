@@ -1,36 +1,15 @@
 import {
-  Arrow,
-  ArrowContainer,
-  ArrowWrapper,
-} from "../../styles/components/arrow/arrow";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import {
   Container,
   HomeContainer,
-  Video,
-  VideoContainer,
   LeftContainer,
   MainWrapper,
   H3,
   H2Wrapper,
   H2,
-  H2Span,
-  CustomersWrapper,
-  Customers,
-  CustomerLogo,
-  FrameworkContainer,
-  Framework,
   LineContainer,
   AlignLeft,
   RightContainer,
-  AlignRight,
   H4,
-  InsightsWrapper,
-  InsightsContainer,
-  H5,
-  SlideshowContainer,
-  SlideshowWrapper,
   Row,
   RowChild,
   RowContainer,
@@ -38,7 +17,6 @@ import {
   HalfWidth,
   RowLogo,
   RowText,
-  FullWidthContainer,
   ServicesContainer,
   Service,
   ServiceImgWrapper,
@@ -69,26 +47,12 @@ import {
   ImageGrid,
   Vertical_Image,
   SS_ContainerWrapper,
-  ValuesContainer,
-  Value,
-  ValueImg,
-  ValueTitle,
-  ValueDescription,
-  ValueTextWrapper,
-  ValueImgWrapper,
-  StickyGridWrapper,
-  StickyContainer,
   FullImageContainer,
   SubTitle,
   DescriptionSpan,
 } from "../../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
-import {
-  ContactUs,
-  ContactUsContainer,
-  ContactUsGrid,
-  ContactUsWrapper,
-} from "../../styles/components/contactUs/contactUs";
+import { ContactUs } from "../../styles/components/contactUs/contactUs";
 import { Footer } from "../../styles/components/footer/footer";
 import CountupHook from "../../styles/components/countUp/countUp";
 import {
@@ -107,9 +71,7 @@ import Head from "next/head";
 
 import Link from "next/link";
 //Next Slideshow images
-import slideshowImg1 from "../../public/about.webp";
-import slideshowImg2 from "../../public/slideshowImg2.avif";
-import slideshowImg3 from "../../public/slideshowImg3.avif";
+
 import development from "../../public/development.avif";
 import reactImg from "../../public/react.webp";
 import arvTuning from "../../public/arvTuning.avif";
@@ -122,7 +84,7 @@ import { FcGallery } from "react-icons/fc";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
-import { AiOutlinePlus } from "react-icons/ai";
+
 import dynamic from "next/dynamic";
 
 const Xarrow = dynamic(() => import("react-xarrows"), {
@@ -202,12 +164,11 @@ export default function WebDevelopment() {
     <>
       <Head>
         <title>
-          Your #1 Birmingham Web Development Specialists | Obsidian Web
-          Developments
+          #1 Birmingham Web Development Specialists | Obsidian Web Developments
         </title>
         <meta
           name="description"
-          content="Our  Web Development strategies in Birmingham will ensure that you have the most optimal website that meets your business requirements. We have 10+ years commercially in web development and specifically web development Birmingham, so rest assured you can count on us to build the most optimal business solution for you! "
+          content="Our  Web Development strategies in Birmingham will ensure that you have the most optimal website that meets your business requirements. We have 10+ years commercially in web development and specifically web development Birmingham, so rest assured you can count on us to build the most optimal complete business solution for you! "
         />
       </Head>
       <Head>
@@ -227,7 +188,7 @@ export default function WebDevelopment() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      #1 Web Development agency in Birmingham
+                      #1 Birmingham Web Development agency
                     </H2>
                   </motion.div>
                 ) : (
@@ -525,13 +486,13 @@ export default function WebDevelopment() {
               requirements
             </Title>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              At Obsidian Web Developments, we don't use templates. Templates
+              are boring, slow and cluttered with junk that is poor for SEO,
+              performance and can reduce the likelihood of your website ranking
+              high for certain keywords on Google. With our approach to
+              custom-built websites, we ensure that your website is optimized
+              for maximum performance, efficency and scalabillity for future
+              updates to your website. Interested? View our pricing below
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -541,13 +502,10 @@ export default function WebDevelopment() {
               Birmingham front-end and back-end development
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              At Obsidian Web Developments, we create complete business
+              solutions for clients no matter the complexity of the project. We
+              offer front-end and back-end development, think of server and
+              website development.
             </Description>
           </HalfWidth>
           <HalfWidth width="80%">
@@ -562,11 +520,11 @@ export default function WebDevelopment() {
                 <ServiceTextWrapper>
                   <ServiceTitle>Front-end Web Development</ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    We offer Birmingham's #1 front-end development services. We
+                    aim to create a website that matches your expectation,
+                    performs well, has great SEO and has a beautiful design. Our
+                    front-end services have proven to be successful for various
+                    clients, which can be seen on our case studies.
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
@@ -580,11 +538,11 @@ export default function WebDevelopment() {
                 <ServiceTextWrapper>
                   <ServiceTitle>Back-end Web Development</ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    Our back-end development services for businesses who require
+                    complex functionallity inlcuded in thier complete business
+                    solution. This service is mainly used for various
+                    requirements such as contact forms, dashboards, content
+                    management etc..
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
@@ -598,11 +556,12 @@ export default function WebDevelopment() {
                 <ServiceTextWrapper>
                   <ServiceTitle>Custom-built to meet requirements</ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    All of our solutions are custom built per project. We don't
+                    use templated as we pride ourselves on speed, SEO and fast
+                    build times. Which is why we create all of our projects from
+                    the ground up so we ensure that the customer recieves a
+                    solution that is blazing-fast, has great SEO and is mobile
+                    responsive
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
@@ -616,11 +575,10 @@ export default function WebDevelopment() {
                 <ServiceTextWrapper>
                   <ServiceTitle>Tested rigorously before handover</ServiceTitle>
                   <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    All of our web solutions are tested rigorously before the
+                    handover the the client. This ensures that the product you
+                    are recivieving performs as expected and meets all the
+                    requirements that you have outline and is robust and secure
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
@@ -636,13 +594,11 @@ export default function WebDevelopment() {
               View our Web Development case studies below
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Interested in the work we do? We build{" "}
+              <DescriptionSpan>complete business solutions</DescriptionSpan>{" "}
+              that add real value to a business. Interested in automation or
+              dashboards for your employees? <br />
+              <DescriptionSpan> View our work below</DescriptionSpan>
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -790,13 +746,8 @@ export default function WebDevelopment() {
               Our Web Development pricing
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Interested in our web development services? <br />
+              View our bundles below, and pick the most suitable one for you
             </Description>
           </HalfWidth>
           <HalfWidth width="80%">
