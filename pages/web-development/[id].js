@@ -133,7 +133,7 @@ const reducer = (state, action) => {
 
 //Get static props
 export const getStaticPaths = async () => {
-  const res = await fetch(`${server}/api/landingPage`);
+  const res = await fetch(`http://localhost:3000/api/landingPage`);
   const data = await res.json();
   const paths = data.map((map) => {
     return {
@@ -149,7 +149,7 @@ export const getStaticPaths = async () => {
 export async function getStaticProps(context) {
   const id = context.params.id;
   // Call an external API endpoint to get posts
-  const res = await fetch(`${server}/api/landingPage`);
+  const res = await fetch(`http://localhost:3000/api/landingPage`);
   const data = await res.json();
 
   const found = data.find((element) => element.location == id);
