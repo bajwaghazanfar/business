@@ -117,7 +117,7 @@ export const Navbar = () => {
       return false;
     }
   };
-  console.log(setBgColor(), "bgcollorrr");
+  console.log(router.pathname, "bgcollorrr");
   const openMenu = () => {
     setOpen(!open);
   };
@@ -160,7 +160,7 @@ export const Navbar = () => {
               </H3>
             </Link>
 
-            <Link href="/web-development-birmingham-web-design-birmingham/web-development">
+            <Link href="web-development-birmingham-web-design-birmingham/web-development-birmingham">
               <H3
                 style={setBgColor() ? { color: "black" } : { color: "white" }}
               >

@@ -90,20 +90,14 @@ import dynamic from "next/dynamic";
 const Xarrow = dynamic(() => import("react-xarrows"), {
   ssr: false,
 });
+//Config server
 
 //Bg
 import bgImage from "../../public/web-development-1.avif";
 import bgImage2 from "../../public/web-development-2.avif";
-import {
-  FAQ,
-  FAQComponent,
-  FAQContainer,
-  FAQ_Left,
-  FAQ_Right,
-  FAQ_TextWrapper,
-  FAQ_Title,
-} from "../../styles/components/faq/faq";
+import { FAQComponent } from "../../styles/components/faq/faq";
 import { useReducer } from "react";
+import { server } from "../../config";
 
 const faqState = {
   item1: false,
@@ -136,7 +130,37 @@ const reducer = (state, action) => {
       throw new Error();
   }
 };
-export default function WebDevelopment() {
+
+//Get static props
+export const getStaticPaths = async () => {
+  const res = await fetch(`${server}/api/landingPage`);
+  const data = await res.json();
+  const paths = data.map((map) => {
+    return {
+      params: { id: map.location },
+    };
+  });
+
+  return {
+    paths: paths,
+    fallback: false,
+  };
+};
+export async function getStaticProps(context) {
+  const id = context.params.id;
+  // Call an external API endpoint to get posts
+  const res = await fetch(`${server}/api/landingPage`);
+  const data = await res.json();
+
+  const found = data.find((element) => element.location == id);
+  return {
+    props: {
+      data: found,
+    },
+  };
+}
+export default function LandinPageWebDevelopment({ data }) {
+  console.log(data);
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
@@ -164,11 +188,12 @@ export default function WebDevelopment() {
     <>
       <Head>
         <title>
-          #1 Birmingham Web Development Specialists | Obsidian Web Developments
+          #1 {data.location} Web Development Specialists | Obsidian Web
+          Developments
         </title>
         <meta
           name="description"
-          content="Our  Web Development strategies in Birmingham will ensure that you have the most optimal website that meets your business requirements. We have 10+ years commercially in web development and specifically web development Birmingham, so rest assured you can count on us to build the most optimal complete business solution for you! "
+          content={`Our  Web Development strategies in ${data.location} will ensure that you have the most optimal website that meets your business requirements. We have 10+ years commercially in web development and specifically ${data.keyword}, so rest assured you can count on us to build the most optimal complete business solution for you! `}
         />
       </Head>
       <Head>
@@ -179,7 +204,7 @@ export default function WebDevelopment() {
           <LeftContainer>
             <MainWrapper>
               <H2Wrapper>
-                <H3>Web development Birmingham</H3>
+                <H3>{data.keyword}</H3>
                 {toggle ? (
                   <motion.div
                     variants={FadeUpContainer(0)}
@@ -188,7 +213,7 @@ export default function WebDevelopment() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      #1 Birmingham Web Development agency
+                      #1 {data.location} Web Development agency
                     </H2>
                   </motion.div>
                 ) : (
@@ -199,7 +224,7 @@ export default function WebDevelopment() {
                     key={toggle}
                   >
                     <H2 variants={FadeUpChildren}>
-                      #1 Web Design and Development Birmingham
+                      #1 Web Design and Development {data.location}
                     </H2>
                   </motion.div>
                 )}
@@ -309,13 +334,13 @@ export default function WebDevelopment() {
         <CenterWrapper>
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700">
-              Web development Birmingham
+              {data.keyword}
             </Title>
             <Description color="black" align="center">
               Obsidian Web Developments is an award winning
               <DescriptionSpan> Web development</DescriptionSpan> and{" "}
               <DescriptionSpan>
-                Web Design Agency based in Birmingham
+                Web Design Agency based in {data.location}
               </DescriptionSpan>
               , with a team passionate about delivering web solutions for
               clients with complex requirements. Our focal point is{" "}
@@ -347,8 +372,8 @@ export default function WebDevelopment() {
               Bespoke Web Development
             </SubTitle>
             <Description color="black">
-              Most web development agencies in Birmingham will create a website
-              for you that is
+              Most web development agencies in {data.location} will create a
+              website for you that is
               <DescriptionSpan>
                 {" "}
                 slow, unneccesarily expensive, has poor SEO
@@ -378,7 +403,7 @@ export default function WebDevelopment() {
             </Description>
             <ButtonContainer>
               <Button>
-                <ButtonText>View Web Development Birmingham pricing</ButtonText>
+                <ButtonText>View {data.keyword} pricing</ButtonText>
               </Button>
             </ButtonContainer>
           </Grid>
@@ -499,7 +524,7 @@ export default function WebDevelopment() {
         <CenterWrapper bg="#28282B  ">
           <HalfWidth>
             <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
-              Birmingham front-end and back-end development
+              {data.location} front-end and back-end development
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
               At Obsidian Web Developments, we create complete business
@@ -520,11 +545,12 @@ export default function WebDevelopment() {
                 <ServiceTextWrapper>
                   <ServiceTitle>Front-end Web Development</ServiceTitle>
                   <ServiceDescription>
-                    We offer Birmingham's #1 front-end development services. We
-                    aim to create a website that matches your expectation,
-                    performs well, has great SEO and has a beautiful design. Our
-                    front-end services have proven to be successful for various
-                    clients, which can be seen on our case studies.
+                    We offer {data.location}'s #1 front-end development
+                    services. We aim to create a website that matches your
+                    expectation, performs well, has great SEO and has a
+                    beautiful design. Our front-end services have proven to be
+                    successful for various clients, which can be seen on our
+                    case studies.
                   </ServiceDescription>
                 </ServiceTextWrapper>
               </Service>
@@ -629,7 +655,7 @@ export default function WebDevelopment() {
               business.
             </Title>
             <ButtonContainer>
-              <Link href="/web-development-birmingham-web-design-birmingham/lchinsure">
+              <Link href="/web-development-{data.location}-web-design-{data.location}/lchinsure">
                 <Button id="caseStudy1">
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -672,7 +698,7 @@ export default function WebDevelopment() {
               resulting in 60% more customers every month
             </Title>
             <ButtonContainer>
-              <Link href="/web-development-birmingham-web-design-birmingham/arvTuning">
+              <Link href="/web-development-{data.location}-web-design-{data.location}/arvTuning">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>
@@ -715,7 +741,7 @@ export default function WebDevelopment() {
               tasks, freeing resources and improving turnover rates by 85%
             </Title>
             <ButtonContainer>
-              <Link href="/web-development-birmingham-web-design-birmingham/fcProperties">
+              <Link href="/web-development-{data.location}-web-design-{data.location}/fcProperties">
                 <Button>
                   <ButtonText>Explore</ButtonText>
                 </Button>

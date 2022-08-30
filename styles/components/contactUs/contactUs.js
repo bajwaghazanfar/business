@@ -9,6 +9,7 @@ import Alert from "@mui/material/Alert";
 import axios from "axios";
 import { useState } from "react";
 import contactUs from "../../../public/contactUs.webp";
+import Link from "next/link";
 
 export const Title = styled.h1`
   font-size: ${(props) => (props.font ? props.font : " 100px ")};
@@ -44,14 +45,14 @@ export const Description = styled.h3`
 //Container and divs
 export const ContactUsContainer = styled.div`
   width: 100%;
-  height: ${(props) => (props.mobile ? "100%" : "100vh ")};
+  height: ${(props) => (props.mobile ? "100vh" : "100% ")};
 
   display: flex;
   flex-direction: column;
 
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
-  background-color: ${(props) => (props.bg ? props.bg : "#F8BBD0")};
+
   top: ${(props) => (props.top ? props.top : "0px")};
 `;
 export const ContactUsWrapper = styled.div`
@@ -62,7 +63,7 @@ export const ContactUsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0rem;
-  background-color: ${(props) => (props.bg ? props.bg : "#F8BBD0")};
+
   @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
@@ -73,7 +74,7 @@ export const ContactUsGrid = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #28282b;
+  background-color: ${(props) => (props.bg ? props.bg : "#28282b ")};
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-items: ${(props) => (props.align ? props.align : "center ")};
   padding: ${(props) => (props.padding ? props.padding : "2rem ")};
@@ -88,18 +89,14 @@ export const FormContainer = styled.div`
   position: relative;
 `;
 export const Form = styled.form`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+ 
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  z-index: 10;
+ 
   gap: 5px;
   @media only screen and (max-width: 770px) {
     position:relative;
@@ -117,6 +114,7 @@ export const InputWrapper = styled.div`
 export const InputName = styled.h3`
   font-size: 20px;
   font-weight: 400;
+  color: white;
 `;
 export const Input = styled.input`
   width: 100%;
@@ -226,111 +224,106 @@ export const ContactUs = ({ alt, mobile }) => {
             Your message has been sent!
           </Alert>
         </Snackbar>
-        <ContactUsWrapper>
-          <ContactUsGrid padding="0rem">
-            <FullImage src={contactUs} layout="fill" />
-          </ContactUsGrid>
-          <ContactUsGrid justify="flex-start" align="flex-start">
-            <Description>Contact Us</Description>
-            <FormContainer>
-              <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-              >
-                {({ errors, touched, handleBlur }) => (
-                  <Form>
-                    <Row>
-                      <InputWrapper>
-                        <InputName>First name</InputName>
-                        <Input
-                          placeholder="First name"
-                          name="firstName"
-                          onBlur={handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.firstName}
-                        />
-                        {formik.errors.firstName && touched.firstName ? (
-                          <p>{formik.errors.firstName}</p>
-                        ) : null}
-                      </InputWrapper>
-                      <InputWrapper>
-                        <InputName>Last name</InputName>
-                        <Input
-                          placeholder="Last name"
-                          name="lastName"
-                          onBlur={handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.lastName}
-                        />
-                        {formik.errors.lastName && touched.lastName ? (
-                          <p>{formik.errors.lastName}</p>
-                        ) : null}
-                      </InputWrapper>
-                    </Row>
-                    <Row>
-                      <InputWrapper>
-                        <InputName>Email Address</InputName>
-                        <Input
-                          placeholder="Email Address"
-                          name="emailAddress"
-                          onBlur={handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.emailAddress}
-                        />
-                        {formik.errors.emailAddress && touched.emailAddress ? (
-                          <p>{formik.errors.emailAddress}</p>
-                        ) : null}
-                      </InputWrapper>
-                      <InputWrapper>
-                        <InputName>Mobile number</InputName>
-                        <Input
-                          placeholder="Mobile number"
-                          name="mobileNumber"
-                          onBlur={handleBlur}
-                          onChange={formik.handleChange}
-                          value={formik.values.mobileNumber}
-                        />
-                        {formik.errors.mobileNumber && touched.mobileNumber ? (
-                          <p>{formik.errors.mobileNumber}</p>
-                        ) : null}
-                      </InputWrapper>
-                    </Row>
+
+        <ContactUsGrid justify="flex-start" align="flex-start">
+          <FormContainer>
+            <Formik
+              initialValues={initialValues}
+              validationSchema={validationSchema}
+            >
+              {({ errors, touched, handleBlur }) => (
+                <Form>
+                  <Row>
                     <InputWrapper>
-                      <InputName>Subject</InputName>
+                      <InputName>First name</InputName>
                       <Input
-                        placeholder="Subject"
-                        name="subject"
+                        placeholder="First name"
+                        name="firstName"
                         onBlur={handleBlur}
                         onChange={formik.handleChange}
-                        value={formik.values.subject}
+                        value={formik.values.firstName}
                       />
-                      {formik.errors.subject && touched.subject ? (
-                        <p>{formik.errors.subject}</p>
+                      {formik.errors.firstName && touched.firstName ? (
+                        <p>{formik.errors.firstName}</p>
                       ) : null}
                     </InputWrapper>
                     <InputWrapper>
-                      <InputName>Message</InputName>
-                      <TextArea
-                        name="message"
+                      <InputName>Last name</InputName>
+                      <Input
+                        placeholder="Last name"
+                        name="lastName"
                         onBlur={handleBlur}
                         onChange={formik.handleChange}
-                        value={formik.values.message}
+                        value={formik.values.lastName}
                       />
-                      {formik.errors.message && touched.message ? (
-                        <p>{formik.errors.message}</p>
+                      {formik.errors.lastName && touched.lastName ? (
+                        <p>{formik.errors.lastName}</p>
                       ) : null}
                     </InputWrapper>
-                    <ButtonContainer>
-                      <Button onClick={formik.handleSubmit} type="submit">
-                        <ButtonText>Submit</ButtonText>
-                      </Button>
-                    </ButtonContainer>
-                  </Form>
-                )}
-              </Formik>
-            </FormContainer>
-          </ContactUsGrid>
-        </ContactUsWrapper>
+                  </Row>
+                  <Row>
+                    <InputWrapper>
+                      <InputName>Email Address</InputName>
+                      <Input
+                        placeholder="Email Address"
+                        name="emailAddress"
+                        onBlur={handleBlur}
+                        onChange={formik.handleChange}
+                        value={formik.values.emailAddress}
+                      />
+                      {formik.errors.emailAddress && touched.emailAddress ? (
+                        <p>{formik.errors.emailAddress}</p>
+                      ) : null}
+                    </InputWrapper>
+                    <InputWrapper>
+                      <InputName>Mobile number</InputName>
+                      <Input
+                        placeholder="Mobile number"
+                        name="mobileNumber"
+                        onBlur={handleBlur}
+                        onChange={formik.handleChange}
+                        value={formik.values.mobileNumber}
+                      />
+                      {formik.errors.mobileNumber && touched.mobileNumber ? (
+                        <p>{formik.errors.mobileNumber}</p>
+                      ) : null}
+                    </InputWrapper>
+                  </Row>
+                  <InputWrapper>
+                    <InputName>Subject</InputName>
+                    <Input
+                      placeholder="Subject"
+                      name="subject"
+                      onBlur={handleBlur}
+                      onChange={formik.handleChange}
+                      value={formik.values.subject}
+                    />
+                    {formik.errors.subject && touched.subject ? (
+                      <p>{formik.errors.subject}</p>
+                    ) : null}
+                  </InputWrapper>
+                  <InputWrapper>
+                    <InputName>Message</InputName>
+                    <TextArea
+                      name="message"
+                      onBlur={handleBlur}
+                      onChange={formik.handleChange}
+                      value={formik.values.message}
+                    />
+                    {formik.errors.message && touched.message ? (
+                      <p>{formik.errors.message}</p>
+                    ) : null}
+                  </InputWrapper>
+                  <ButtonContainer justify="flex-end">
+                    <Button onClick={formik.handleSubmit} type="submit">
+                      <ButtonText>Submit</ButtonText>
+                    </Button>
+                  </ButtonContainer>
+                </Form>
+              )}
+            </Formik>
+          </FormContainer>
+        </ContactUsGrid>
       </ContactUsContainer>
     );
   }
@@ -344,12 +337,13 @@ export const ContactUs = ({ alt, mobile }) => {
           <Title font="50px" align="center" fontWeight="600" color="#F8BBD0">
             Arrange your non-binding, free inital consulation now
           </Title>
-          <ButtonContainer align="center " justify="center">
-            {" "}
-            <Button>
-              <ButtonText>Arrange a conversation</ButtonText>
-            </Button>
-          </ButtonContainer>
+          <Link href="/contactUs">
+            <ButtonContainer align="center " justify="center">
+              <Button>
+                <ButtonText>Arrange a conversation</ButtonText>
+              </Button>
+            </ButtonContainer>
+          </Link>
         </ContactUsGrid>
         <ContactUsGrid padding="0rem">
           <FullImageContainer>

@@ -47,6 +47,8 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 770px) {
+  }
 `;
 export const RightContainer = styled.div`
   width: 100%;
@@ -61,7 +63,8 @@ export const RightContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   @media only screen and (max-width: 770px) {
-    display: none;
+    height: ${(props) => (props.mobile ? "100%" : "100vh  ")};
+    padding: ${(props) => (props.mobile ? "0rem" : "2rem  ")};
   }
 `;
 export const ImageGrid = styled.div`

@@ -832,7 +832,7 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <ContactUs alt={false} />
+      <ContactUs alt={false} mobile={true} />
       <Footer />
     </>
   );
