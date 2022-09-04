@@ -189,7 +189,7 @@ const Fcproperties = () => {
             </CenterDiv>
           </Grid>
         </SS_ContainerWrapper>
-        <ContactUs />
+        <ContactUs alt={false} mobile={true} />
         <Footer />
       </SS_Container>
     </>

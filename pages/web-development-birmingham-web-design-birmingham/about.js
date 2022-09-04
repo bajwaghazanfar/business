@@ -103,7 +103,7 @@ import slideshowImg1 from "../../public/about.webp";
 import slideshowImg2 from "../../public/slideshowImg2.avif";
 import slideshowImg3 from "../../public/slideshowImg3.avif";
 import development from "../../public/development.avif";
-import reactImg from "../../public/react.webp";
+import reactImg from "../../public/react1.webp";
 import arvTuning from "../../public/arvTuning.avif";
 //Icons
 import { DiReact } from "react-icons/di";
@@ -748,7 +748,7 @@ export default function AboutUs() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <ContactUs alt={false} />
+      <ContactUs alt={false} mobile={true} />
       <Footer />
     </>
   );

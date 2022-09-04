@@ -94,7 +94,7 @@ const Lchinsure = () => {
               <Description style={{ fontWeight: "700" }} sticky="sticky">
                 Case Study/LCH Insurance
               </Description>
-              <Title font="50px" align="left" sticky="sticky">
+              <Title font="60px" align="left" sticky="sticky">
                 How Obsidian Web Developments reduced the costs of laborious
                 tasks by 50%, increased clients and automated 95% of an
                 insurance business.
@@ -177,7 +177,7 @@ const Lchinsure = () => {
             </CenterDiv>
           </Grid>
         </SS_ContainerWrapper>
-        <ContactUs />
+        <ContactUs alt={false} mobile={true} />
         <Footer />
       </SS_Container>
     </>

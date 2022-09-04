@@ -54,6 +54,9 @@ export const ContactUsContainer = styled.div`
   align-content: ${(props) => (props.align ? props.align : "center ")};
 
   top: ${(props) => (props.top ? props.top : "0px")};
+  @media only screen and (max-width: 770px) {
+    height: 100%;
+  }
 `;
 export const ContactUsWrapper = styled.div`
   width: 100%;

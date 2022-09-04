@@ -3,7 +3,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Button, ButtonText } from "../Buttons/Button";
 import { FullImage, FullImageContainer } from "../StickySection/StickySection";
-import logo from "../../../public/logos/companyLogo/logo6.webp";
+import logo from "../../../public/logos/companyLogo/logonew.webp";
 //H1,H2 etc..
 export const Title = styled.h1`
   font-size: ${(props) => (props.font ? props.font : " 40px ")};
@@ -268,11 +268,11 @@ export const Footer = () => {
               <Link href="/">
                 <FooterLink>Home</FooterLink>
               </Link>
-              <Link href="/about">
+              <Link href="/web-development-birmingham-web-design-birmingham/about">
                 <FooterLink>About</FooterLink>
               </Link>{" "}
-              <Link href="/contactUs">
-                <FooterLink>Contact Us</FooterLink>
+              <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                <FooterLink>Web Development</FooterLink>
               </Link>
               <Link href="/contactUs">
                 <FooterLink>Contact Us</FooterLink>
@@ -280,13 +280,13 @@ export const Footer = () => {
             </FooterLinksContainer>
             <FooterLinksContainer>
               <FooterLinkHeader>Case studies</FooterLinkHeader>
-              <Link href="/arvTuning">
+              <Link href="/web-development-birmingham-web-design-birmingham/arvTuning">
                 <FooterLink>ARV Tuning</FooterLink>
               </Link>
-              <Link href="/fcProperties">
+              <Link href="/web-development-birmingham-web-design-birmingham/fcProperties">
                 <FooterLink>FC Properties</FooterLink>
               </Link>
-              <Link href="/lchInsure">
+              <Link href="/web-development-birmingham-web-design-birmingham/lchinsure">
                 <FooterLink>LCH Insurance</FooterLink>
               </Link>
             </FooterLinksContainer>

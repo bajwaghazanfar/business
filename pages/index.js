@@ -650,18 +650,7 @@ export default function Home() {
                     </FAQ_Right>
                   </FAQ>
                 </Link>
-                <Link href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
-                  <FAQ bg="#f8bbd0">
-                    <FAQ_Left>
-                      <FiExternalLink
-                        style={{ fontSize: "40px", color: "#28282b" }}
-                      />
-                    </FAQ_Left>
-                    <FAQ_Right>
-                      <FAQ_Title color="#28282b">Web design</FAQ_Title>
-                    </FAQ_Right>
-                  </FAQ>
-                </Link>{" "}
+
                 <Link href="/contactUs">
                   <FAQ bg="#f8bbd0">
                     <FAQ_Left>

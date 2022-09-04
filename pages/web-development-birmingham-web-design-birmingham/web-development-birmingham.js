@@ -467,11 +467,7 @@ export default function WebDevelopment() {
           </RowChild>
         </Row>
       </RowContainer>
-      <Xarrow
-        start="technologies" //can be react ref
-        end="bespoke" //or an id
-        startAnchor="right"
-      />
+
       <Container>
         <CenterWrapper justify="flex-start" align="flex-start">
           <HalfWidth>

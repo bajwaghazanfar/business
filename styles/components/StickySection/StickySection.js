@@ -87,7 +87,7 @@ export const A = styled.a`
 `;
 export const DescriptionSpan = styled.span`
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 700;
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
   color: black;
@@ -383,7 +383,7 @@ export const ValueImg = styled.img`
 export const ValueTitle = styled.h2`
   font-size: 20px;
   color: ${(props) => (props.alternate ? "#f8bbd0" : "  black")};
-  font-weight: 700;
+  font-weight: 600;
 `;
 export const ValueDescription = styled.p`
   font-size: 16px;

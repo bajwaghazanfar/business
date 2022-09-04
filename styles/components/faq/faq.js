@@ -9,7 +9,7 @@ export const FAQ_Title = styled.div`
   font-size: 25px;
   text-align: center;
   color: ${(props) => (props.color ? props.color : " #f8bbd0;")};
-  font-weight: 800;
+  font-weight: 600;
   margin: 0px;
 `;
 export const FAQContainer = styled(motion.div)`
@@ -41,6 +41,7 @@ export const FAQ = styled(motion.div)`
   cursor: pointer;
   @media only screen and (max-width: 770px) {
     gap: 50px;
+    grid-template-columns: 5% 95%;
   }
 `;
 

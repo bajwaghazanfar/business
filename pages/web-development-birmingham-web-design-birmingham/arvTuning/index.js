@@ -66,7 +66,7 @@ const Arvtuning = () => {
         <SS_ContainerWrapper>
           <StickyGrid justify="flex-start" align="flex-start" padding="2rem">
             <StickyContainer>
-              <Description style={{ fontWeight: "500" }} sticky="sticky">
+              <Description style={{ fontWeight: "700" }} sticky="sticky">
                 Case Study/Arv Tuning
               </Description>
               <Title font="60px" align="left" sticky="sticky">
@@ -132,7 +132,7 @@ const Arvtuning = () => {
             </CenterDiv>
           </Grid>
         </SS_ContainerWrapper>
-        <ContactUs />
+        <ContactUs alt={false} mobile={true} />
         <Footer />
       </SS_Container>
     </>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import logo from "../../../public/logos/companyLogo/logo6.webp";
+import logo from "../../../public/logos/companyLogo/logonew.webp";
 import Image from "next/image";
 
 //Fonts
@@ -13,6 +13,7 @@ export const H3 = styled.h3`
   font-weight: 600;
   margin: 0px;
   cursor: pointer;
+  letter-spacing: 3px;
   @media (max-width: 768px) {
     padding: 1rem;
   }

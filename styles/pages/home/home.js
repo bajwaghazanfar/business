@@ -65,6 +65,7 @@ export const RightContainer = styled.div`
   @media only screen and (max-width: 770px) {
     height: ${(props) => (props.mobile ? "100%" : "100vh  ")};
     padding: ${(props) => (props.mobile ? "0rem" : "2rem  ")};
+    display: ${(props) => (props.mobile ? "flex" : "none  ")};
   }
 `;
 export const ImageGrid = styled.div`
@@ -461,7 +462,7 @@ export const ServiceImg = styled.img`
 export const ServiceTitle = styled.h2`
   font-size: 25px;
   color: ${(props) => (props.alternate ? "#f8bbd0" : "  black")};
-  font-weight: 700;
+  font-weight: 500;
 `;
 export const ServiceSubText = styled.p`
   font-size: 17px;
