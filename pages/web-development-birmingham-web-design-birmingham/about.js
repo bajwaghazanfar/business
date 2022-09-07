@@ -116,9 +116,6 @@ import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
 import dynamic from "next/dynamic";
 
-const Xarrow = dynamic(() => import("react-xarrows"), {
-  ssr: false,
-});
 import { useRef } from "react";
 //Bg
 import bgImage from "../../public/birmingham.avif";
@@ -320,7 +317,7 @@ export default function AboutUs() {
         </RowContainer>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700">
+            <Title font="50px" align="center" fontWeight="600">
               10+ years in web development and web design commercially
             </Title>
             <Description color="black" align="center">
@@ -335,7 +332,7 @@ export default function AboutUs() {
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer overlay={true}>
               <FullImage
                 src={me}
                 layout="fill"
@@ -345,7 +342,7 @@ export default function AboutUs() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="50px" align="left" fontWeight="700">
+            <SubTitle font="50px" align="left" fontWeight="600">
               Authentic and hard-working
             </SubTitle>
             <Description color="black">
@@ -368,7 +365,7 @@ export default function AboutUs() {
       <SS_Container>
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="50px" align="left" fontWeight="700" color="#F8BBD0">
+            <SubTitle font="50px" align="left" fontWeight="600" color="#F8BBD0">
               100% custom coded websites. We don't use templates
             </SubTitle>
             <Description color="white">
@@ -399,58 +396,13 @@ export default function AboutUs() {
         </SS_ContainerWrapper>
       </SS_Container>
 
-      <RowContainer>
-        <Row>
-          <RowChild>
-            <DiReact
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#65C9FF " }
-                  : { fontSize: "80px", color: "#65C9FF " }
-              }
-            />
-          </RowChild>
-          <RowChild>
-            <DiNodejs
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4EC63F" }
-                  : { fontSize: "80px", color: "#4EC63F" }
-              }
-            />
-          </RowChild>
-          <RowChild id="technologies">
-            <DiVisualstudio
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4FB1E6 " }
-                  : { fontSize: "80px", color: "#4FB1E6 " }
-              }
-            />
-          </RowChild>
-          <RowChild>
-            <GrGraphQl
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#F76EE9 " }
-                  : { fontSize: "80px", color: "#F76EE9 " }
-              }
-            />
-          </RowChild>
-        </Row>
-      </RowContainer>
-      <Xarrow
-        start="technologies" //can be react ref
-        end="bespoke" //or an id
-        startAnchor="right"
-      />
       <Container style={{ top: "10px" }}>
         <CenterWrapper justify="flex-start" align="flex-start">
           <HalfWidth>
             <Title
               font="50px"
               align="left"
-              fontWeight="700"
+              fontWeight="600"
               justify="flex-start"
               id="bespoke"
             >

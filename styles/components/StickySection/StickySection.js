@@ -133,6 +133,30 @@ export const FullImageContainer = styled.div`
   height: 100%;
   position: relative;
 
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    display: ${(props) => (props.overlay ? "" : "none")};
+    background: ${(props) => (props.bg ? props.bg : "#BDD2E8")};
+    left: -50px;
+    border-top-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
+    border-bottom-right-radius: ${(props) =>
+      props.roundright ? "10px" : "0px"};
+    border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+    border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+    @media only screen and (max-width: 770px) {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      left: -20px;
+      top: 20px;
+    }
+  }
+
   @media only screen and (max-width: 770px) {
     display: ${(props) => (props.caseStudy ? "none" : "")};
   }
@@ -147,6 +171,7 @@ export const FullImage = styled(Image)`
   border-bottom-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
   border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
   border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
+
   @media only screen and (max-width: 770px) {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;

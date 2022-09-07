@@ -153,6 +153,7 @@ export default function Home() {
       description:
         "Obsidian Web Developments helped us improve our productivity tenfold. At LCH Insure, repetitive tasks would take up most of our time, making growth unforeseeable. Thanks to Obsidian Web Developments, they have automated all of these repetitive tasks, increasing our capacity to deal with more clients and increasing our profits",
       image: slideshowImg,
+      bg: "#9CD0EC ",
     },
 
     {
@@ -163,15 +164,17 @@ export default function Home() {
       description:
         "I attracted most of my clients through Instagram, but needed a website which reflected the nature of my business and myself. Obsidian Web Developments, created a beautiful site with a management portal that allowed me to track the monthly rent of various tenants for landlords. Without them, I would've been stuck! ",
       image: slideshowImg2,
+      bg: "#EC9C9C ",
     },
     {
       title: "Quick and high quality service",
       subHeading: "compliance",
-      customer: "Ammar Riaz",
+      customer: "Ali Taqi",
       business: "ARV Tuning ",
       description:
         "I wanted a site for my car remapping business that would increase my reach to the car enthusiats in Birmingham. Obsidian Web Developments created a sleek, easy to navigate site that increased my outreach to potential clients and helped my business gain the traction it needed ",
       image: slideshowImg3,
+      bg: "#9CECB7 ",
     },
   ];
 
@@ -221,7 +224,7 @@ export default function Home() {
                     animate="visible"
                     key={toggle}
                   >
-                    <H2 variants={FadeUpChildren} priority={true}>
+                    <H2 variants={FadeUpChildren} priority="true">
                       #1 Web Development Birmingham
                     </H2>
                   </motion.div>
@@ -335,10 +338,10 @@ export default function Home() {
         </RowContainer>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="45px" align="center" fontWeight="700">
+            <Title font="45px" align="center" fontWeight="600">
               #1 Web Development agency in Birmingham
             </Title>
-            <Description color="black" align="center">
+            <Description align="center">
               Obsidian Web Developments is an award winning
               <DescriptionSpan> Web development</DescriptionSpan> and{" "}
               <DescriptionSpan>
@@ -358,7 +361,11 @@ export default function Home() {
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer
+              roundleft="true"
+              roundright="true"
+              overlay={true}
+            >
               <FullImage
                 src={development}
                 layout={`${width <= 770 ? "responsive" : "fill"}`}
@@ -369,10 +376,10 @@ export default function Home() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="45px" align="left" fontWeight="700">
+            <SubTitle font="45px" align="left" fontWeight="600">
               Web Development Birmingham
             </SubTitle>
-            <Description color="black">
+            <Description>
               We are a newly founded Web Development and Web Design agency based
               in Birmingham with over{" "}
               <DescriptionSpan>
@@ -387,7 +394,7 @@ export default function Home() {
               high-level and delivering quality web solutions that meet your
               project requirements no matter how complex.
             </Description>
-            <Description color="black">
+            <Description>
               <DescriptionSpan>
                 Code runs in our blood, literally!
               </DescriptionSpan>{" "}
@@ -416,7 +423,7 @@ export default function Home() {
             <Title
               font="45px"
               align="left"
-              fontWeight="700"
+              fontWeight="600"
               color="#F8BBD0"
               style={{ margin: "0px" }}
             >
@@ -506,15 +513,15 @@ export default function Home() {
                 <Title
                   font="45px"
                   align="center"
-                  fontWeight="700"
+                  fontWeight="600"
                   justify="flex-start"
                 >
-                  Our goal is to help founders and entrepreneurs sell their
+                  Our goal is to help founders and entrepreneurs launch their
                   startups
                 </Title>
               </H2Wrapper>
 
-              <Description color="black" align="center">
+              <Description align="center">
                 Most web development agencies will customize a pre-built,
                 wordpress website with a bloated theme that has poor performance
                 and poor SEO. At Obsidian Web Developments, we pride ourselves
@@ -531,7 +538,7 @@ export default function Home() {
         </CenterWrapper>
         <CenterWrapper bg="#28282B  ">
           <HalfWidth>
-            <Title font="45px" align="center" fontWeight="700" color="#f8bbd0">
+            <Title font="45px" align="center" fontWeight="600" color="#f8bbd0">
               How it works
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
@@ -552,15 +559,15 @@ export default function Home() {
                   <ServiceDescription>
                     Browse through our site and view our various services such
                     as{" "}
-                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                    <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Development
-                    </ServiceA>
+                    </Link>
                     ,{" "}
-                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                    <ServiceA href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Design
                     </ServiceA>{" "}
                     or{" "}
-                    <ServiceA href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                    <ServiceA href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       SEO
                     </ServiceA>
                     .
@@ -602,7 +609,7 @@ export default function Home() {
                 <Title
                   font="45px"
                   align="left"
-                  fontWeight="700"
+                  fontWeight="600"
                   color="#f8bbd0"
                 >
                   Explore{" "}
@@ -660,10 +667,10 @@ export default function Home() {
       <Container>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="45px" align="center" fontWeight="700" id="start">
+            <Title font="45px" align="center" fontWeight="600" id="start">
               View our web development case studies below
             </Title>
-            <Description color="black" style={{ textAlign: "center" }}>
+            <Description style={{ textAlign: "center" }}>
               Interested in the work we do? We build{" "}
               <DescriptionSpan>business solutions</DescriptionSpan> that add
               real value to a business. Interested in automation or dashboards
@@ -729,6 +736,7 @@ export default function Home() {
             justify="flex-start"
             align="flex-start"
             roundleft="true"
+            roundright="true"
             style={{
               background: "black",
               boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",

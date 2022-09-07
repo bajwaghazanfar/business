@@ -66,7 +66,7 @@ import { useInView } from "react-intersection-observer";
 import fiberOptics from "../../public/fiber-optics.webp";
 import fcProperties from "../../public/fcProperties.avif";
 import me from "../../public/awsMe.avif";
-import design from "../../public/web-development-3.avif";
+import design from "../../public/bespoke.jpg";
 import Head from "next/head";
 
 import Link from "next/link";
@@ -308,7 +308,7 @@ export default function WebDevelopment() {
         </RowContainer>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700">
+            <Title font="50px" align="center" fontWeight="600">
               Web development Birmingham
             </Title>
             <Description color="black" align="center">
@@ -331,7 +331,12 @@ export default function WebDevelopment() {
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer
+              roundleft="true"
+              roundright="true"
+              overlay={true}
+              bg="#28282B "
+            >
               <FullImage
                 src={design}
                 layout="fill"
@@ -343,7 +348,7 @@ export default function WebDevelopment() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="50px" align="left" fontWeight="700">
+            <SubTitle font="50px" align="left" fontWeight="600">
               Bespoke Web Development
             </SubTitle>
             <Description color="black">
@@ -387,7 +392,7 @@ export default function WebDevelopment() {
       <SS_Container>
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="50px" align="left" fontWeight="700" color="#F8BBD0">
+            <SubTitle font="50px" align="left" fontWeight="600" color="#F8BBD0">
               Web design & Web Development industries
             </SubTitle>
             <Description color="white">
@@ -474,7 +479,7 @@ export default function WebDevelopment() {
             <Title
               font="50px"
               align="left"
-              fontWeight="700"
+              fontWeight="600"
               justify="flex-start"
               id="bespoke"
             >
@@ -494,7 +499,7 @@ export default function WebDevelopment() {
         </CenterWrapper>
         <CenterWrapper bg="#28282B  ">
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
+            <Title font="50px" align="center" fontWeight="600" color="#f8bbd0">
               Birmingham front-end and back-end development
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
@@ -586,7 +591,7 @@ export default function WebDevelopment() {
       <Container>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700">
+            <Title font="50px" align="center" fontWeight="600">
               Our Web Development pricing
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>
@@ -726,7 +731,7 @@ export default function WebDevelopment() {
       <Container>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700">
+            <Title font="50px" align="center" fontWeight="600">
               FREQUENTLY ASKED QUESTIONS
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>

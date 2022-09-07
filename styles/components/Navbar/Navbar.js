@@ -157,7 +157,7 @@ export const Navbar = () => {
               </H3>
             </Link>
 
-            <Link href="web-development-birmingham-web-design-birmingham/web-development-birmingham">
+            <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
               <H3
                 style={setBgColor() ? { color: "black" } : { color: "white" }}
               >

@@ -8,8 +8,9 @@ import { MoveLeft, MoveRight } from "../stagger";
 import Image from "next/image";
 import { BsChevronLeft } from "react-icons/bs";
 import { BsChevronRight } from "react-icons/bs";
+import { AiFillStar } from "react-icons/ai";
 import { FullImage, FullImageContainer } from "../StickySection/StickySection";
-import slideshowImg from "../../../public/about3.webp";
+
 export const SliderContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -63,10 +64,10 @@ export const NavButton = styled.button`
   position: absolute;
   top: 0%;
   z-index: 10;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   transform: translate(0, 0%);
-  border-radius: 5px;
+
   background-color: rgba(0, 0, 0, 0.2);
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
@@ -91,6 +92,7 @@ export const SliderButton = styled.button`
   border: none;
 
   background: #ff4081;
+
   cursor: pointer;
   border-radius: 15px;
   display: flex;
@@ -191,7 +193,7 @@ export const SlideshowImg = styled(Image)`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 100%;
-  border: 2px solid red;
+
   border-radius: 10px;
 `;
 export const TestimonialContainer = styled.div`
@@ -200,8 +202,8 @@ export const TestimonialContainer = styled.div`
 
   display: flex;
 
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   overflow: hidden;
   @media only screen and (max-width: 770px) {
@@ -212,18 +214,35 @@ export const TestimonialWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
   gap: 30px;
 
   overflow: hidden;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
 
-  border-radius: 15px;
   @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
+    padding: 0rem;
   }
+`;
+export const Customer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+`;
+export const Row = styled.div`
+  width: auto;
+  height: 100%;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
 `;
 export const Info = ({ data, index, type, width, direction }) => {
   console.log(direction);
@@ -257,10 +276,14 @@ export const Info = ({ data, index, type, width, direction }) => {
           </Grid>
         </GridContainer>
       ) : (
-        <TestimonialContainer bg={data.bg}>
+        <TestimonialContainer>
           <TestimonialWrapper>
             <Grid image={true}>
-              <FullImageContainer style={{ height: "600px" }}>
+              <FullImageContainer
+                overlay={true}
+                bg={data.bg}
+                style={{ height: "600px" }}
+              >
                 <FullImage
                   src={data.image}
                   layout={`${width <= 770 ? "responsive" : "fill"}`}
@@ -272,10 +295,22 @@ export const Info = ({ data, index, type, width, direction }) => {
               <HalfWidth width="80%">
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
-                <DescriptionSpan>{data.customer}</DescriptionSpan>
-                <Description style={{ margin: "0px" }}>
-                  {data.business}
-                </Description>
+                <Customer>
+                  <div>
+                    <DescriptionSpan>{data.customer}</DescriptionSpan>
+                    <Description style={{ margin: "0px" }}>
+                      {data.business}
+                    </Description>
+                  </div>
+                  <Row>
+                    {" "}
+                    <AiFillStar style={{ color: "#D1CC2A" }} />{" "}
+                    <AiFillStar style={{ color: "#D1CC2A" }} />{" "}
+                    <AiFillStar style={{ color: "#D1CC2A" }} />{" "}
+                    <AiFillStar style={{ color: "#D1CC2A" }} />{" "}
+                    <AiFillStar style={{ color: "#D1CC2A" }} />
+                  </Row>
+                </Customer>
               </HalfWidth>
             </Grid>
           </TestimonialWrapper>
