@@ -133,9 +133,9 @@ import {
 } from "../styles/components/slideshow/Slider";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import slideshowImg from "../public/slideshowImg.jpg";
-import slideshowImg2 from "../public/slideshowImg2.jpg";
-import slideshowImg3 from "../public/slideshowImg3.jpg";
+import slideshowImg from "../public/slideshowImg.webp";
+import slideshowImg2 from "../public/slideshowImg2.webp";
+import slideshowImg3 from "../public/slideshowImg3.webp";
 
 export default function Home() {
   const [height, setHeight] = useState(null);

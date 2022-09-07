@@ -66,7 +66,7 @@ import { useInView } from "react-intersection-observer";
 import fiberOptics from "../../public/fiber-optics.webp";
 import fcProperties from "../../public/fcProperties.avif";
 import me from "../../public/awsMe.avif";
-import design from "../../public/bespoke.jpg";
+import design from "../../public/bespoke.webp";
 import Head from "next/head";
 
 import Link from "next/link";
@@ -86,10 +86,6 @@ import { FcAcceptDatabase } from "react-icons/fc";
 import { FcBullish } from "react-icons/fc";
 
 import dynamic from "next/dynamic";
-
-const Xarrow = dynamic(() => import("react-xarrows"), {
-  ssr: false,
-});
 
 //Bg
 import bgImage from "../../public/web-development-1.avif";
