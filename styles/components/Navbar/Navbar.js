@@ -31,7 +31,7 @@ export const NavbarContainer = styled.div`
   height: 10%;
   position: absolute;
   z-index: 10;
-
+  background-color: transparent;
   @media (max-width: 768px) {
     z-index: 10;
     height: 15%;
@@ -128,11 +128,7 @@ export const Navbar = () => {
     setWidth(innerWidth);
   }, [width]);
   return (
-    <NavbarContainer
-      style={
-        setBgColor() ? { background: "	none " } : { background: "	#28282B " }
-      }
-    >
+    <NavbarContainer>
       <NavbarWrapper>
         <LeftContainer>
           <Link href="/">

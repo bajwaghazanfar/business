@@ -324,13 +324,10 @@ export default function AboutUs() {
               10+ years in web development and web design commercially
             </Title>
             <Description color="black" align="center">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              At Obsidian Web Developments, we have an experienced team with
+              over 10+ years in web development, web design, software
+              development and DevOps. We pride ourselves on delivering websites
+              that are premium, blazing-fast and solve meet your business needs
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -342,8 +339,6 @@ export default function AboutUs() {
               <FullImage
                 src={me}
                 layout="fill"
-                roundleft="true"
-                roundright="true"
                 alt="Web Development logo"
                 priority={true}
               />
@@ -354,23 +349,14 @@ export default function AboutUs() {
               Authentic and hard-working
             </SubTitle>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              Some of our core principles are authenticity and competency. We
+              pride ourselves on being authentic and transparent with our
+              clientelle as it leads to a healthy business-client relationship
+              aswell as increasing the quality of work produced. We also ensure
+              that we are the right fit for your business needs and that we can
+              provide a solution that is most optimal for your business needs
             </Description>
-            <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>{" "}
+            <Description color="black"></Description>
             <ButtonContainer>
               <Button>
                 <ButtonText>Explore</ButtonText>
@@ -386,23 +372,13 @@ export default function AboutUs() {
               100% custom coded websites. We don't use templates
             </SubTitle>
             <Description color="white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              We are web development agency, not a template development agency
+              which is why we custom code all of our websites for our clients.
+              By doing this, we have complete control throughout the development
+              process and any changes, no matter the complexity can easily be
+              integrated into your site.
             </Description>
-            <Description color="white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>{" "}
+            <Description color="white"></Description>{" "}
             <ButtonContainer>
               <Button>
                 <ButtonText>Explore</ButtonText>
@@ -468,7 +444,7 @@ export default function AboutUs() {
         end="bespoke" //or an id
         startAnchor="right"
       />
-      <Container>
+      <Container style={{ top: "10px" }}>
         <CenterWrapper justify="flex-start" align="flex-start">
           <HalfWidth>
             <Title
@@ -500,254 +476,8 @@ export default function AboutUs() {
             />
           </FullWidthContainer>
         </CenterWrapper>
-        <CenterWrapper bg="#28282B  ">
-          <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
-              Why Obsidian Web Developments?
-            </Title>
-            <Description color="white" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>
-          </HalfWidth>
-          <HalfWidth width="80%">
-            <ServicesContainer>
-              <Service id="service1">
-                <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
-                </ServiceImgWrapper>
-                <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ServiceDescription>
-                </ServiceTextWrapper>
-              </Service>
-              <Service>
-                <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
-                </ServiceImgWrapper>
-                <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ServiceDescription>
-                </ServiceTextWrapper>
-              </Service>
-              <Service>
-                <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
-                </ServiceImgWrapper>
-                <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ServiceDescription>
-                </ServiceTextWrapper>
-              </Service>
-              <Service>
-                <ServiceImgWrapper>
-                  <ServiceImg
-                    src="/logos/building.svg"
-                    alt="In house full stack web development"
-                  />
-                </ServiceImgWrapper>
-                <ServiceTextWrapper>
-                  <ServiceTitle>Web Development</ServiceTitle>
-                  <ServiceDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  </ServiceDescription>
-                </ServiceTextWrapper>
-              </Service>
-            </ServicesContainer>
-          </HalfWidth>
-        </CenterWrapper>
       </Container>
 
-      <Container>
-        <CenterWrapper>
-          <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700" id="start">
-              View our web development case studies below
-            </Title>
-            <Description color="black" style={{ textAlign: "center" }}>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
-            </Description>
-          </HalfWidth>
-        </CenterWrapper>
-      </Container>
-      <SS_Container>
-        <SS_ContainerWrapper caseStudy="true">
-          <Grid
-            justify="flex-start"
-            align="flex-start"
-            roundleft="true"
-            style={{
-              background: "black",
-              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
-            }}
-          >
-            <Description style={{ fontWeight: "700" }}>
-              Case Study/LCH Insure
-            </Description>
-            <Title
-              font="50px"
-              align="left"
-              color="white"
-              fontWeight="600"
-              id="caseStudy1"
-            >
-              How Obsidian Web Developments reduced the costs of laborious tasks
-              by 50%, increased clients and automated 95% of an insurance
-              business.
-            </Title>
-            <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/lchinsure">
-                <Button id="caseStudy1">
-                  <ButtonText>Explore</ButtonText>
-                </Button>
-              </Link>
-            </ButtonContainer>
-          </Grid>
-          <Grid
-            align="flex-start"
-            justify="flex-start"
-            padding="0rem"
-            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
-          >
-            <FullImageContainer caseStudy="true">
-              <FullImage
-                src={fiberOptics}
-                layout="fill"
-                alt="LCH Insure "
-                roundright="true"
-              />
-            </FullImageContainer>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
-      <SS_Container>
-        <SS_ContainerWrapper caseStudy="true">
-          <Grid
-            justify="flex-start"
-            align="flex-start"
-            roundleft="true"
-            style={{
-              background: "black",
-              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
-            }}
-          >
-            <Description style={{ fontWeight: "700" }}>
-              Case Study/Arv Tuning
-            </Description>
-            <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Developments improved the SEO of a site,
-              resulting in 60% more customers every month
-            </Title>
-            <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/arvTuning">
-                <Button>
-                  <ButtonText>Explore</ButtonText>
-                </Button>
-              </Link>
-            </ButtonContainer>
-          </Grid>
-          <Grid
-            padding="0rem"
-            align="flex-start"
-            justify="flex-start"
-            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
-          >
-            <FullImageContainer caseStudy="true">
-              <FullImage
-                src={arvTuning}
-                alt="ARV Tuning"
-                layout="fill"
-                roundright="true"
-              />
-            </FullImageContainer>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
-      <SS_Container>
-        <SS_ContainerWrapper caseStudy="true">
-          <Grid
-            justify="flex-start"
-            align="flex-start"
-            roundleft="true"
-            style={{
-              background: "black",
-              boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)",
-            }}
-          >
-            <Description style={{ fontWeight: "600" }} color="white">
-              Case Study/FC Properties
-            </Description>
-            <Title font="50px" align="left" color="white" fontWeight="600">
-              How Obsidian Web Developments reduced the time spent on repetitive
-              tasks, freeing resources and improving turnover rates by 85%
-            </Title>
-            <ButtonContainer>
-              <Link href="/web-design-web-development-company-birmingham/fcProperties">
-                <Button>
-                  <ButtonText>Explore</ButtonText>
-                </Button>
-              </Link>
-            </ButtonContainer>
-          </Grid>
-          <Grid
-            padding="0rem"
-            align="flex-start"
-            justify="flex-start"
-            style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
-          >
-            <FullImageContainer caseStudy="true">
-              <FullImage
-                src={fcProperties}
-                alt="FC Properties"
-                layout="fill"
-                roundright="true"
-              />
-            </FullImageContainer>
-          </Grid>
-        </SS_ContainerWrapper>
-      </SS_Container>
       <ContactUs alt={false} mobile={true} />
       <Footer />
     </>

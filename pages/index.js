@@ -49,6 +49,7 @@ import {
   RightContainerImage,
   TwoColumnGrid,
   ServiceA,
+  AlignEnd,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -92,9 +93,7 @@ import Head from "next/head";
 
 import Link from "next/link";
 //Next Slideshow images
-import slideshowImg1 from "../public/about.webp";
-import slideshowImg2 from "../public/slideshowImg2.avif";
-import slideshowImg3 from "../public/slideshowImg3.avif";
+
 import development from "../public/development.avif";
 
 import arvTuning from "../public/arvTuning.avif";
@@ -113,6 +112,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/bs";
+
 import { useRef } from "react";
 //Bg
 import bgImage from "../public/bgImage.webp";
@@ -122,12 +122,20 @@ import dynamic from "next/dynamic";
 import {
   FAQ,
   FAQContainer,
-  FAQ_Description,
   FAQ_Left,
   FAQ_Right,
-  FAQ_TextWrapper,
   FAQ_Title,
 } from "../styles/components/faq/faq";
+import {
+  Slider,
+  SliderButton,
+  SliderContainer,
+} from "../styles/components/slideshow/Slider";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import slideshowImg from "../public/slideshowImg.jpg";
+import slideshowImg2 from "../public/slideshowImg2.jpg";
+import slideshowImg3 from "../public/slideshowImg3.jpg";
 
 export default function Home() {
   const [height, setHeight] = useState(null);
@@ -138,27 +146,35 @@ export default function Home() {
   const box1Ref = useRef(null);
   const sliderData = [
     {
-      title: "FC Properties",
+      title: "Helped us improve our productivity",
       subHeading: "compliance",
+      customer: "Ammar Riaz",
+      business: "LCH Insurance",
       description:
-        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
-      image: slideshowImg1,
+        "Obsidian Web Developments helped us improve our productivity tenfold. At LCH Insure, repetitive tasks would take up most of our time, making growth unforeseeable. Thanks to Obsidian Web Developments, they have automated all of these repetitive tasks, increasing our capacity to deal with more clients and increasing our profits",
+      image: slideshowImg,
     },
+
     {
-      title: "LCH Insure",
+      title: "Launched our site on time",
       subHeading: "compliance",
+      customer: "Azqa Faisal",
+      business: "FC Properties",
       description:
-        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+        "I attracted most of my clients through Instagram, but needed a website which reflected the nature of my business and myself. Obsidian Web Developments, created a beautiful site with a management portal that allowed me to track the monthly rent of various tenants for landlords. Without them, I would've been stuck! ",
       image: slideshowImg2,
     },
     {
-      title: "ARV Tuning",
+      title: "Quick and high quality service",
       subHeading: "compliance",
+      customer: "Ammar Riaz",
+      business: "ARV Tuning ",
       description:
-        "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
+        "I wanted a site for my car remapping business that would increase my reach to the car enthusiats in Birmingham. Obsidian Web Developments created a sleek, easy to navigate site that increased my outreach to potential clients and helped my business gain the traction it needed ",
       image: slideshowImg3,
     },
   ];
+
   //#0096FF
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -319,7 +335,7 @@ export default function Home() {
         </RowContainer>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700">
+            <Title font="45px" align="center" fontWeight="700">
               #1 Web Development agency in Birmingham
             </Title>
             <Description color="black" align="center">
@@ -353,8 +369,8 @@ export default function Home() {
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
-            <SubTitle font="50px" align="left" fontWeight="700">
-              Web Design Birmingham
+            <SubTitle font="45px" align="left" fontWeight="700">
+              Web Development Birmingham
             </SubTitle>
             <Description color="black">
               We are a newly founded Web Development and Web Design agency based
@@ -398,7 +414,7 @@ export default function Home() {
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
           <Grid justify="center" align="flex-start">
             <Title
-              font="50px"
+              font="45px"
               align="left"
               fontWeight="700"
               color="#F8BBD0"
@@ -481,69 +497,41 @@ export default function Home() {
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
-      <RowContainer>
-        <Row>
-          <RowChild>
-            <DiReact
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#65C9FF " }
-                  : { fontSize: "80px", color: "#65C9FF " }
-              }
-            />
-          </RowChild>
-          <RowChild>
-            <DiNodejs
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4EC63F" }
-                  : { fontSize: "80px", color: "#4EC63F" }
-              }
-            />
-          </RowChild>
-          <RowChild>
-            <DiVisualstudio
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#4FB1E6 " }
-                  : { fontSize: "80px", color: "#4FB1E6 " }
-              }
-            />
-          </RowChild>
-          <RowChild>
-            <GrGraphQl
-              style={
-                width <= 768
-                  ? { fontSize: "60px", color: "#F76EE9 " }
-                  : { fontSize: "80px", color: "#F76EE9 " }
-              }
-            />
-          </RowChild>
-        </Row>
-      </RowContainer>
+
       <Container>
         <CenterWrapper justify="flex-start" align="flex-start">
-          <HalfWidth>
-            <Title
-              font="50px"
-              align="left"
-              fontWeight="700"
-              justify="flex-start"
-            >
-              Web Development Birmingham
-            </Title>
-            <Description color="black">
-              Most web development agencies will customize a pre-built,
-              wordpress website with a bloated theme that has poor performance
-              and poor SEO. At Obsidian Web Developments, we pride ourselves on
-              building websites that are blazing-fast, responsive, easy to
-              navigate and have great SEO.
-            </Description>
-          </HalfWidth>
+          <CenterWrapper>
+            <HalfWidth>
+              <H2Wrapper>
+                <Title
+                  font="45px"
+                  align="center"
+                  fontWeight="700"
+                  justify="flex-start"
+                >
+                  Our goal is to help founders and entrepreneurs sell their
+                  startups
+                </Title>
+              </H2Wrapper>
+
+              <Description color="black" align="center">
+                Most web development agencies will customize a pre-built,
+                wordpress website with a bloated theme that has poor performance
+                and poor SEO. At Obsidian Web Developments, we pride ourselves
+                on building websites that are blazing-fast, responsive, easy to
+                navigate and have great SEO.
+              </Description>
+            </HalfWidth>
+          </CenterWrapper>
+          <SlideshowContainer>
+            <SlideshowWrapper width="100%" height="100%">
+              <Slider data={sliderData} />
+            </SlideshowWrapper>
+          </SlideshowContainer>
         </CenterWrapper>
         <CenterWrapper bg="#28282B  ">
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700" color="#f8bbd0">
+            <Title font="45px" align="center" fontWeight="700" color="#f8bbd0">
               How it works
             </Title>
             <Description color="white" style={{ textAlign: "center" }}>
@@ -612,7 +600,7 @@ export default function Home() {
             <TwoColumnGrid>
               <CenterWrapper>
                 <Title
-                  font="50px"
+                  font="45px"
                   align="left"
                   fontWeight="700"
                   color="#f8bbd0"
@@ -672,7 +660,7 @@ export default function Home() {
       <Container>
         <CenterWrapper>
           <HalfWidth>
-            <Title font="50px" align="center" fontWeight="700" id="start">
+            <Title font="45px" align="center" fontWeight="700" id="start">
               View our web development case studies below
             </Title>
             <Description color="black" style={{ textAlign: "center" }}>
@@ -700,7 +688,7 @@ export default function Home() {
               Case Study/LCH Insure
             </Description>
             <Title
-              font="50px"
+              font="45px"
               align="left"
               color="white"
               fontWeight="600"
@@ -749,7 +737,7 @@ export default function Home() {
             <Description style={{ fontWeight: "700" }}>
               Case Study/Arv Tuning
             </Description>
-            <Title font="50px" align="left" color="white" fontWeight="600">
+            <Title font="45px" align="left" color="white" fontWeight="600">
               How Obsidian Web Developments improved the SEO of a site,
               resulting in 60% more customers every month
             </Title>
@@ -792,7 +780,7 @@ export default function Home() {
             <Description style={{ fontWeight: "600" }} color="white">
               Case Study/FC Properties
             </Description>
-            <Title font="50px" align="left" color="white" fontWeight="600">
+            <Title font="45px" align="left" color="white" fontWeight="600">
               How Obsidian Web Developments reduced the time spent on repetitive
               tasks, freeing resources and improving turnover rates by 85%
             </Title>

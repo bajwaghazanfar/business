@@ -5,12 +5,17 @@ import { CenterWrapper, HalfWidth } from "../../pages/home/home";
 import { FAQAnimation } from "../stagger";
 
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 export const FAQ_Title = styled.div`
   font-size: 25px;
   text-align: center;
   color: ${(props) => (props.color ? props.color : " #f8bbd0;")};
   font-weight: 600;
   margin: 0px;
+  @media only screen and (max-width: 770px) {
+    font-size: 20px;
+  }
 `;
 export const FAQContainer = styled(motion.div)`
   width: 100%;
@@ -40,7 +45,7 @@ export const FAQ = styled(motion.div)`
   border-radius: 10px;
   cursor: pointer;
   @media only screen and (max-width: 770px) {
-    gap: 50px;
+    gap: 20px;
     grid-template-columns: 5% 95%;
   }
 `;
@@ -81,9 +86,14 @@ export const FAQ_Description = styled.h3`
   @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
+    padding: 1rem;
   }
 `;
 export const FAQComponent = React.memo(({ state, dispatch }) => {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(innerWidth);
+  }, [width]);
   return (
     <CenterWrapper>
       <HalfWidth width="70%">
@@ -96,10 +106,20 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             <FAQ_Left>
               {state.item1 ? (
                 <AiOutlineMinus
-                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
                 />
               ) : (
-                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+                <AiOutlinePlus
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
+                />
               )}
             </FAQ_Left>
             <FAQ_Right>
@@ -127,10 +147,20 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             <FAQ_Left>
               {state.item2 ? (
                 <AiOutlineMinus
-                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
                 />
               ) : (
-                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+                <AiOutlinePlus
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
+                />
               )}
             </FAQ_Left>
             <FAQ_Right>
@@ -159,10 +189,20 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             <FAQ_Left>
               {state.item3 ? (
                 <AiOutlineMinus
-                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
                 />
               ) : (
-                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+                <AiOutlinePlus
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
+                />
               )}
             </FAQ_Left>
             <FAQ_Right>
@@ -189,10 +229,20 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             <FAQ_Left>
               {state.item4 ? (
                 <AiOutlineMinus
-                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
                 />
               ) : (
-                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+                <AiOutlinePlus
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
+                />
               )}
             </FAQ_Left>
             <FAQ_Right>
@@ -227,10 +277,20 @@ export const FAQComponent = React.memo(({ state, dispatch }) => {
             <FAQ_Left>
               {state.item5 ? (
                 <AiOutlineMinus
-                  style={{ fontSize: "40px", color: "#f8bbd0" }}
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
                 />
               ) : (
-                <AiOutlinePlus style={{ fontSize: "40px", color: "#f8bbd0" }} />
+                <AiOutlinePlus
+                  style={
+                    width <= 770
+                      ? { fontSize: "20px", color: "#f8bbd0" }
+                      : { fontSize: "40px", color: "#f8bbd0" }
+                  }
+                />
               )}
             </FAQ_Left>
             <FAQ_Right>

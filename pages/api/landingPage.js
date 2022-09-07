@@ -78,6 +78,30 @@ export default function handler(req, res) {
       location: "Telford",
       keyword: "Web Development Telford",
     },
+    {
+      location: "Sparkhill",
+      keyword: "Web Development Sparkhill",
+    },
+    {
+      location: "Solihull",
+      keyword: "Web Development Solihull",
+    },
+    {
+      location: "Lozells",
+      keyword: "Web Development Telford",
+    },
+    {
+      location: "Alum Rock",
+      keyword: "Web Development Alum Rock",
+    },
+    {
+      location: "Hall Green",
+      keyword: "Web Development Hall Green",
+    },
+    {
+      location: "Shirley",
+      keyword: "Web Development Shirley",
+    },
   ];
   res.status(200).json(keywords);
 }

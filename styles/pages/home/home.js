@@ -8,7 +8,6 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  top: 50px;
 `;
 export const VideoContainer = styled.div`
   width: 100%;
@@ -68,6 +67,7 @@ export const RightContainer = styled.div`
     display: ${(props) => (props.mobile ? "flex" : "none  ")};
   }
 `;
+
 export const ImageGrid = styled.div`
   width: 100%;
   height: 90%;
@@ -116,9 +116,10 @@ export const H5 = styled.h5`
 export const H4 = styled(motion.h4)`
   font-size: ${(props) => (props.font ? props.font : " 20px ")};
   color: ${(props) => (props.color ? props.color : " white ")};
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   text-align: left;
+  margin: 0px;
 
   @media only screen and (max-width: 770px) {
     font-size: 20px;
@@ -142,6 +143,7 @@ export const H2 = styled(motion.h1)`
   color: ${(props) => (props.color ? props.color : " white ")};
   font-weight: 400;
   margin: 0px;
+  position: relative;
   @media only screen and (max-width: 770px) {
     font-size: 30px;
   }
@@ -287,6 +289,18 @@ export const SlideshowWrapper = styled.div`
   @media only screen and (max-width: 770px) {
     width: 100%;
     height: 100%;
+  }
+`;
+export const AlignEnd = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  @media only screen and (max-width: 770px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 

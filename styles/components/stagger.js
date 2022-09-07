@@ -38,6 +38,16 @@ export const MoveLeft = () => {
     },
   };
 };
+//MoveRight animation
+export const MoveRight = () => {
+  return {
+    visible: { opacity: 1, x: 0 },
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+  };
+};
 //Fade animations
 export const FadeUpContainer = (delay, stagger, duration) => {
   return {
