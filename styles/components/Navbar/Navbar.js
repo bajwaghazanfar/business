@@ -58,7 +58,7 @@ export const LeftContainer = styled.div`
   padding: 2rem;
 `;
 export const RightContainer = styled.div`
-  width: 20%;
+  width: 30%;
   height: auto;
   display: flex;
   justify-content: space-evenly;
@@ -108,11 +108,12 @@ export const Navbar = () => {
     "/web-development-birmingham-web-design-birmingham/lchinsure",
     "/web-development-birmingham-web-design-birmingham/fcProperties",
     "/web-development-birmingham-web-design-birmingham/arvTuning",
+    "/blog",
   ];
   const setBgColor = () => {
     const isPresent = routes.indexOf(router.pathname);
-
-    if (isPresent > 0) {
+    const checkIfIncludes = router.pathname.includes("/blog");
+    if (isPresent > 0 || checkIfIncludes === true) {
       return true;
     } else {
       return false;
@@ -162,6 +163,13 @@ export const Navbar = () => {
                 style={setBgColor() ? { color: "black" } : { color: "white" }}
               >
                 Services
+              </H3>
+            </Link>
+            <Link href="/blog/allBlogs">
+              <H3
+                style={setBgColor() ? { color: "black" } : { color: "white" }}
+              >
+                Blog
               </H3>
             </Link>
             <Link href="/contactUs">

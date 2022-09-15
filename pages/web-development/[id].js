@@ -66,7 +66,7 @@ import { useInView } from "react-intersection-observer";
 import fiberOptics from "../../public/fiber-optics.webp";
 import fcProperties from "../../public/fcProperties.avif";
 import me from "../../public/awsMe.avif";
-import design from "../../public/web-development-3.avif";
+import design from "../../public/bespoke.webp";
 import Head from "next/head";
 
 import Link from "next/link";
@@ -87,9 +87,6 @@ import { FcBullish } from "react-icons/fc";
 
 import dynamic from "next/dynamic";
 
-const Xarrow = dynamic(() => import("react-xarrows"), {
-  ssr: false,
-});
 //Config server
 
 //Bg
@@ -356,7 +353,12 @@ export default function LandinPageWebDevelopment({ data }) {
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer
+              roundleft="true"
+              roundright="true"
+              overlay={true}
+              bg="#28282B "
+            >
               <FullImage
                 src={design}
                 layout="fill"
@@ -492,11 +494,7 @@ export default function LandinPageWebDevelopment({ data }) {
           </RowChild>
         </Row>
       </RowContainer>
-      <Xarrow
-        start="technologies" //can be react ref
-        end="bespoke" //or an id
-        startAnchor="right"
-      />
+
       <Container>
         <CenterWrapper justify="flex-start" align="flex-start">
           <HalfWidth>
