@@ -202,9 +202,7 @@ export const Navbar = () => {
           </H3>
         </Link>
         <Link href="/blog/allBlogs">
-          <H3 style={setBgColor() ? { color: "black" } : { color: "white" }}>
-            Blog
-          </H3>
+          <H3>Blog</H3>
         </Link>
         <Link href="/contactUs">
           <H3
