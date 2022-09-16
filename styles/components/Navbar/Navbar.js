@@ -200,7 +200,12 @@ export const Navbar = () => {
           >
             Services
           </H3>
-        </Link>{" "}
+        </Link>
+        <Link href="/blog/allBlogs">
+          <H3 style={setBgColor() ? { color: "black" } : { color: "white" }}>
+            Blog
+          </H3>
+        </Link>
         <Link href="/contactUs">
           <H3
             onClick={() => {
