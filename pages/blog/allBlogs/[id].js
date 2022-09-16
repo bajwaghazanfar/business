@@ -30,18 +30,6 @@ import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
 export default function allBlogs({ data }) {
-  const [height, setHeight] = useState(null);
-  const [width, setWidth] = useState(null);
-  const [toggle, setToggle] = useState(true);
-
-  //#0096FF
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHeight(window.document.body.scrollHeight);
-      setWidth(window.innerWidth);
-    }
-  }, []);
-
   return (
     <>
       <Head>
@@ -69,11 +57,11 @@ export default function allBlogs({ data }) {
                 </SpaceAroundContainer>
                 <GridContainerAlt>
                   {data.data.attributes.blogs.data.map((map) => (
-                    <GridWrapperAlt>
+                    <GridWrapperAlt key={map.id}>
                       <GridR>
                         <FullImageContainer>
                           <FullImage
-                            src={`http://localhost:1337${map.attributes.BlogImage.data.attributes.url}`}
+                            src={map.attributes.BlogImage.data.attributes.url}
                           />
                         </FullImageContainer>
                       </GridR>
@@ -119,7 +107,7 @@ export async function getServerSideProps(context) {
 
   const allCategories = await (
     await fetch(
-      `http://localhost:1337/api/categories/${id}?populate[blogs][populate]=*`
+      `https://strapi-obsidian-blog.herokuapp.com/api/categories/${id}?populate[blogs][populate]=*`
     )
   )
     //http://localhost:1337/api/categories?populate[blogs][populate]=*

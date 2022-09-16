@@ -1,8 +1,4 @@
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import ReactHtmlParser, { processNodes } from "react-html-parser";
 import {
   Category,
   CenterAlign,
@@ -23,35 +19,17 @@ import {
   HR,
   FullWidth,
   Figcaption,
-  CaptionBackground,
   NewsletterContainer,
   InputContainer,
   Input,
   Button,
   ButtonText,
 } from "../../../styles/pages/blogPage/blogPage";
-import { useEffect, useState } from "react";
+import uniqid from "uniqid";
 import Head from "next/head";
 import { Footer } from "../../../styles/components/footer/footer";
 
-export default function allBlogs({ data }) {
-  const [height, setHeight] = useState(null);
-  const [width, setWidth] = useState(null);
-  const [toggle, setToggle] = useState(true);
-
-  //#0096FF
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHeight(window.document.body.scrollHeight);
-      setWidth(window.innerWidth);
-    }
-
-    const intervalID = setInterval(() => {
-      setToggle((toggle) => !toggle);
-    }, 5000);
-    return () => clearInterval(intervalID);
-  }, []);
-
+export default function singleBlog({ data }) {
   return (
     <>
       {data.data.attributes != null ? (
@@ -102,81 +80,52 @@ export default function allBlogs({ data }) {
                 </FullWidth>
                 {ReactHtmlParser(data.data.attributes.Description, {
                   transform: (node, index) => {
-                    console.log(node.name);
                     if (node.type === "tag" && node.name === "img") {
                       const props = node.attribs;
 
-                      return <BlogImage {...props} />;
+                      return <BlogImage {...props} key={index} />;
                     }
                     if (node.type === "tag" && node.name === "h1") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <>
-                              <H1>{map.data}</H1>
-                            </>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <H1 key={uniqid()}> {map.data}</H1>
+                      ));
                     }
                     if (node.type === "tag" && node.name === "h2") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <>
-                              <H2>{map.data}</H2>
-                            </>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <H2 key={`${uniqid()}`}> {map.data}</H2>
+                      ));
                     }
                     if (node.type === "tag" && node.name === "h3") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <>
-                              <H3>{map.data}</H3>
-                            </>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <H3 key={`${uniqid()}`}> {map.data}</H3>
+                      ));
                     }
                     if (node.type === "tag" && node.name === "h4") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <>
-                              <H4>{map.data}</H4>
-                            </>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <H4 key={`${uniqid()}`}> {map.data}</H4>
+                      ));
                     }
                     if (node.type === "tag" && node.name === "p") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <>
-                              <P>{map.data}</P>
-                            </>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <P key={`${uniqid()}`}> {map.data}</P>
+                      ));
                     }
                     if (node.type === "tag" && node.name === "figcaption") {
                       const data = node.children;
-                      return (
-                        <>
-                          {data.map((map) => (
-                            <Figcaption>{map.data}</Figcaption>
-                          ))}
-                        </>
-                      );
+
+                      return data.map((map) => (
+                        <Figcaption key={`${uniqid()}`}> {map.data}</Figcaption>
+                      ));
                     }
                   },
                 })}
@@ -208,7 +157,9 @@ export default function allBlogs({ data }) {
 export async function getServerSideProps(context) {
   const id = context.params.id;
   // Fetch data from external API
-  const res = await fetch(`http://localhost:1337/api/blogs/${id}?populate=*`);
+  const res = await fetch(
+    `https://strapi-obsidian-blog.herokuapp.com/api/blogs/${id}?populate=*`
+  );
   const data = await res.json();
 
   // Pass data to the page via props

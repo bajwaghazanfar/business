@@ -76,6 +76,12 @@ export const GridL = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 3rem;
+  @media only screen and (max-width: 770px) {
+    padding: 0rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 `;
 export const GridR = styled.div`
   width: 100%;
@@ -119,7 +125,7 @@ export const LeftAlign = styled.div`
 
   @media only screen and (max-width: 770px) {
     width: 100%;
-    padding: 2rem;
+    padding: 0rem;
   }
 `;
 export const RightAlign = styled.div`
@@ -133,7 +139,9 @@ export const RightAlign = styled.div`
 
   @media only screen and (max-width: 770px) {
     width: 100%;
-    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    j
   }
 `;
 export const CenterAlign = styled.div`
@@ -168,9 +176,10 @@ export const H1 = styled.h1`
   color: black;
   font-weight: 700;
   margin: 0px;
-  text-align: left;
+
   @media only screen and (max-width: 770px) {
     font-size: 30px;
+    text-align: center;
   }
 `;
 export const H2 = styled.h2`
@@ -181,6 +190,8 @@ export const H2 = styled.h2`
   text-align: left;
   @media only screen and (max-width: 770px) {
     font-size: 30px;
+
+    text-align: center;
   }
 `;
 export const H3 = styled.h1`

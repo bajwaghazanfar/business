@@ -47,7 +47,7 @@ export default function allBlogs({ data }) {
     setLatestBlog(data[0]);
   }, []);
 
-  console.log(categories);
+  console.log(latestBlog);
   return (
     <>
       <Head>
@@ -80,10 +80,7 @@ export default function allBlogs({ data }) {
                     </FullImageContainer>
                   </GridR>
                   <GridL>
-                    <H2>
-                      Introducing Segment Data lakes: How to start using
-                      advanced analytics
-                    </H2>
+                    <H2>{latestBlog.data.attributes.Title}</H2>
                     <Subtitle>
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -106,8 +103,8 @@ export default function allBlogs({ data }) {
                 </GridWrapper>
               </GridContainer>
 
-              {categories.data.map((map) => (
-                <>
+              {categories.data.map((map, index) => (
+                <LeftAlign key={map.id}>
                   <SpaceAroundContainer>
                     <SpaceBetween>
                       <H1>{map.attributes.CategoryName}</H1>
@@ -121,7 +118,7 @@ export default function allBlogs({ data }) {
                   </SpaceAroundContainer>
                   <GridContainerAlt>
                     {map.attributes.blogs.data.map((map) => (
-                      <GridWrapperAlt>
+                      <GridWrapperAlt key={map.id}>
                         <GridR>
                           <FullImageContainer>
                             <FullImage
@@ -156,7 +153,7 @@ export default function allBlogs({ data }) {
                       </GridWrapperAlt>
                     ))}
                   </GridContainerAlt>
-                </>
+                </LeftAlign>
               ))}
             </Wrapper>
           </Container>
@@ -168,12 +165,12 @@ export default function allBlogs({ data }) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const categories = await (
+  const latestBlog = await (
     await fetch(
-      `https://strapi-obsidian-blog.herokuapp.com/api/blogs/1?populate=*`
+      `https://strapi-obsidian-blog.herokuapp.com/api/blogs/3?populate=*`
     )
   ).json();
-  console.log(categories);
+
   const allCategories = await (
     await fetch(
       `https://strapi-obsidian-blog.herokuapp.com/api/categories?populate[blogs][populate]=*`
@@ -181,7 +178,7 @@ export async function getServerSideProps() {
   )
     ///api/categories?populate[blogs][populate]=*
     .json();
-  const data = [categories, allCategories];
+  const data = [latestBlog, allCategories];
 
   // Pass data to the page via props
   return { props: { data } };
