@@ -35,23 +35,6 @@ import Head from "next/head";
 import { Footer } from "../../styles/components/footer/footer";
 
 export default function allBlogs({ data }) {
-  const [height, setHeight] = useState(null);
-  const [width, setWidth] = useState(null);
-  const [toggle, setToggle] = useState(true);
-
-  //#0096FF
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setHeight(window.document.body.scrollHeight);
-      setWidth(window.innerWidth);
-    }
-
-    const intervalID = setInterval(() => {
-      setToggle((toggle) => !toggle);
-    }, 5000);
-    return () => clearInterval(intervalID);
-  }, []);
-
   return (
     <>
       {data.data.attributes != null ? (
