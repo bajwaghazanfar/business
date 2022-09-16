@@ -29,7 +29,7 @@ import { Footer } from "../../../styles/components/footer/footer";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
-export default function allBlogs({ data }) {
+export default function AllBlogs({ data }) {
   const [height, setHeight] = useState(null);
   const [width, setWidth] = useState(null);
   const [toggle, setToggle] = useState(true);
