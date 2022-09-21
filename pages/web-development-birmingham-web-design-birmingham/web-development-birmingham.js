@@ -308,18 +308,13 @@ export default function WebDevelopment() {
               Web development Birmingham
             </Title>
             <Description color="black" align="center">
-              Obsidian Web Developments is an award winning
-              <DescriptionSpan> Web development</DescriptionSpan> and{" "}
-              <DescriptionSpan>
-                Web Design Agency based in Birmingham
-              </DescriptionSpan>
-              , with a team passionate about delivering web solutions for
-              clients with complex requirements. Our focal point is{" "}
-              <DescriptionSpan>Web Development</DescriptionSpan> and{" "}
-              <DescriptionSpan>Web Design</DescriptionSpan>, we aim to combine
-              various state of the art technologies to meet your project
-              requirements on time, within budget and most important of all to a
-              high standard.
+              Obsidian Web Developments is an award winning Web development and{" "}
+              Web Design Agency based in Birmingham , with a team passionate
+              about delivering web solutions for clients with complex
+              requirements. Our focal point is Web Development and Web Design,
+              we aim to combine various state of the art technologies to meet
+              your project requirements on time, within budget and most
+              important of all to a high standard.
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -349,33 +344,20 @@ export default function WebDevelopment() {
             </SubTitle>
             <Description color="black">
               Most web development agencies in Birmingham will create a website
-              for you that is
-              <DescriptionSpan>
-                {" "}
-                slow, unneccesarily expensive, has poor SEO
-              </DescriptionSpan>{" "}
-              and uses a{" "}
-              <DescriptionSpan>pre-purchased template</DescriptionSpan>. At
-              Obsidian Web Developments, we pride ourselves on creating
-              <DescriptionSpan> custom-built websites</DescriptionSpan> from the
-              ground up that meet your requirements and has a unique web design
-              which you are happy with. We also ensure that your website is
-              <DescriptionSpan>
-                {" "}
-                fast, responsive on mobile devices
-              </DescriptionSpan>{" "}
-              and has the best <DescriptionSpan>SEO</DescriptionSpan> so your
-              website ranks high on Google, resulting in more customers.
+              for you that is slow, unneccesarily expensive, has poor SEO and
+              uses a pre-purchased template. At Obsidian Web Developments, we
+              pride ourselves on creating custom-built websites from the ground
+              up that meet your requirements and has a unique web design which
+              you are happy with. We also ensure that your website is fast,
+              responsive on mobile devices and has the best SEO so your website
+              ranks high on Google, resulting in more customers.
             </Description>
             <Description color="black">
-              At Obsidian Web Developments, we create{" "}
-              <DescriptionSpan>
-                solutions for businesses, ensuing sucess, rapid growth and
-                scalabillity
-              </DescriptionSpan>
-              . Our Web Development services are bespoke meaning we don't use
-              any templates and our project are built from the ground up for
-              every client.
+              At Obsidian Web Developments, we create solutions for businesses,
+              ensuing sucess, rapid growth and scalabillity . Our Web
+              Development services are bespoke meaning we don't use any
+              templates and our project are built from the ground up for every
+              client.
             </Description>
             <ButtonContainer>
               <Button>
