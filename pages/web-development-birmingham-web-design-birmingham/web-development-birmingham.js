@@ -623,7 +623,7 @@ export default function WebDevelopment() {
                     <Li color="black">
                       Website hosted and domain setup included
                     </Li>
-                    <ServicePrice>£2000</ServicePrice>
+                    <ServicePrice>£1000</ServicePrice>
                   </CenterDiv>
                 </ServiceTextWrapper>
               </Service>
@@ -662,7 +662,7 @@ export default function WebDevelopment() {
                     <Li color="black">
                       Website and server hosted and domain setup included
                     </Li>
-                    <ServicePrice>£3000</ServicePrice>
+                    <ServicePrice>£2500</ServicePrice>
                   </CenterDiv>
                 </ServiceTextWrapper>
               </Service>

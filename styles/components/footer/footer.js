@@ -119,7 +119,7 @@ export const SS_ContainerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
@@ -293,7 +293,7 @@ export const Footer = () => {
 
             <FooterLinksContainer>
               <FooterLinkHeader>Contact</FooterLinkHeader>
-              <FooterLink>Email:bajwaghazanfar0@gmail.com</FooterLink>
+              <FooterLink>Email:info@obsidianwebdevelopment.com</FooterLink>
               <FooterLink>07342806885</FooterLink>
             </FooterLinksContainer>
           </Grid_Alt>

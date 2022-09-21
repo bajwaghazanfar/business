@@ -58,7 +58,7 @@ export const SubHeading = styled.h3`
   }
 `;
 export const Description = styled.h4`
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
   text-align: ${(props) => (props.align ? props.align : "left")};
   line-height: 35px;
@@ -141,7 +141,7 @@ export const FullImageContainer = styled.div`
     height: 100%;
     display: ${(props) => (props.overlay ? "" : "none")};
     background: ${(props) => (props.bg ? props.bg : "#BDD2E8")};
-    left: -50px;
+    left: ${(props) => (props.reverse ? "50px" : "-50px")};
     border-top-right-radius: ${(props) => (props.roundright ? "10px" : "0px")};
     border-bottom-right-radius: ${(props) =>
       props.roundright ? "10px" : "0px"};
@@ -286,11 +286,12 @@ export const Grid = styled(motion.div)`
   height: ${(props) => (props.height ? props.height : "100% ")};
   display: flex;
   flex-direction: column;
+
   justify-content: ${(props) => (props.justify ? props.justify : "flex-end ")};
-  align-content: ${(props) => (props.align ? props.align : "center ")};
-  padding: ${(props) => (props.padding ? props.padding : "2rem ")};
+  align-items: ${(props) => (props.align ? props.align : "center ")};
+  padding: ${(props) => (props.padding ? props.padding : "4rem ")};
   background-color: ${(props) => (props.bg ? props.bg : "none")};
-  gap: 20px;
+
   position: relative;
   border-top-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};
   border-bottom-left-radius: ${(props) => (props.roundleft ? "10px" : "0px")};

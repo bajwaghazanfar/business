@@ -40,6 +40,7 @@ import {
   ServiceTitle,
   ServiceDescription,
   RightContainerImage,
+  Li,
 } from "../../styles/pages/home/home";
 import {
   Button,
@@ -103,7 +104,7 @@ import slideshowImg1 from "../../public/about.webp";
 import slideshowImg2 from "../../public/slideshowImg2.avif";
 import slideshowImg3 from "../../public/slideshowImg3.avif";
 import development from "../../public/development.avif";
-import reactImg from "../../public/react1.webp";
+import building from "../../public/building.jpg";
 import arvTuning from "../../public/arvTuning.avif";
 //Icons
 import { DiReact } from "react-icons/di";
@@ -257,12 +258,7 @@ export default function AboutUs() {
 
       <Container>
         <RowContainer>
-          <Row
-            bg="none"
-            alternate="true"
-            drag="x"
-            dragConstraints={{ left: 100, right: 100 }}
-          >
+          <Row bg="none" alternate="true">
             <RowChild bg="white" alternate="true">
               <RowLogo bg="#90CAF9 ">
                 <FcGallery
@@ -330,7 +326,7 @@ export default function AboutUs() {
         </CenterWrapper>
       </Container>
       <SS_Container>
-        <SS_ContainerWrapper padding="4rem">
+        <SS_ContainerWrapper>
           <Grid align="flex-start" justify="flex-start">
             <FullImageContainer overlay={true}>
               <FullImage
@@ -354,16 +350,11 @@ export default function AboutUs() {
               provide a solution that is most optimal for your business needs
             </Description>
             <Description color="black"></Description>
-            <ButtonContainer>
-              <Button>
-                <ButtonText>Explore</ButtonText>
-              </Button>
-            </ButtonContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>
       <SS_Container>
-        <SS_ContainerWrapper bg="#28282B  " padding="4rem">
+        <SS_ContainerWrapper bg="#28282B  ">
           <Grid justify="center" align="flex-start" roundright="true">
             <SubTitle font="50px" align="left" fontWeight="600" color="#F8BBD0">
               100% custom coded websites. We don't use templates
@@ -376,19 +367,12 @@ export default function AboutUs() {
               integrated into your site.
             </Description>
             <Description color="white"></Description>{" "}
-            <ButtonContainer>
-              <Button>
-                <ButtonText>Explore</ButtonText>
-              </Button>
-            </ButtonContainer>
           </Grid>
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer overlay={true} bg="#F2D7D5 " reverse="true">
               <FullImage
                 src={development}
                 layout="fill"
-                roundleft="true"
-                roundright="true"
                 alt="Web Development logo"
               />
             </FullImageContainer>
@@ -397,34 +381,38 @@ export default function AboutUs() {
       </SS_Container>
 
       <SS_Container>
-        <SS_ContainerWrapper padding="4rem">
+        <SS_ContainerWrapper>
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer>
+            <FullImageContainer overlay={true} bg="#73C6B6 ">
               <FullImage
-                src={development}
+                src={building}
                 layout="fill"
-                roundleft="true"
-                roundright="true"
                 alt="Web Development logo"
               />
             </FullImageContainer>
           </Grid>
           <Grid justify="center" align="flex-start" roundright="true">
             <SubTitle font="50px" align="left" fontWeight="600">
-              Creating blazing-fast websites that deliver results
+              Creating blazing-fast websites for small and large businesses
             </SubTitle>
             <Description color="black">
               At Obsidian Web Developments, we create beautiful, blazing-fast
               websites that deliver results! We pride ourselves on the quality
               of our service and abillity to deliver results that meet your
-              requirements
+              requirements. Our main goal is to create intuitive business
+              solutions, that will ensue rapid growth and success. With our
+              holistic approach to web development, optimization and industry
+              awareness we've created business solutions for various clients,
+              tackling thier issues and catalysing growth.
+              <br />
+              <br />
+              <ButtonContainer>
+                <Button>
+                  <ButtonText>View our web development services</ButtonText>
+                </Button>
+              </ButtonContainer>
             </Description>
             <Description color="white"></Description>{" "}
-            <ButtonContainer>
-              <Button>
-                <ButtonText>Explore</ButtonText>
-              </Button>
-            </ButtonContainer>
           </Grid>
         </SS_ContainerWrapper>
       </SS_Container>

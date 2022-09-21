@@ -342,18 +342,13 @@ export default function Home() {
               #1 Web Development agency in Birmingham
             </Title>
             <Description align="center">
-              Obsidian Web Developments is an award winning
-              <DescriptionSpan> Web development</DescriptionSpan> and{" "}
-              <DescriptionSpan>
-                Web Design Agency based in Birmingham
-              </DescriptionSpan>
-              , with a team passionate about delivering web solutions for
-              clients with complex requirements. Our focal point is{" "}
-              <DescriptionSpan>Web Development</DescriptionSpan> and{" "}
-              <DescriptionSpan>Web Design</DescriptionSpan>, we aim to combine
-              various state of the art technologies to meet your project
-              requirements on time, within budget and most important of all to a
-              high standard.
+              Obsidian Web Developments is an award winning Web development and{" "}
+              Web Design Agency based in Birmingham , with a team passionate
+              about delivering web solutions for clients with complex
+              requirements. Our focal point is Web Development and Web Design,
+              we aim to combine various state of the art technologies to meet
+              your project requirements on time, within budget and most
+              important of all to a high standard.
             </Description>
           </HalfWidth>
         </CenterWrapper>
@@ -381,27 +376,20 @@ export default function Home() {
             </SubTitle>
             <Description>
               We are a newly founded Web Development and Web Design agency based
-              in Birmingham with over{" "}
-              <DescriptionSpan>
-                10+ years in Web Development and Web Design commercially
-              </DescriptionSpan>
-              . Our team of developers have gained vital experience with large
-              corporations all over the world, to grasp the intricacies of{" "}
-              <DescriptionSpan>
-                Web Development, Web Design and SEO
-              </DescriptionSpan>
-              . We pride ourselves on understanding these services to a
-              high-level and delivering quality web solutions that meet your
-              project requirements no matter how complex.
+              in Birmingham with over 10+ years in Web Development and Web
+              Design commercially . Our team of developers have gained vital
+              experience with large corporations all over the world, to grasp
+              the intricacies of Web Development, Web Design and SEO . We pride
+              ourselves on understanding these services to a high-level and
+              delivering quality web solutions that meet your project
+              requirements no matter how complex.
             </Description>
             <Description>
-              <DescriptionSpan>
-                Code runs in our blood, literally!
-              </DescriptionSpan>{" "}
-              Which is why we are passionate about custom built websites that
-              are not built from Wordpress templates which are bloated, slow and
-              restrict the capaballities for creative expansion. Our Web
-              Development team will produce websites that score perfect{" "}
+              Code runs in our blood, literally! Which is why we are passionate
+              about custom built websites that are not built from Wordpress
+              templates which are bloated, slow and restrict the capaballities
+              for creative expansion. Our Web Development team will produce
+              websites that score perfect{" "}
               <A href="https://web.dev/">lighthouse scores</A> and rank well on
               Google.
               <br />
@@ -419,29 +407,32 @@ export default function Home() {
       </SS_Container>
       <SS_Container>
         <SS_ContainerWrapper bg="#28282B  " padding="4rem">
-          <Grid justify="center" align="flex-start">
-            <Title
-              font="45px"
-              align="left"
-              fontWeight="600"
-              color="#F8BBD0"
-              style={{ margin: "0px" }}
-            >
-              Web development services we offer
-            </Title>
-            <Description color="white" style={{ margin: "0px" }}>
-              At Obsidian Web Developments, we offer the best Web Development
-              service in Birmingham. Our focal point is custom-built web
-              solutions which utilises the latest technologies to create your
-              perfect website that solves your business needs and ensues growth.
-            </Description>
-            <ButtonContainer>
-              <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
-                <Button>
-                  <ButtonText>View web Development Birmingham</ButtonText>
-                </Button>
-              </Link>
-            </ButtonContainer>
+          <Grid justify="center" align="center">
+            <CenterDiv>
+              <Title
+                font="45px"
+                align="left"
+                fontWeight="600"
+                color="#F8BBD0"
+                style={{ margin: "0px" }}
+              >
+                Web development services we offer
+              </Title>
+              <Description color="white" style={{ margin: "0px" }}>
+                At Obsidian Web Developments, we offer the best Web Development
+                service in Birmingham. Our focal point is custom-built web
+                solutions which utilises the latest technologies to create your
+                perfect website that solves your business needs and ensues
+                growth.
+              </Description>
+              <ButtonContainer>
+                <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                  <Button>
+                    <ButtonText>View web Development Birmingham</ButtonText>
+                  </Button>
+                </Link>
+              </ButtonContainer>
+            </CenterDiv>
           </Grid>
           <Grid align="flex-start" justify="flex-start">
             <ValuesContainer>
@@ -671,11 +662,10 @@ export default function Home() {
               View our web development case studies below
             </Title>
             <Description style={{ textAlign: "center" }}>
-              Interested in the work we do? We build{" "}
-              <DescriptionSpan>business solutions</DescriptionSpan> that add
+              Interested in the work we do? We build business solutions that add
               real value to a business. Interested in automation or dashboards
               for your employees? <br />
-              <DescriptionSpan> View our work below</DescriptionSpan>
+              View our work below
             </Description>
           </HalfWidth>
         </CenterWrapper>

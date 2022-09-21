@@ -353,6 +353,9 @@ export const Row = styled(motion.div)`
     width: 90%;
     padding: 1rem 2rem;
   }
+  @media only screen and (min-width: 770px) and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 export const RowChild = styled(motion.div)`
   width: 200px;
@@ -370,6 +373,9 @@ export const RowChild = styled(motion.div)`
       
       `
       : ""}
+  @media only screen and (min-width: 770px) and (max-width: 1024px) {
+    width: auto;
+  }
 `;
 export const RowLogo = styled.div`
   width: auto;
@@ -390,6 +396,9 @@ export const RowText = styled.p`
   @media only screen and (max-width: 770px) {
     position: ${(props) => (props.sticky ? "relative" : "")};
     font-size: 15px;
+  }
+  @media only screen and (min-width: 770px) and (max-width: 1024px) {
+    font-size: 13px;
   }
 `;
 export const CenterWrapper = styled.div`

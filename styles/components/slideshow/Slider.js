@@ -289,6 +289,7 @@ export const Info = ({ data, index, type, width, direction }) => {
                   layout={`${width <= 770 ? "responsive" : "fill"}`}
                   alt="Web Development logo"
                   priority
+                  loading="eager"
                 />
               </FullImageContainer>
             </Grid>

@@ -5,13 +5,14 @@ export const ButtonContainer = styled.div`
   height: 100px;
   position: relative;
   display: flex;
+
   justify-content: ${(props) =>
     props.justify ? props.justify : "flex-start "};
   align-content: ${(props) => (props.align ? props.align : "flex-start ")};
 `;
 
 export const ButtonText = styled.h3`
-  font-size: 18px;
+  font-size: 14px;
   color: ${(props) => (props.alt ? `${props.alt}` : " black")};
   font-weight: 600;
   text-transform: uppercase;
@@ -24,7 +25,7 @@ export const Button = styled.button`
   width: ${(props) => (props.width ? `${props.width}` : "auto ")};
 
   height: ${(props) => (props.height ? `${props.height}` : "auto ")};
-  padding: 1rem 4rem;
+  padding: 0.5rem 3rem;
   background: ${(props) => (props.alt ? `${props.alt}` : "#FF4081 ")};
   border-radius: 10px;
   border: none;

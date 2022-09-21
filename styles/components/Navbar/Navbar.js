@@ -32,9 +32,9 @@ export const NavbarContainer = styled.div`
   position: absolute;
   z-index: 10;
   background-color: transparent;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     z-index: 10;
-    height: 15%;
+    height: 17%;
   }
 `;
 export const NavbarWrapper = styled.div`
@@ -63,6 +63,9 @@ export const RightContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
 `;
 //Mobile
 export const HamburgerLogo = styled.button`
