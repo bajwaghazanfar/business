@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Image from "next/image";
 export const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -45,7 +45,7 @@ export const FullImage = styled.img`
   height: 400px;
   object-fit: cover;
 `;
-export const BlogImage = styled.img`
+export const BlogImage = styled(Image)`
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -78,7 +78,7 @@ export const H4 = styled.h1`
 export const P = styled.p`
   font-size: 17px;
   color: ${(props) => (props.color ? props.color : " black ")};
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const Title = styled.h1`

@@ -396,39 +396,38 @@ export default function AboutUs() {
         </SS_ContainerWrapper>
       </SS_Container>
 
-      <Container style={{ top: "10px" }}>
-        <CenterWrapper justify="flex-start" align="flex-start">
-          <HalfWidth>
-            <Title
-              font="50px"
-              align="left"
-              fontWeight="600"
-              justify="flex-start"
-              id="bespoke"
-            >
-              Bespoke, in-house coded websites, tailored to meet your
-              requirements
-            </Title>
+      <SS_Container>
+        <SS_ContainerWrapper padding="4rem">
+          <Grid align="flex-start" justify="flex-start">
+            <FullImageContainer>
+              <FullImage
+                src={development}
+                layout="fill"
+                roundleft="true"
+                roundright="true"
+                alt="Web Development logo"
+              />
+            </FullImageContainer>
+          </Grid>
+          <Grid justify="center" align="flex-start" roundright="true">
+            <SubTitle font="50px" align="left" fontWeight="600">
+              Creating blazing-fast websites that deliver results
+            </SubTitle>
             <Description color="black">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, co
+              At Obsidian Web Developments, we create beautiful, blazing-fast
+              websites that deliver results! We pride ourselves on the quality
+              of our service and abillity to deliver results that meet your
+              requirements
             </Description>
-          </HalfWidth>
-          <FullWidthContainer>
-            <FullImage
-              src={reactImg}
-              layout="fill"
-              roundleft="true"
-              roundright="true"
-            />
-          </FullWidthContainer>
-        </CenterWrapper>
-      </Container>
+            <Description color="white"></Description>{" "}
+            <ButtonContainer>
+              <Button>
+                <ButtonText>Explore</ButtonText>
+              </Button>
+            </ButtonContainer>
+          </Grid>
+        </SS_ContainerWrapper>
+      </SS_Container>
 
       <ContactUs alt={false} mobile={true} />
       <Footer />

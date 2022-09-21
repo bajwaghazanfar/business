@@ -288,6 +288,7 @@ export const Info = ({ data, index, type, width, direction }) => {
                   src={data.image}
                   layout={`${width <= 770 ? "responsive" : "fill"}`}
                   alt="Web Development logo"
+                  priority
                 />
               </FullImageContainer>
             </Grid>

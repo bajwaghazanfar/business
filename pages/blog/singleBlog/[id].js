@@ -83,7 +83,7 @@ export default function singleBlog({ data }) {
                     if (node.type === "tag" && node.name === "img") {
                       const props = node.attribs;
 
-                      return <BlogImage {...props} key={index} />;
+                      return <BlogImage {...props} key={index} layout="fill" />;
                     }
                     if (node.type === "tag" && node.name === "h1") {
                       const data = node.children;
