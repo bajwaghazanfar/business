@@ -54,7 +54,7 @@ export const ContactUsContainer = styled.div`
   align-content: ${(props) => (props.align ? props.align : "center ")};
 
   top: ${(props) => (props.top ? props.top : "0px")};
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1445px) {
     height: 100%;
   }
 `;
@@ -214,7 +214,7 @@ export const ContactUs = ({ alt, mobile }) => {
       }
     },
   });
-  console.log(alt);
+  console.log(mobile);
   if (alt) {
     return (
       <ContactUsContainer mobile={mobile}>
@@ -349,7 +349,7 @@ export const ContactUs = ({ alt, mobile }) => {
           </Link>
         </ContactUsGrid>
         <ContactUsGrid padding="0rem">
-          <FullImageContainer>
+          <FullImageContainer height="100%">
             <FullImage src={contactUs} layout="fill" alt="Contact Us image" />
           </FullImageContainer>
         </ContactUsGrid>

@@ -130,7 +130,7 @@ export const Logo = styled.img`
 `;
 export const FullImageContainer = styled.div`
   width: ${(props) => (props.width ? props.width : "100% ")};
-  height: 100%;
+  height: ${(props) => (props.height ? props.height : "auto ")};
   position: relative;
 
   &:before {

@@ -6,7 +6,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: auto;
+
   position: relative;
 `;
 export const VideoContainer = styled.div`
@@ -51,7 +52,7 @@ export const LeftContainer = styled.div`
 `;
 export const RightContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: ${(props) => (props.height ? "100%" : "100vh  ")};
   padding: 2rem;
 
   display: flex;
@@ -147,7 +148,7 @@ export const H2 = styled(motion.h1)`
   @media only screen and (max-width: 770px) {
     font-size: 30px;
   }
-  @media (min-width: 760px) and (max-width: 1030px) {
+  @media (min-width: 760px) and (max-width: 1440px) {
     font-size: 30px;
   }
 `;
@@ -286,7 +287,7 @@ export const SlideshowWrapper = styled.div`
   width: ${(props) => (props.width ? props.width : "60% ")};
   height: ${(props) => (props.height ? props.height : "700px ")};
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1440px) {
     width: 100%;
     height: 100%;
   }

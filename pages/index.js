@@ -355,15 +355,11 @@ export default function Home() {
       </Container>
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
-          <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer
-              roundleft="true"
-              roundright="true"
-              overlay={true}
-            >
+          <Grid align="center" justify="center">
+            <FullImageContainer overlay={true}>
               <FullImage
                 src={development}
-                layout={`${width <= 770 ? "responsive" : "fill"}`}
+                layout="responsive"
                 roundleft="true"
                 roundright="true"
                 alt="Web Development logo"
@@ -624,7 +620,7 @@ export default function Home() {
                     </FAQ_Right>
                   </FAQ>
                 </Link>
-                <Link href="//web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                   <FAQ bg="#f8bbd0">
                     <FAQ_Left>
                       <FiExternalLink
@@ -709,7 +705,7 @@ export default function Home() {
             padding="0rem"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
-            <FullImageContainer caseStudy="true">
+            <FullImageContainer caseStudy="true" height="100%">
               <FullImage
                 src={fiberOptics}
                 layout="fill"
@@ -753,7 +749,7 @@ export default function Home() {
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
-            <FullImageContainer caseStudy="true">
+            <FullImageContainer caseStudy="true" height="100%">
               <FullImage
                 src={arvTuning}
                 alt="ARV Tuning"
@@ -796,7 +792,7 @@ export default function Home() {
             justify="flex-start"
             style={{ boxShadow: "-49px 33px 24px -3px rgba(0,0,0,0.1)" }}
           >
-            <FullImageContainer caseStudy="true">
+            <FullImageContainer caseStudy="true" height="100%">
               <FullImage
                 src={fcProperties}
                 alt="FC Properties"

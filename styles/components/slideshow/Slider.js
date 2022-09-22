@@ -30,6 +30,7 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 5px;
+
   @media only screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
@@ -209,6 +210,9 @@ export const TestimonialContainer = styled.div`
   @media only screen and (max-width: 770px) {
     flex-direction: column;
   }
+  @media (min-width: 760px) and (max-width: 1445px) {
+    height: 100%;
+  }
 `;
 export const TestimonialWrapper = styled.div`
   width: 100%;
@@ -226,6 +230,9 @@ export const TestimonialWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0rem;
+  }
+  @media (min-width: 760px) and (max-width: 1445px) {
+    grid-template-columns: 40% 60%;
   }
 `;
 export const Customer = styled.div`

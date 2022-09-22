@@ -82,7 +82,7 @@ const Contact = () => {
               </AlignLeft>
             </MainWrapper>
           </LeftContainer>
-          <RightContainer mobile={true}>
+          <RightContainer mobile={true} height="100%">
             <ContactUs alt={true} mobile={width <= 768 ? true : false} />
           </RightContainer>
         </HomeContainer>

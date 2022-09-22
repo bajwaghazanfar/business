@@ -326,12 +326,12 @@ export default function AboutUs() {
         </CenterWrapper>
       </Container>
       <SS_Container>
-        <SS_ContainerWrapper>
+        <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
             <FullImageContainer overlay={true}>
               <FullImage
                 src={me}
-                layout="fill"
+                layout="responsive"
                 alt="Web Development logo"
                 priority={true}
               />
@@ -369,10 +369,10 @@ export default function AboutUs() {
             <Description color="white"></Description>{" "}
           </Grid>
           <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer overlay={true} bg="#F2D7D5 " reverse="true">
+            <FullImageContainer>
               <FullImage
                 src={development}
-                layout="fill"
+                layout="responsive"
                 alt="Web Development logo"
               />
             </FullImageContainer>
@@ -381,12 +381,12 @@ export default function AboutUs() {
       </SS_Container>
 
       <SS_Container>
-        <SS_ContainerWrapper>
+        <SS_ContainerWrapper padding="4rem">
           <Grid align="flex-start" justify="flex-start">
             <FullImageContainer overlay={true} bg="#73C6B6 ">
               <FullImage
                 src={building}
-                layout="fill"
+                layout="responsive"
                 alt="Web Development logo"
               />
             </FullImageContainer>

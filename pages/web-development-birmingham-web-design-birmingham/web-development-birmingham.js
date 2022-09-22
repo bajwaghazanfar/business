@@ -321,18 +321,11 @@ export default function WebDevelopment() {
       </Container>
       <SS_Container>
         <SS_ContainerWrapper padding="4rem">
-          <Grid align="flex-start" justify="flex-start">
-            <FullImageContainer
-              roundleft="true"
-              roundright="true"
-              overlay={true}
-              bg="#28282B "
-            >
+          <Grid align="center" justify="center">
+            <FullImageContainer height="auto" overlay={true} bg="#28282B ">
               <FullImage
                 src={design}
-                layout="fill"
-                roundleft="true"
-                roundright="true"
+                layout="responsive"
                 alt="Web Development logo"
                 priority={true}
               />
@@ -345,7 +338,7 @@ export default function WebDevelopment() {
             <Description color="black">
               Most web development agencies in Birmingham will create a website
               for you that is slow, unneccesarily expensive, has poor SEO and
-              uses a pre-purchased template. At Obsidian Web Developments, we
+              uses a pre-purchased template . At Obsidian Web Developments, we
               pride ourselves on creating custom-built websites from the ground
               up that meet your requirements and has a unique web design which
               you are happy with. We also ensure that your website is fast,
@@ -400,9 +393,7 @@ export default function WebDevelopment() {
             <FullImageContainer>
               <FullImage
                 src={development}
-                layout="fill"
-                roundleft="true"
-                roundright="true"
+                layout="responsive"
                 alt="Web Development logo"
               />
             </FullImageContainer>

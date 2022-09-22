@@ -119,7 +119,7 @@ export const SS_ContainerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (props.bg ? props.bg : "#ededed")};
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1445px) {
     display: flex;
     flex-direction: column;
   }
