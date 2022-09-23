@@ -65,6 +65,10 @@ export const FAQ_Right = styled(motion.div)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  @media only screen and (max-width: 770px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export const FAQ_TextWrapper = styled(motion.div)`
   width: 100%;

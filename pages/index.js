@@ -517,9 +517,9 @@ export default function Home() {
                   <ServiceDescription>
                     Browse through our site and view our various services such
                     as{" "}
-                    <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
+                    <ServiceA href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Development
-                    </Link>
+                    </ServiceA>{" "}
                     ,{" "}
                     <ServiceA href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
                       Web Design

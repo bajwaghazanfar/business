@@ -263,7 +263,7 @@ export const Info = ({ data, index, type, width, direction }) => {
       style={{ width: "100%" }}
     >
       {type === "image" ? (
-        <SlideshowImg src={data.image} loading="eager" />
+        <SlideshowImg src={data.image} priority loading="eager" />
       ) : type === "complex" ? (
         <GridContainer>
           <Grid
