@@ -227,7 +227,7 @@ export const SS_Container = styled.div`
   justify-content: ${(props) => (props.justify ? props.justify : "center ")};
   align-content: ${(props) => (props.align ? props.align : "center ")};
   position: relative;
-  top: ${(props) => (props.top ? props.top : "10px")};
+  top: ${(props) => (props.top ? props.top : "0px")};
   padding: ${(props) => (props.padding ? props.padding : "0rem")};
   @media only screen and (max-width: 770px) {
     padding: 0rem;

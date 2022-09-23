@@ -79,9 +79,7 @@ export default function allBlogs({ data }) {
                             </Category>
                           </CategoryContainer>
                           <RightAlign>
-                            <Link
-                              href={`http://localhost:3000/blog/singleBlog/${map.id}`}
-                            >
+                            <Link href={`/blog/singleBlog/${map.id}`}>
                               <Button>
                                 <ButtonText>Read more</ButtonText>
                               </Button>

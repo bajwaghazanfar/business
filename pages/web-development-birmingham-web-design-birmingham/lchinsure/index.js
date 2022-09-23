@@ -168,10 +168,10 @@ const Lchinsure = () => {
               </Description>
               <QuoteContainer>
                 <H3 color="black" font="40px">
-                  "We are very grateful for the committed and flexible way of
-                  working of the teams at Obsidian Web Developments. The optimal
-                  combination of consulting and engineering supports our
-                  insolvency proceedings optimally on the IT side."
+                  "We are very greateful for the commited and flexible way of
+                  working at Obsidian Web Developments. Thier holistic approach
+                  to solving our business needs, saved us £5000 in labour costs
+                  and increased our profit margins"
                 </H3>
               </QuoteContainer>
             </CenterDiv>

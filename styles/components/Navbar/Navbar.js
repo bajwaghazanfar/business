@@ -195,7 +195,7 @@ export const Navbar = () => {
             About
           </H3>
         </Link>{" "}
-        <Link href="/web-development-birmingham-web-design-birmingham/web-development">
+        <Link href="/web-development-birmingham-web-design-birmingham/web-development-birmingham">
           <H3
             onClick={() => {
               setOpen(!open);

@@ -180,10 +180,9 @@ const Fcproperties = () => {
               </Description>
               <QuoteContainer>
                 <H3 color="black" font="40px">
-                  "We are very grateful for the committed and flexible way of
-                  working of the teams at Obsidian Web Developments. The optimal
-                  combination of consulting and engineering supports our
-                  insolvency proceedings optimally on the IT side."
+                  "Working with Obsidian Web Developments was a pleasure. I had
+                  complex requirements that I thought couldn't be met, but they
+                  pulled through and I'm grateful!"
                 </H3>
               </QuoteContainer>
             </CenterDiv>

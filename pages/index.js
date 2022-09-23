@@ -1,44 +1,27 @@
-import {
-  Arrow,
-  ArrowContainer,
-  ArrowWrapper,
-} from "../styles/components/arrow/arrow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   Container,
   HomeContainer,
-  Video,
-  VideoContainer,
-  LeftContainer,
   MainWrapper,
   H3,
   H2Wrapper,
   H2,
-  H2Span,
-  CustomersWrapper,
-  Customers,
-  CustomerLogo,
-  FrameworkContainer,
-  Framework,
   LineContainer,
   AlignLeft,
   RightContainer,
-  AlignRight,
   H4,
-  InsightsWrapper,
-  InsightsContainer,
   H5,
   SlideshowContainer,
   SlideshowWrapper,
   Row,
+  LeftContainer,
   RowChild,
   RowContainer,
   CenterWrapper,
   HalfWidth,
   RowLogo,
   RowText,
-  FullWidthContainer,
   ServicesContainer,
   Service,
   ServiceImgWrapper,
@@ -49,7 +32,6 @@ import {
   RightContainerImage,
   TwoColumnGrid,
   ServiceA,
-  AlignEnd,
 } from "../styles/pages/home/home";
 import {
   Button,
@@ -61,11 +43,9 @@ import {
   Description,
   Grid,
   SS_Container,
-  StickyGrid,
   Title,
   FullImage,
   ImageGrid,
-  Vertical_Image,
   SS_ContainerWrapper,
   ValuesContainer,
   Value,
@@ -76,7 +56,6 @@ import {
   ValueImgWrapper,
   FullImageContainer,
   SubTitle,
-  DescriptionSpan,
   A,
 } from "../styles/components/StickySection/StickySection";
 import { useEffect, useState } from "react";
@@ -97,12 +76,9 @@ import Link from "next/link";
 import development from "../public/development.avif";
 
 import arvTuning from "../public/arvTuning.avif";
-import undraw1 from "../public/undraw/undraw1.svg";
+
 //Icons
-import { DiReact } from "react-icons/di";
-import { DiNodejs } from "react-icons/di";
-import { DiVisualstudio } from "react-icons/di";
-import { GrGraphQl } from "react-icons/gr";
+
 import { FcGallery } from "react-icons/fc";
 import { FcSalesPerformance } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
@@ -118,7 +94,7 @@ import { useRef } from "react";
 import bgImage from "../public/bgImage.webp";
 import bgImage2 from "../public/bg2.webp";
 import { Footer } from "../styles/components/footer/footer";
-import dynamic from "next/dynamic";
+
 import {
   FAQ,
   FAQContainer,
@@ -126,13 +102,8 @@ import {
   FAQ_Right,
   FAQ_Title,
 } from "../styles/components/faq/faq";
-import {
-  Slider,
-  SliderButton,
-  SliderContainer,
-} from "../styles/components/slideshow/Slider";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { Slider } from "../styles/components/slideshow/Slider";
+
 import slideshowImg from "../public/slideshowImg.webp";
 import slideshowImg2 from "../public/slideshowImg2.webp";
 import slideshowImg3 from "../public/slideshowImg3.webp";
